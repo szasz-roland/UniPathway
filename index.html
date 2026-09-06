@@ -63,8 +63,10 @@
   .dbtn .cnt{position:absolute;top:6px;right:8px;font-size:9px;font-weight:800;color:var(--sel);line-height:1}
   .dbtn.on .cnt{color:var(--gy-ac)}
   .dbtn.free{opacity:.45}
-  #rail{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:4px;flex:0 0 auto;height:auto}
+  #rail{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:4px;flex:1;min-height:0;position:relative}
   #rail .dbtn{height:44px;flex:0 0 44px;align-self:center}
+  .rail-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-90deg);
+    white-space:nowrap;font-size:12px;font-weight:700;letter-spacing:.03em;color:var(--rail-tx)}
   .rail .gear{margin-top:auto;width:40px;height:40px;border:none;background:transparent;color:var(--rail-tx-2);
     cursor:pointer;border-radius:11px;display:grid;place-items:center;transition:background .15s,color .15s,transform 140ms var(--ease-out)}
   .rail .gear:hover{background:var(--rail-line);color:#fff}
@@ -336,9 +338,15 @@ function goto(newView,dayIndex){
 
 function rail(){
   const r=document.getElementById("rail");r.innerHTML="";
+  if(view!=="schedule"){
+    const label=E("div");label.className="rail-label";
+    label.textContent=PAGE_LABELS[view];
+    r.appendChild(label);
+    return;
+  }
   DAYS.forEach((d,i)=>{
     const n=EV.filter(e=>e[0]===i).length;
-    const b=E("button");b.className="dbtn"+(view==="schedule"&&i===curDay?" on":"")+(n===0?" free":"");
+    const b=E("button");b.className="dbtn"+(i===curDay?" on":"")+(n===0?" free":"");
     b.innerHTML=SHORT[i]+(n?`<span class="cnt">${n}</span>`:"");
     b.onclick=()=>goto("schedule",i);
     r.appendChild(b);
