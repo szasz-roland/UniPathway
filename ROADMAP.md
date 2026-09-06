@@ -22,4 +22,4 @@
 
 ## Status
 
-Phase 1 not started. App is currently a single static `index.html` with hardcoded schedule data.
+Phase 1 code work not started. Deployment/hosting setup (domain, DNS, Access lock) is in progress — see [DEPLOYMENT.md](DEPLOYMENT.md) for live status. App is currently a single static `index.html` with hardcoded schedule data.
