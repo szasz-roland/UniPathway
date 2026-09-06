@@ -63,10 +63,10 @@
   .dbtn .cnt{position:absolute;top:6px;right:8px;font-size:9px;font-weight:800;color:var(--sel);line-height:1}
   .dbtn.on .cnt{color:var(--gy-ac)}
   .dbtn.free{opacity:.45}
-  #rail{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;flex:1;min-height:0;position:relative}
+  #rail{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:4px;flex:0 0 auto;height:auto}
   #rail .dbtn{height:44px;flex:0 0 44px;align-self:center}
-  .rail-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-90deg);
-    white-space:nowrap;font-size:12px;font-weight:700;letter-spacing:.03em;color:var(--rail-tx)}
+  .rail-label-wrap{width:28px;height:200px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .rail-label{white-space:nowrap;font-size:13px;font-weight:800;letter-spacing:.03em;color:var(--rail-tx);transform:rotate(-90deg)}
   .rail .gear{margin-top:auto;width:40px;height:40px;border:none;background:transparent;color:var(--rail-tx-2);
     cursor:pointer;border-radius:11px;display:grid;place-items:center;transition:background .15s,color .15s,transform 140ms var(--ease-out)}
   .rail .gear:hover{background:var(--rail-line);color:#fff}
@@ -322,9 +322,11 @@ function goto(newView,dayIndex){
 function rail(){
   const r=document.getElementById("rail");r.innerHTML="";
   if(view!=="schedule"){
+    const wrap=E("div");wrap.className="rail-label-wrap";
     const label=E("div");label.className="rail-label";
     label.textContent=PAGE_LABELS[view];
-    r.appendChild(label);
+    wrap.appendChild(label);
+    r.appendChild(wrap);
     return;
   }
   DAYS.forEach((d,i)=>{
