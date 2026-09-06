@@ -218,6 +218,7 @@
   .exportbtn:hover{background:var(--rail-line);color:#fff}
   .exportbtn:active{transform:scale(.96)}
   .exportbtn:disabled{opacity:.5;cursor:default}
+  .export-err{font-size:12.5px;color:#ff8a80;font-weight:600;margin-top:10px;line-height:1.4}
 
   /* ---- checklist panel ---- */
   .cl-newbtn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;text-align:center;border:1px dashed var(--rail-line);
@@ -727,12 +728,13 @@ function renderSettingsPanel(){
   const exSection=E("div");exSection.className="set-section";
   const exLabel=E("div");exLabel.className="set-label";exLabel.textContent="Órarend exportálása";
   const exRow=E("div");exRow.className="exportbtns";
+  const errBox=E("div");errBox.className="export-err";errBox.id="exportErr";errBox.hidden=true;
   const jpgBtn=E("button");jpgBtn.className="exportbtn";jpgBtn.textContent="JPG";
-  jpgBtn.onclick=()=>runExport("jpg",jpgBtn);
+  jpgBtn.onclick=()=>runExport("jpg",jpgBtn,errBox);
   const pdfBtn=E("button");pdfBtn.className="exportbtn";pdfBtn.textContent="PDF";
-  pdfBtn.onclick=()=>runExport("pdf",pdfBtn);
+  pdfBtn.onclick=()=>runExport("pdf",pdfBtn,errBox);
   exRow.appendChild(jpgBtn);exRow.appendChild(pdfBtn);
-  exSection.appendChild(exLabel);exSection.appendChild(exRow);
+  exSection.appendChild(exLabel);exSection.appendChild(exRow);exSection.appendChild(errBox);
   wrap.appendChild(exSection);
 }
 
@@ -808,6 +810,9 @@ const EXPORT_LIGHT_VARS={
   "--mt-bg":"#e8f1ea","--mt-tx":"#356148","--mt-ac":"#5fa87c",
 };
 async function exportSchedule(format){
+  if(typeof html2canvas!=="function"||!window.jspdf){
+    throw new Error("A képexportáláshoz szükséges könyvtár nem töltődött be. Ellenőrizd az internetkapcsolatot, vagy hogy egy hirdetésblokkoló nem tiltja-e a cdnjs.cloudflare.com-ot.");
+  }
   const wrap=E("div");wrap.className="export-capture";
   wrap.style.width="1360px";wrap.style.padding="32px";wrap.style.background="#ffffff";
   wrap.style.fontFamily="var(--sans)";
@@ -835,11 +840,15 @@ async function exportSchedule(format){
     pdf.save("orarend.pdf");
   }
 }
-async function runExport(format,btn){
+async function runExport(format,btn,errBox){
   const orig=btn.textContent;
   btn.disabled=true;btn.textContent="...";
+  if(errBox){errBox.hidden=true;errBox.textContent="";}
   try{await exportSchedule(format);}
-  catch(err){console.error(err);}
+  catch(err){
+    console.error(err);
+    if(errBox){errBox.textContent=err&&err.message?err.message:"Az exportálás sikertelen.";errBox.hidden=false;}
+  }
   finally{btn.disabled=false;btn.textContent=orig;}
 }
 
