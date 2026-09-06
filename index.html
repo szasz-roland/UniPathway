@@ -11,7 +11,7 @@
 <style>
   :root{
     --bg:#ffffff; --ink:#1d2233; --ink-2:#5a6178; --faint:#9aa0b4;
-    --rail:#20242e; --rail-line:#333949;
+    --rail:#20242e; --rail-line:#333949; --rail-tx:#aeb4c7; --rail-tx-2:#8a90a6;
     --hair:#eef0f4;
     --ea-bg:#e8f3f4;   --ea-tx:#1f6b74;   --ea-ac:#2fa8b5;
     --gy-bg:#fdeee6;   --gy-tx:#a2542c;   --gy-ac:#e8834b;
@@ -24,7 +24,7 @@
     --ease-drawer:cubic-bezier(.32,.72,0,1);
   }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-  
+
   /* FIX 1: Strict height matching & no bounce scrolling */
   html, body {
     height: 100dvh; /* Dynamic viewport height (perfect for mobile) */
@@ -33,7 +33,7 @@
     padding: 0;
     overscroll-behavior: none; /* Prevents the "rubber band" bounce effect */
   }
-  
+
   body{
     background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.4;
     -webkit-font-smoothing:antialiased; display: flex; flex-direction: column;
@@ -47,10 +47,12 @@
     position:sticky;top:0;height:100%}
   .rail .logo{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;margin-bottom:10px;cursor:pointer;flex:0 0 auto;
     transition:background .15s,transform 140ms var(--ease-out)}
-  .rail .logo svg{opacity:.9}
+  .rail .logo svg{opacity:.9;transition:transform 300ms var(--ease-in-out)}
   .rail .logo:hover{background:var(--rail-line)}
   .rail .logo:active{transform:scale(.92)}
-  .dbtn{width:44px;height:44px;min-height:44px;max-height:44px;flex:0 0 44px;border:none;background:transparent;color:#aeb4c7;font-family:var(--sans);
+  .rail .logo.active{background:var(--rail-line)}
+  .rail .logo.active svg{transform:rotate(90deg)}
+  .dbtn{width:44px;height:44px;min-height:44px;max-height:44px;flex:0 0 44px;border:none;background:transparent;color:var(--rail-tx);font-family:var(--sans);
     font-weight:700;font-size:15px;border-radius:12px;cursor:pointer;position:relative;transition:background .15s,color .15s,transform 140ms var(--ease-out);
     display:grid;place-items:center;line-height:1;padding:0}
   .dbtn:hover{background:var(--rail-line);color:#fff}
@@ -63,14 +65,14 @@
   .dbtn.free{opacity:.45}
   #rail{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:4px;flex:0 0 auto;height:auto}
   #rail .dbtn{height:44px;flex:0 0 44px;align-self:center}
-  .rail .gear{margin-top:auto;width:40px;height:40px;border:none;background:transparent;color:#8a90a6;
+  .rail .gear{margin-top:auto;width:40px;height:40px;border:none;background:transparent;color:var(--rail-tx-2);
     cursor:pointer;border-radius:11px;display:grid;place-items:center;transition:background .15s,color .15s,transform 140ms var(--ease-out)}
   .rail .gear:hover{background:var(--rail-line);color:#fff}
   .rail .gear:active{transform:scale(.9)}
 
   /* FIX 3: Make main area scroll independently, reduce padding to maximize space */
   .main{padding:28px clamp(16px,4vw,40px) 40px;min-width:0;overflow-y:auto;height:100%}
-  
+
   .head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px}
   .head .title{font-size:32px;font-weight:800;letter-spacing:-.02em}
   .head .title .day{display:block;font-size:15px;font-weight:600;color:var(--ink-2);margin-top:2px}
@@ -112,20 +114,42 @@
   .drchip b{display:block;font-weight:700;font-size:13px}
   .drchip span{color:var(--faint);font-size:11.5px}
 
-  /* ---- code drawer ---- */
-  .scrim{position:fixed;inset:0;background:rgba(20,24,36,.4);opacity:0;visibility:hidden;transition:opacity 250ms var(--ease-out),visibility 250ms;z-index:60}
+  .codepage{max-width:640px;animation:enterUp 260ms var(--ease-out) both}
+
+  /* ---- submenu panel (expands from the rail) ---- */
+  .scrim{position:fixed;top:0;left:76px;right:0;bottom:0;background:rgba(20,24,36,.4);opacity:0;visibility:hidden;
+    transition:opacity 250ms var(--ease-out),visibility 250ms;z-index:60}
   .scrim.show{opacity:1;visibility:visible}
-  .drawer{position:fixed;top:0;left:0;bottom:0;width:min(390px,88vw);background:#fff;z-index:70;
-    transform:translateX(-100%);transition:transform 320ms var(--ease-drawer);display:flex;flex-direction:column;
-    box-shadow:2px 0 30px rgba(20,24,36,.18)}
-  .drawer.show{transform:translateX(0)}
-  .dr-top{padding:24px 22px 16px;border-bottom:1px solid var(--hair)}
-  .dr-top h2{font-size:22px;font-weight:800}
-  .dr-top p{font-size:12.5px;color:var(--ink-2);margin-top:3px}
-  .dr-close{position:absolute;top:20px;right:18px;width:34px;height:34px;border:none;background:#f2f3f7;
-    border-radius:10px;cursor:pointer;font-size:18px;color:var(--ink-2);transition:transform 140ms var(--ease-out)}
-  .dr-close:active{transform:scale(.9)}
-  .dr-body{overflow-y:auto;padding:14px 16px;flex:1}
+  .drawer{position:fixed;top:0;left:76px;bottom:0;width:min(390px,calc(100vw - 76px));background:var(--rail);z-index:70;
+    clip-path:inset(0 100% 0 0);transition:clip-path 380ms var(--ease-in-out);display:flex;flex-direction:column;
+    pointer-events:none;box-shadow:2px 0 30px rgba(20,24,36,.18)}
+  .drawer.show{clip-path:inset(0 0 0 0);pointer-events:auto}
+  .dr-body{overflow-y:auto;padding:20px 14px;flex:1}
+
+  .navhead{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;
+    border:none;background:transparent;color:var(--rail-tx);font-family:var(--sans);font-weight:700;
+    font-size:14px;padding:13px 14px;border-radius:11px;cursor:pointer;
+    transition:background 150ms ease,color 150ms ease,transform 140ms var(--ease-out)}
+  .navhead:hover{background:var(--rail-line);color:#fff}
+  .navhead.active{background:var(--rail-line);color:#fff}
+  .navhead:active{transform:scale(.98)}
+  .navhead .chev{display:inline-flex;opacity:.7;transition:transform 220ms var(--ease-out)}
+  .navhead.open .chev{transform:rotate(90deg)}
+  .navkids{overflow:hidden;max-height:0;transition:max-height 260ms var(--ease-out)}
+  .navkids.open{max-height:260px}
+  .navkid{display:block;width:100%;text-align:left;border:none;background:transparent;color:var(--rail-tx-2);
+    font-family:var(--sans);font-weight:600;font-size:13px;padding:10px 14px 10px 30px;border-radius:9px;cursor:pointer;
+    transition:background 150ms ease,color 150ms ease,transform 140ms var(--ease-out)}
+  .navkid:hover{background:var(--rail-line);color:#fff}
+  .navkid.active{background:var(--rail-line);color:#fff}
+  .navkid:active{transform:scale(.98)}
+  .navlink{display:block;width:100%;text-align:left;border:none;background:transparent;color:var(--rail-tx);
+    font-family:var(--sans);font-weight:700;font-size:14px;padding:13px 14px;border-radius:11px;cursor:pointer;
+    margin-top:6px;transition:background 150ms ease,color 150ms ease,transform 140ms var(--ease-out)}
+  .navlink:hover{background:var(--rail-line);color:#fff}
+  .navlink.active{background:var(--rail-line);color:#fff}
+  .navlink:active{transform:scale(.98)}
+
   .grp{font-size:11px;font-weight:700;color:var(--faint);margin:14px 4px 8px}
   .grp:first-child{margin-top:2px}
   .crow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:1px solid var(--hair);
@@ -138,7 +162,6 @@
   .crow.copied .ck{color:var(--mt-tx)}
   .crow .cnm{font-size:12px;color:var(--ink-2);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .crow .cic{font-size:12px;color:var(--faint)}
-  .dr-foot{padding:14px 16px 20px;border-top:1px solid var(--hair)}
   .copyall{width:100%;background:var(--ink);color:#fff;border:none;border-radius:12px;padding:14px;
     font-size:14px;font-weight:700;cursor:pointer;font-family:var(--sans);transition:background 150ms ease,transform 140ms var(--ease-out)}
   .copyall:active{background:var(--ea-tx);transform:scale(.98)}
@@ -184,7 +207,7 @@
     .list,.freeday{max-width:none}
     .main{max-width:820px}
   }
-  
+
   /* FIX 4: Mobile optimizations for Galaxy A55 and similar devices */
   @media(max-width:640px){
     .shell{grid-template-columns:56px 1fr}
@@ -192,7 +215,9 @@
     #rail .dbtn,.dbtn{width:38px;height:38px;min-height:38px;max-height:38px;flex-basis:38px;font-size:13px}
     .rail .logo{width:32px;height:32px}
     .rail .gear{width:36px;height:36px}
-    
+    .scrim{left:56px}
+    .drawer{left:56px;width:min(360px,calc(100vw - 56px))}
+
     /* Tighter padding and independent scrolling for mobile */
     .main{padding:20px 14px 32px; overflow-y: auto; height: 100%;}
     .head{margin-bottom:16px}
@@ -200,7 +225,7 @@
     .head .title .day{font-size:13px}
     .head .date .d{font-size:24px}
     .head .date .m{font-size:11px}
-    
+
     .list{gap:12px} /* Slightly tighter gap to fit more on screen */
     .item{grid-template-columns:42px 1fr;gap:9px}
     .item .tcol{padding-top:12px}
@@ -209,49 +234,46 @@
     .card{padding:13px 14px;border-radius:15px}
     .card .cn{font-size:15px;padding-right:20px}
     .card .foot{font-size:11px;margin-top:9px}
-    .drawer{width:min(360px,92vw)}
   }
-  
+
   @media(max-width:380px){
     .head .title{font-size:23px}
     .card .cn{font-size:14.5px}
   }
   @media(prefers-reduced-motion:reduce){
     *{transition:none!important}
-    .item,.freeday,.wcol,.card.now,.wcard.now{animation:none!important}
+    .item,.freeday,.wcol,.card.now,.wcard.now,.codepage{animation:none!important}
   }
 </style>
 </head>
 <body>
   <div class="shell">
     <aside class="rail">
-      <div class="logo" id="burger" title="Kurzuskódok">
+      <div class="logo" id="burger" title="Menü">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </div>
       <div id="rail"></div>
-      <button class="gear" title="Kódok" onclick="openDrawer()">
+      <button class="gear" title="Menü" onclick="openDrawer()">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
       </button>
     </aside>
 
     <main class="main">
       <div class="head">
-        <div class="title">Órarend<span class="day" id="dayName">Hétfő</span></div>
-        <div class="date"><div class="d" id="dCount">4</div><div class="m">óra ma</div></div>
+        <div class="title" id="pageTitle">Órarend<span class="day" id="dayName">Hétfő</span></div>
+        <div class="date" id="dateBox"><div class="d" id="dCount">4</div><div class="m">óra ma</div></div>
       </div>
-      <div id="list"></div>
-      <div class="week" id="week"></div>
+      <div id="schedviews">
+        <div id="list"></div>
+        <div class="week" id="week"></div>
+      </div>
+      <div id="codepage" hidden></div>
     </main>
   </div>
 
   <div class="scrim" id="scrim"></div>
   <nav class="drawer" id="drawer" aria-hidden="true">
-    <div class="dr-top">
-      <button class="dr-close" onclick="closeDrawer()" aria-label="Bezárás">×</button>
-      <h2>Tárgyak és kódok</h2><p>Online tárgyak és a felvételi kódok.</p>
-    </div>
-    <div class="dr-body" id="drbody"></div>
-    <div class="dr-foot"><button class="copyall" id="copyall">Összes kód másolása</button></div>
+    <div class="dr-body" id="navbody"></div>
   </nav>
 
 <script>
@@ -290,24 +312,58 @@ const CODES=[
    ["XA0031-ALK2","Karrierépítés alapozó kurzus"],
  ]],
 ];
+const NAV_LINKS=[
+ {id:"kotelezo",label:"Kötelező tárgyak"},
+ {id:"online",label:"Rögzített időpont nélkül"},
+ {id:"kriterium",label:"Kritérium (0 kredit)"},
+];
+const PAGE_LABELS=Object.fromEntries(NAV_LINKS.map(x=>[x.id,x.label]));
 const E=document.createElement.bind(document);
 const svgArw='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
 const svgLoc='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>';
 const now=new Date();const nowDay=now.getDay()-1;const nowMin=now.getHours()*60+now.getMinutes();
 let curDay=(nowDay<0||nowDay>4)?0:nowDay;
+let view="schedule"; // "schedule" | "kotelezo" | "online" | "kriterium"
+let navOrarendOpen=true;
+
+function goto(newView,dayIndex){
+  view=newView;
+  if(typeof dayIndex==="number") curDay=dayIndex;
+  rail();
+  renderHead();
+  renderMain();
+}
 
 function rail(){
   const r=document.getElementById("rail");r.innerHTML="";
   DAYS.forEach((d,i)=>{
     const n=EV.filter(e=>e[0]===i).length;
-    const b=E("button");b.className="dbtn"+(i===curDay?" on":"")+(n===0?" free":"");
+    const b=E("button");b.className="dbtn"+(view==="schedule"&&i===curDay?" on":"")+(n===0?" free":"");
     b.innerHTML=SHORT[i]+(n?`<span class="cnt">${n}</span>`:"");
-    b.onclick=()=>{curDay=i;rail();day()};
+    b.onclick=()=>goto("schedule",i);
     r.appendChild(b);
   });
 }
+
+function renderHead(){
+  const t=document.getElementById("pageTitle");
+  const d=document.getElementById("dateBox");
+  if(view==="schedule"){
+    t.innerHTML=`Órarend<span class="day" id="dayName">${DAYS[curDay]}</span>`;
+    d.hidden=false;
+  }else{
+    t.textContent=PAGE_LABELS[view];
+    d.hidden=true;
+  }
+}
+
+function renderMain(){
+  document.getElementById("schedviews").hidden=view!=="schedule";
+  document.getElementById("codepage").hidden=view==="schedule";
+  if(view==="schedule"){day();week();}else{renderCodepage();}
+}
+
 function day(){
-  document.getElementById("dayName").textContent=DAYS[curDay];
   const items=EV.filter(e=>e[0]===curDay);
   document.getElementById("dCount").textContent=items.length||"0";
   const wrap=document.getElementById("list");wrap.innerHTML="";
@@ -331,14 +387,16 @@ function day(){
   });
   wrap.appendChild(list);
 }
-function drawer(){
-  const b=document.getElementById("drbody");b.innerHTML="";
-  const og=E("div");og.className="grp";og.textContent="Rögzített időpont nélkül";b.appendChild(og);
-  const oc=E("div");oc.className="drchips";
-  ONLINE.forEach(([n,m])=>{const x=E("div");x.className="drchip";x.innerHTML=`<b>${n}</b><span>${m}</span>`;oc.appendChild(x);});
-  b.appendChild(oc);
-  CODES.forEach(([grp,rows])=>{
-    const g=E("div");g.className="grp";g.textContent=grp;b.appendChild(g);
+
+function renderCodepage(){
+  const el=document.getElementById("codepage");el.innerHTML="";
+  const wrap=E("div");wrap.className="codepage";
+  if(view==="online"){
+    const oc=E("div");oc.className="drchips";
+    ONLINE.forEach(([n,m])=>{const x=E("div");x.className="drchip";x.innerHTML=`<b>${n}</b><span>${m}</span>`;oc.appendChild(x);});
+    wrap.appendChild(oc);
+  }else{
+    const[,rows]=CODES[view==="kotelezo"?0:1];
     rows.forEach(([k,n])=>{
       const r=E("button");r.className="crow";
       r.innerHTML=`<span class="ck">${k}</span><span class="cnm">${n}</span><span class="cic">⧉</span>`;
@@ -346,22 +404,69 @@ function drawer(){
         r.classList.add("copied");r.querySelector(".cic").textContent="✓";
         setTimeout(()=>{r.classList.remove("copied");r.querySelector(".cic").textContent="⧉"},1200);
       });
-      b.appendChild(r);
+      wrap.appendChild(r);
     });
+    const foot=E("div");foot.style.marginTop="16px";
+    const btn=E("button");btn.className="copyall";btn.textContent=`Mind a ${rows.length} kód másolása`;
+    btn.onclick=()=>{
+      const all=rows.map(r=>r[0]).join("\n");
+      navigator.clipboard.writeText(all).then(()=>{
+        const o=btn.textContent;btn.textContent=`✓ ${rows.length} kód másolva`;
+        setTimeout(()=>btn.textContent=o,1500);
+      });
+    };
+    foot.appendChild(btn);wrap.appendChild(foot);
+  }
+  el.appendChild(wrap);
+}
+
+function renderNav(){
+  const wrap=document.getElementById("navbody");wrap.innerHTML="";
+
+  const head=E("button");
+  head.className="navhead"+(view==="schedule"?" active":"")+(navOrarendOpen?" open":"");
+  head.setAttribute("aria-expanded",navOrarendOpen?"true":"false");
+  head.innerHTML=`<span>Órarend</span><span class="chev">${svgArw}</span>`;
+  head.onclick=()=>{navOrarendOpen=!navOrarendOpen;goto("schedule");renderNav();};
+  wrap.appendChild(head);
+
+  const kids=E("div");kids.className="navkids"+(navOrarendOpen?" open":"");
+  DAYS.forEach((d,i)=>{
+    const b=E("button");b.className="navkid"+(view==="schedule"&&curDay===i?" active":"");
+    b.textContent=d;
+    b.onclick=()=>{goto("schedule",i);closeDrawer();};
+    kids.appendChild(b);
+  });
+  wrap.appendChild(kids);
+
+  NAV_LINKS.forEach(item=>{
+    const b=E("button");b.className="navlink"+(view===item.id?" active":"");
+    b.textContent=item.label;
+    b.onclick=()=>{goto(item.id);closeDrawer();};
+    wrap.appendChild(b);
   });
 }
-function openDrawer(){document.getElementById("drawer").classList.add("show");document.getElementById("scrim").classList.add("show");document.getElementById("drawer").setAttribute("aria-hidden","false")}
-function closeDrawer(){document.getElementById("drawer").classList.remove("show");document.getElementById("scrim").classList.remove("show");document.getElementById("drawer").setAttribute("aria-hidden","true")}
-document.getElementById("burger").onclick=openDrawer;
+
+function openDrawer(){
+  renderNav();
+  document.getElementById("drawer").classList.add("show");
+  document.getElementById("scrim").classList.add("show");
+  document.getElementById("drawer").setAttribute("aria-hidden","false");
+  document.getElementById("burger").classList.add("active");
+}
+function closeDrawer(){
+  document.getElementById("drawer").classList.remove("show");
+  document.getElementById("scrim").classList.remove("show");
+  document.getElementById("drawer").setAttribute("aria-hidden","true");
+  document.getElementById("burger").classList.remove("active");
+}
+function toggleDrawer(){
+  document.getElementById("drawer").classList.contains("show")?closeDrawer():openDrawer();
+}
+document.getElementById("burger").onclick=toggleDrawer;
 document.getElementById("scrim").onclick=closeDrawer;
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
-document.getElementById("copyall").onclick=()=>{
-  const all=CODES.flatMap(g=>g[1].map(r=>r[0])).join("\n");
-  navigator.clipboard.writeText(all).then(()=>{
-    const btn=document.getElementById("copyall");const o=btn.textContent;
-    btn.textContent="✓ Mind a "+CODES.flatMap(g=>g[1]).length+" kód másolva";setTimeout(()=>btn.textContent=o,1500);
-  });
-};
+
 function week(){
   const w=document.getElementById("week");w.innerHTML="";
   const grid=E("div");grid.className="weekgrid";
@@ -383,7 +488,10 @@ function week(){
   });
   w.appendChild(grid);
 }
-rail();day();week();drawer();
+
+rail();
+renderHead();
+renderMain();
 </script>
 </body>
 </html>
