@@ -25,6 +25,7 @@ Rebuilding/reinstalling an APK on every schedule change was the reason for pivot
 - This repo is public. Never commit signing keys, `.env` files, API tokens, or Vercel/Firebase/Supabase credentials — see [.gitignore](.gitignore). If Phase 2/3 introduces a backend or push notifications, secrets belong in Vercel environment variables, not in the repo.
 - The schedule data (professor names, room numbers, course codes) is ordinary public university catalog information, not sensitive — no need to redact it.
 - The `android/` build output contains no signing material currently, but double-check before adding gradle/keystore files later.
+- **Access control lives entirely outside this repo.** The live site (`orarend.szaszroland.hu`) is gated by Cloudflare Access at the DNS edge (email allow-list + one-time PIN / Google login) — see [README.md](README.md#deployment--access). Do not add in-app passwords, login forms, or auth middleware to "secure" the app; that would duplicate/weaken a control that's already handled correctly upstream. If that architecture ever changes, update this note and the README section together.
 
 ## Working style notes
 
