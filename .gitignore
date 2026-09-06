@@ -1,0 +1,35 @@
+# --- Secrets & credentials (never commit these) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.keystore
+*.jks
+*.p12
+secrets.json
+service-account*.json
+
+# --- Android / Web2APK signing & build artifacts ---
+*.apk
+*.aab
+*.idsig
+keystore.properties
+local.properties
+android/build/
+android/.gradle/
+android/app/build/
+
+# --- Node / future tooling (Phase 2+) ---
+node_modules/
+dist/
+.vercel/
+npm-debug.log*
+yarn-error.log*
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/*
+!.vscode/extensions.json
