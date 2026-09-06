@@ -4,7 +4,7 @@ Context for Claude Code (or any AI assistant) working in this repo.
 
 ## What this is
 
-Órarend is a personal university schedule web app, currently a single static file: [index.html](index.html) (inline CSS + vanilla JS, zero dependencies, zero build step). It's being converted into an installable, offline-capable PWA hosted on Vercel — see [ROADMAP.md](ROADMAP.md) for the phased plan and current priorities.
+Órarend is a personal university schedule web app, currently a single static file: [index.html](index.html) (inline CSS + vanilla JS, zero build step). It's being converted into an installable, offline-capable PWA hosted on Vercel — see [ROADMAP.md](ROADMAP.md) for the phased plan and current priorities. It also now includes a checklist/todo feature (shopping lists with price tracking, task lists) with data persisted in `localStorage`, and light/dark theme switching.
 
 ## History (for context, not action items)
 
@@ -14,9 +14,12 @@ Rebuilding/reinstalling an APK on every schedule change was the reason for pivot
 
 ## Code conventions
 
-- No frameworks, no build tooling. Keep it vanilla HTML/CSS/JS unless a roadmap phase explicitly calls for a dependency (e.g. a data backend in Phase 2).
-- CSS custom properties in `:root` drive theming — `--rail` (dark sidebar), `--bg` (light main area), and per-subject color pairs (`--ea-*`, `--gy-*`, `--pr-*`, `--mt-*`). Reuse these rather than hardcoding colors.
-- Schedule data lives in three arrays at the top of the script: `EV` (timed classes), `ONLINE` (async/no-fixed-time courses), `CODES` (registration codes shown in the drawer). Phase 2 moves this out of the source file.
+- No frameworks, no build tooling for the app's own code. Keep it vanilla HTML/CSS/JS unless a roadmap phase explicitly calls for a dependency (e.g. a data backend in Phase 2). The two exceptions that do exist are documented below (export libraries) — don't add further runtime dependencies without calling it out the same way.
+- CSS custom properties in `:root` drive theming — `--rail` (dark sidebar, theme-invariant — it's always dark), `--bg`/`--ink`/`--ink-2`/`--faint`/`--hair`/`--surface-2` (light-mode main area, redefined under `[data-theme="dark"]`), and per-subject color pairs (`--ea-*`, `--gy-*`, `--pr-*`, `--mt-*`, also redefined per theme). Reuse these rather than hardcoding colors — the rail/drawer/nav UI is theme-invariant by design and never needs dark-mode overrides.
+- Theme: `applyTheme('light'|'dark')` sets `data-theme` on `<html>` and persists to `localStorage['orarend-theme']`; an inline script in `<head>` (before the stylesheet) applies the saved/system preference immediately to avoid a flash of the wrong theme. Toggled from the settings panel (gear icon).
+- Checklists: persisted as one JSON blob in `localStorage['orarend-checklists-v1']` (see `loadChecklists`/`saveChecklists` and the `createChecklist`/`addItem`/etc. helpers). This is genuinely private to one browser — no sync across devices, since there's no backend. New checklists get a preset icon per category (`CATS`) and a color cycled from `COLOR_CYCLE` (the same 4 subject accent pairs used elsewhere) — don't add a custom icon/color picker unless asked, that was a deliberate scope decision.
+- Schedule data lives in three arrays at the top of the script: `EV` (timed classes), `ONLINE` (async/no-fixed-time courses), `CODES` (registration codes). Phase 2 moves this out of the source file.
+- Export (JPG/PDF, in the settings panel) uses `html2canvas` + `jsPDF`, loaded via pinned CDN `<script defer>` tags — the one deliberate exception to "no dependencies" here, since there's no native browser way to rasterize a DOM subtree to an image. `buildWeekGrid()` is reused for both the on-screen desktop week view and the export capture (rendered off-screen via `.export-capture`, which force-overrides the CSS variables to light-mode values and disables the `.wcol` entrance animation, regardless of the active theme).
 - Font: "Plus Jakarta Sans" via Google Fonts.
 - UI language is Hungarian; keep new user-facing strings in Hungarian unless told otherwise.
 
@@ -25,6 +28,8 @@ Rebuilding/reinstalling an APK on every schedule change was the reason for pivot
 - This repo is public. Never commit signing keys, `.env` files, API tokens, or Vercel/Firebase/Supabase credentials — see [.gitignore](.gitignore). If Phase 2/3 introduces a backend or push notifications, secrets belong in Vercel environment variables, not in the repo.
 - The schedule data (professor names, room numbers, course codes) is ordinary public university catalog information, not sensitive — no need to redact it.
 - The `android/` build output contains no signing material currently, but double-check before adding gradle/keystore files later.
+- Checklist data (shopping items, task names, prices) lives only in the visitor's own browser `localStorage` — never sent anywhere, not a server-side concern. It's still real user data now, though (the app's first), so don't casually wipe/reset the storage key from code.
+- `html2canvas`/`jsPDF` are loaded from cdnjs over HTTPS with pinned exact versions (see index.html's `<script>` tags) — if bumping versions, keep them pinned, don't switch to a `@latest`-style URL.
 - **Access control lives entirely outside this repo.** The live site (`orarend.szaszroland.hu`) is gated by Cloudflare Access at the DNS edge (email allow-list + one-time PIN / Google login) — see [README.md](README.md#deployment--access). Do not add in-app passwords, login forms, or auth middleware to "secure" the app; that would duplicate/weaken a control that's already handled correctly upstream. If that architecture ever changes, update this note and the README section together.
 
 ## Working style notes
