@@ -111,7 +111,9 @@
   .item .tcol{text-align:right;padding-top:14px}
   .item .tcol .s{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums}
   .item .tcol .e{font-size:12px;font-weight:600;color:var(--faint);font-variant-numeric:tabular-nums;margin-top:2px}
-  .card{border-radius:18px;padding:16px 18px;position:relative;cursor:default;overflow:hidden;
+  .list .item{cursor:pointer}
+  .list .item:active .card{transform:scale(.98)}
+  .card{border-radius:18px;padding:16px 18px;position:relative;cursor:default;overflow:hidden;transition:transform 140ms var(--ease-out);
     border:1px solid transparent}
   .card .arw{position:absolute;top:15px;right:16px;opacity:.5}
   .card .cn{font-size:17px;font-weight:700;letter-spacing:-.01em;padding-right:22px;line-height:1.2}
@@ -145,6 +147,25 @@
     clip-path:inset(0 100% 0 0);transition:clip-path 380ms var(--ease-in-out);display:flex;flex-direction:column;
     pointer-events:none;box-shadow:2px 0 30px rgba(20,24,36,.18)}
   .drawer.show{clip-path:inset(0 0 0 0);pointer-events:auto}
+
+  .sheet-scrim{position:fixed;inset:0;background:rgba(20,24,36,.4);opacity:0;visibility:hidden;
+    transition:opacity 250ms var(--ease-out),visibility 250ms;z-index:80}
+  .sheet-scrim.show{opacity:1;visibility:visible}
+  .sheet{position:fixed;left:0;right:0;bottom:0;max-width:480px;margin:0 auto;background:var(--bg);
+    border-radius:22px 22px 0 0;padding:10px 20px calc(20px + env(safe-area-inset-bottom,0px));
+    transform:translateY(100%);pointer-events:none;transition:transform 320ms var(--ease-drawer);
+    box-shadow:0 -16px 40px -16px rgba(20,24,36,.35);z-index:90}
+  .sheet.show{transform:translateY(0);pointer-events:auto}
+  .sheet-handle{width:36px;height:4px;background:var(--hair);border-radius:99px;margin:6px auto 16px}
+  .sheet-title{font-size:16.5px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+  .sheet-sub{font-size:12.5px;color:var(--faint);font-weight:600;margin-top:3px;margin-bottom:16px}
+  .sheet-action{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:14px 13px;border-radius:13px;
+    border:none;background:var(--surface-2);color:var(--ink);font-family:var(--sans);font-weight:700;font-size:14px;
+    cursor:pointer;margin-bottom:8px;transition:background 150ms ease,transform 140ms var(--ease-out)}
+  .sheet-action:last-child{margin-bottom:0}
+  .sheet-action:hover{background:var(--hair)}
+  .sheet-action:active{transform:scale(.98)}
+  .sheet-action svg{opacity:.7;flex:0 0 auto}
   .dr-body{overflow-y:auto;padding:20px 14px;flex:1;display:flex;flex-direction:column;gap:6px}
 
   .navlink{display:block;width:100%;text-align:left;border:none;background:transparent;color:var(--rail-tx);
@@ -166,6 +187,24 @@
   .crow.copied .ck{color:var(--mt-tx)}
   .crow .cnm{font-size:12px;color:var(--ink-2);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .crow .cic{font-size:12px;color:var(--faint)}
+  .roomsearch-input{width:100%;padding:13px 16px;border-radius:13px;border:1px solid var(--hair);background:var(--surface-2);
+    color:var(--ink);font-family:var(--sans);font-size:14.5px}
+  .roomsearch-input:focus{outline:2px solid var(--ea-ac);outline-offset:1px}
+  .roomsearch-hint{color:var(--faint);font-size:12px;margin:10px 2px 16px}
+  .roomsearch-empty{color:var(--faint);font-size:13.5px;padding:20px 4px}
+  .room-list{display:flex;flex-direction:column;gap:10px}
+  .room-card{cursor:default}
+  .room-card .rc-code{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:800;letter-spacing:.02em;opacity:.8}
+  .room-card .rc-name{font-size:15.5px;font-weight:700;margin-top:3px;letter-spacing:-.01em;padding-right:0}
+  .room-card .rc-meta{display:flex;align-items:flex-start;gap:6px;margin-top:9px;font-size:12px;font-weight:600;opacity:.9;line-height:1.4}
+  .room-card .rc-meta svg{opacity:.7;flex:0 0 auto;margin-top:1px}
+  .room-card .rc-mapbtn{margin-top:12px;border:none;background:rgba(255,255,255,.5);color:inherit;font-family:var(--sans);
+    font-weight:700;font-size:12.5px;padding:8px 14px;border-radius:10px;cursor:pointer;
+    transition:background 150ms ease,transform 140ms var(--ease-out)}
+  .room-card .rc-mapbtn:hover{background:rgba(255,255,255,.8)}
+  .room-card .rc-mapbtn:active{transform:scale(.96)}
+  .room-map{margin-top:12px;border-radius:12px;overflow:hidden;animation:enterUp 220ms var(--ease-out) both}
+  .room-map iframe{width:100%;height:220px;border:0;display:block}
   .copyall{width:100%;background:var(--rail);color:#fff;border:none;border-radius:12px;padding:14px;
     font-size:14px;font-weight:700;cursor:pointer;font-family:var(--sans);transition:background 150ms ease,transform 140ms var(--ease-out)}
   .copyall:active{background:var(--ea-tx);transform:scale(.98)}
@@ -368,6 +407,12 @@
     <div class="dr-body" id="navbody"></div>
   </nav>
 
+  <div class="sheet-scrim" id="sheetScrim"></div>
+  <div class="sheet" id="courseSheet" aria-hidden="true">
+    <div class="sheet-handle"></div>
+    <div class="sheet-body" id="sheetBody"></div>
+  </div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 <script>
@@ -426,6 +471,18 @@ const NAV_LINKS=[
  {id:"kotelezo",label:"Kötelező tárgyak"},
  {id:"online",label:"Rögzített időpont nélkül"},
  {id:"kriterium",label:"Kritérium (0 kredit)"},
+ {id:"teremkereso",label:"Teremkereső"},
+];
+/* Scraped from u-szeged.hu/teremkereso — only the rooms that appear in EV (your own timetable), not the full ~700-room database. See CLAUDE.md. */
+const ROOMS=[
+ {id:718,code:"TIK-A01-0",name:"TIK Alagsor I. Előadó",dept:"Tanulmányi és Információs Központ",address:"Szeged, Ady tér 10",aliases:["TIK Alagsor I–II. Előadó"]},
+ {id:719,code:"TIK-A02-0",name:"TIK Alagsor II. Előadó",dept:"Tanulmányi és Információs Központ",address:"Szeged, Ady tér 10",aliases:["TIK Alagsor I–II. Előadó"]},
+ {id:151,code:"BO-216-3",name:"Bolyai János terem",dept:"Bolyai Intézet",address:"Szeged, Aradi vértanúk tere 1."},
+ {id:150,code:"BO-215-3",name:"Haar Alfréd terem",dept:"Bolyai Intézet",address:"Szeged, Aradi vértanúk tere 1."},
+ {id:717,code:"TIK-002-0",name:"TIK Nagyelőadó",dept:"Tanulmányi és Információs Központ",address:"Szeged, Ady tér 10",aliases:["TIK Kongresszusi terem"]},
+ {id:345,code:"IR-213-3",name:"Irinyi 213 tanterem",dept:"TTIK Természettudományi és Informatikai Kar",address:"Szeged, Tisza Lajos krt. 103.",aliases:["Irinyi 213 PC-terem"]},
+ {id:349,code:"IR-217-3",name:"Irinyi 217 PC-terem",dept:"Informatikai Intézet",address:"Szeged, Tisza Lajos krt. 103."},
+ {id:355,code:"IR-224-3",name:"Irinyi 224 PC-terem",dept:"Informatikai Intézet",address:"Szeged, Tisza Lajos krt. 103."},
 ];
 const PAGE_LABELS=Object.fromEntries(NAV_LINKS.map(x=>[x.id,x.label]));
 const SCHEDULE_VIEWS=["schedule","zoli"];
@@ -446,6 +503,9 @@ let panelMode="nav"; // "nav" | "checklist" | "settings"
 let activeChecklistId=null;
 let checklistFormOpen=false;
 let checklistFormCat="shopping";
+let roomQuery="";
+let openRoomMaps=new Set();
+let sheetCourse=null;
 
 /* ---------- persistence ---------- */
 const CHECKLIST_KEY="orarend-checklists-v1";
@@ -502,6 +562,35 @@ function openChecklist(id){
   rail();renderHead();renderMain();
 }
 
+/* ---------- course action sheet ---------- */
+function openCourseSheet(course){
+  sheetCourse=course;
+  const body=document.getElementById("sheetBody");body.innerHTML="";
+  const title=E("div");title.className="sheet-title";title.textContent=course.name;
+  const sub=E("div");sub.className="sheet-sub";sub.textContent=`${course.s}–${course.en} · ${course.room}`;
+  body.appendChild(title);body.appendChild(sub);
+
+  const roomBtn=E("button");roomBtn.type="button";roomBtn.className="sheet-action";
+  roomBtn.innerHTML=svgLoc+"<span>Terem keresése</span>";
+  roomBtn.onclick=()=>{
+    closeCourseSheet();
+    roomQuery=course.room;
+    goto("teremkereso");
+  };
+  body.appendChild(roomBtn);
+
+  document.getElementById("courseSheet").classList.add("show");
+  document.getElementById("courseSheet").setAttribute("aria-hidden","false");
+  document.getElementById("sheetScrim").classList.add("show");
+}
+function closeCourseSheet(){
+  document.getElementById("courseSheet").classList.remove("show");
+  document.getElementById("courseSheet").setAttribute("aria-hidden","true");
+  document.getElementById("sheetScrim").classList.remove("show");
+  sheetCourse=null;
+}
+document.getElementById("sheetScrim").onclick=closeCourseSheet;
+
 function rail(){
   const r=document.getElementById("rail");r.innerHTML="";
   if(!isScheduleView(view)){
@@ -542,6 +631,7 @@ function renderMain(){
   document.getElementById("codepage").hidden=isScheduleView(view);
   if(isScheduleView(view)){day();week();}
   else if(view==="checklist"){renderChecklistItemsView();}
+  else if(view==="teremkereso"){renderRoomSearch();}
   else{renderCodepage();}
 }
 
@@ -565,6 +655,7 @@ function day(){
         `<div class="cn">${name}${pref?' <span class="pin">★</span>':''}</div>`+
         `<div class="foot">${svgLoc}<span>${room}${who?' · '+who:''}</span></div>`+
       `</div>`;
+    it.onclick=()=>openCourseSheet({name,room,who,s,en,type});
     list.appendChild(it);
   });
   wrap.appendChild(list);
@@ -600,6 +691,66 @@ function renderCodepage(){
     foot.appendChild(btn);wrap.appendChild(foot);
   }
   el.appendChild(wrap);
+}
+
+function matchesRoom(r,q){
+  q=q.toLowerCase();
+  return r.code.toLowerCase().includes(q)||r.name.toLowerCase().includes(q)||
+    r.dept.toLowerCase().includes(q)||r.address.toLowerCase().includes(q)||
+    (r.aliases||[]).some(a=>a.toLowerCase().includes(q));
+}
+function renderRoomSearch(){
+  const el=document.getElementById("codepage");el.innerHTML="";
+  const wrap=E("div");wrap.className="codepage";
+
+  const input=E("input");input.type="text";input.className="roomsearch-input";
+  input.placeholder="Keresés (terem kód, név, épület...)";
+  input.value=roomQuery;input.autocomplete="off";
+  input.oninput=()=>{roomQuery=input.value;renderRoomResults();};
+  wrap.appendChild(input);
+
+  const hint=E("div");hint.className="roomsearch-hint";
+  hint.textContent="A saját órarended "+ROOMS.length+" terme kereshető itt.";
+  wrap.appendChild(hint);
+
+  const list=E("div");list.className="room-list";list.id="roomResultsList";
+  wrap.appendChild(list);
+
+  el.appendChild(wrap);
+  renderRoomResults();
+}
+function renderRoomResults(){
+  const list=document.getElementById("roomResultsList");if(!list)return;
+  list.innerHTML="";
+  const q=roomQuery.trim();
+  const results=q?ROOMS.filter(r=>matchesRoom(r,q)):ROOMS;
+  if(results.length===0){
+    const empty=E("div");empty.className="roomsearch-empty";empty.textContent="Nincs találat.";
+    list.appendChild(empty);return;
+  }
+  results.forEach((r,i)=>{
+    const colorKey=COLOR_CYCLE[r.id%COLOR_CYCLE.length];
+    const isOpen=openRoomMaps.has(r.id);
+    const card=E("div");card.className="card room-card "+colorKey;
+    card.style.animationDelay=Math.min(i*30,300)+"ms";
+    card.innerHTML=
+      `<div class="rc-code">${r.code}</div>`+
+      `<div class="rc-name">${r.name}</div>`+
+      `<div class="rc-meta">${svgLoc}<span>${r.dept} · ${r.address}</span></div>`+
+      `<button type="button" class="rc-mapbtn">${isOpen?"Térkép elrejtése":"Térkép mutatása"}</button>`;
+    card.querySelector(".rc-mapbtn").onclick=()=>{
+      if(isOpen)openRoomMaps.delete(r.id);else openRoomMaps.add(r.id);
+      renderRoomResults();
+    };
+    if(isOpen){
+      const mapWrap=E("div");mapWrap.className="room-map";
+      const iframe=E("iframe");iframe.loading="lazy";
+      iframe.src="https://www.google.com/maps?q="+encodeURIComponent(r.address)+"&output=embed";
+      mapWrap.appendChild(iframe);
+      card.appendChild(mapWrap);
+    }
+    list.appendChild(card);
+  });
 }
 
 function renderChecklistItemsView(){
@@ -793,7 +944,7 @@ document.getElementById("burger").onclick=()=>toggleDrawer("nav");
 document.getElementById("checklistBtn").onclick=()=>toggleDrawer("checklist");
 document.getElementById("gearBtn").onclick=()=>toggleDrawer("settings");
 document.getElementById("scrim").onclick=closeDrawer;
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeDrawer();closeCourseSheet();}});
 
 function buildWeekGrid(dataset){
   dataset=dataset||EV;
