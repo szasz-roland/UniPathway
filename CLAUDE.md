@@ -4,7 +4,9 @@ Context for Claude Code (or any AI assistant) working in this repo.
 
 ## What this is
 
-Órarend is a personal university schedule web app, currently a single static file: [index.html](index.html) (inline CSS + vanilla JS, zero build step). It's being converted into an installable, offline-capable PWA hosted on Vercel — see [ROADMAP.md](ROADMAP.md) for the phased plan and current priorities. It also now includes a checklist/todo feature (shopping lists with price tracking, task lists) with data persisted in `localStorage`, and light/dark theme switching.
+Órarend is a personal university schedule web app, currently a single static file: [index.html](index.html) (inline CSS + vanilla JS, zero build step). It's being converted into an installable, offline-capable PWA hosted on Vercel — see [ROADMAP.md](ROADMAP.md) for the phased plan and current priorities.
+
+Beyond the core weekly schedule, it now also has: light/dark theme switching; a checklist/todo feature (shopping lists with price tracking, task lists), persisted in `localStorage`; JPG/PDF schedule export; a second person's timetable (`ZOLI_EV`) alongside your own as its own nav entry; a from-scratch "Teremkereső" room search (scoped to just your own classes' rooms) with an embedded-map toggle; and a course action sheet (tap a class → "Terem keresése" jumps to its room, pre-filtered). See "Code conventions" below for how each of these actually works before touching them.
 
 ## History (for context, not action items)
 
@@ -30,7 +32,7 @@ Rebuilding/reinstalling an APK on every schedule change was the reason for pivot
 
 ## Security / repo hygiene
 
-- This repo is public. Never commit signing keys, `.env` files, API tokens, or Vercel/Firebase/Supabase credentials — see [.gitignore](.gitignore). If Phase 2/3 introduces a backend or push notifications, secrets belong in Vercel environment variables, not in the repo.
+- This repo is meant to eventually be public on GitHub, so treat it as if it already were — but as of now (2026-09-07) it has **no GitHub remote configured at all**; every commit so far is local-only (see [DEPLOYMENT.md](DEPLOYMENT.md) for status). Never commit signing keys, `.env` files, API tokens, or Vercel/Firebase/Supabase credentials — see [.gitignore](.gitignore). If Phase 2/3 introduces a backend or push notifications, secrets belong in Vercel environment variables, not in the repo.
 - The schedule data (professor names, room numbers, course codes) is ordinary public university catalog information, not sensitive — no need to redact it.
 - The `android/` build output contains no signing material currently, but double-check before adding gradle/keystore files later.
 - Checklist data (shopping items, task names, prices) lives only in the visitor's own browser `localStorage` — never sent anywhere, not a server-side concern. It's still real user data now, though (the app's first), so don't casually wipe/reset the storage key from code.

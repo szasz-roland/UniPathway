@@ -2,6 +2,8 @@
 
 Live status of putting Órarend on `szaszroland.hu`, locked behind Cloudflare Access. This tracks progress across sessions/devices — the interactive checklist (link below) only saves to one browser's local storage.
 
+**Where things stand (2026-09-07):** nothing below has moved since it was first written — all work since then went into app features (dark mode, checklists, export, Zoli's schedule, room search, the course action sheet; see [ROADMAP.md](ROADMAP.md)). Hosting is still fully paused at the `.hu` "Pending" blocker. Also worth knowing: **this repo has no GitHub remote configured** — every commit is local-only on `main`, so "push repo to GitHub" below is still literally step zero, not just unchecked.
+
 Full step-by-step with copy buttons: **[Órarend Launch checklist](https://claude.ai/code/artifact/abe2becf-0c3b-453e-aebf-eaa31cee53a5)**
 
 ## Architecture decided
@@ -29,7 +31,7 @@ Vercel (static hosting of this repo)
 - [ ] Once Active: switch `szaszroland.hu`'s nameserver profile from "Rackhost" to "Cloudflare" (Domainek → DNS profilok)
 - [ ] Wait for Cloudflare zone to show "Active" (propagation)
 - [ ] Cloudflare SSL/TLS → Full (strict) + Always Use HTTPS
-- [ ] Push repo to GitHub, import into Vercel, deploy
+- [ ] Create a GitHub repo (none exists yet — no `gh` CLI available locally either, so this needs to be done via github.com or by installing `gh`), add it as this repo's remote, push `main`; then import into Vercel and deploy
 - [ ] Add `orarend.szaszroland.hu` as custom domain in Vercel; add matching proxied CNAME in Cloudflare DNS
 - [ ] Redirect Vercel's `*.vercel.app` alias to the custom domain
 - [ ] Cloudflare Zero Trust → Access: create application + allow-list policy for one email
