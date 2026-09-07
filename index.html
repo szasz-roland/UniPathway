@@ -392,6 +392,20 @@ const ONLINE=[
  ["MI az egyetemi tanulmányokban","E-learning · kritérium"],
  ["Karrierépítés alapozó kurzus","kritérium · 0 kredit"],
 ];
+const ZOLI_EV=[
+ [0,"08:00","10:00","Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak","Terem nincs megadva","","ea"],
+ [0,"10:00","12:00","Menedzselt programozás gy.","Terem nincs megadva","","gy"],
+ [0,"12:00","14:00","Digitális architektúrák","Terem nincs megadva","","ea"],
+ [0,"16:00","18:00","Szoftvertesztelés","Terem nincs megadva","","ea"],
+ [0,"16:00","18:00","Digitális architektúra konzultáció","Kiss Árpád terem","","pr"],
+ [1,"10:00","12:00","Mesterséges intelligencia gy.","Terem nincs megadva","","gy"],
+ [1,"15:00","16:00","Szoftvertesztelés gy.","Terem nincs megadva","","gy"],
+ [1,"18:00","20:00","Menedzselt programozás","Terem nincs megadva","","ea"],
+ [2,"08:00","10:00","Mesterséges intelligencia","Terem nincs megadva","","ea"],
+ [2,"14:00","16:00","Projektmunka I","Terem nincs megadva","","gy"],
+ [2,"16:00","18:00","Informatikai biztonság","Terem nincs megadva","","ea"],
+ [2,"18:00","20:00","Hogyan fejlesszünk pénzügyi kultúrát?","Terem nincs megadva","","mt"],
+];
 const CODES=[
  ["Kötelező tárgyak",[
    ["IN1001EA","Programozás alapjai (ea)"],["IN1001LA-16","Programozás alapjai gy."],
@@ -408,11 +422,15 @@ const CODES=[
 ];
 const NAV_LINKS=[
  {id:"schedule",label:"Órarend"},
+ {id:"zoli",label:"Zoli órarend"},
  {id:"kotelezo",label:"Kötelező tárgyak"},
  {id:"online",label:"Rögzített időpont nélkül"},
  {id:"kriterium",label:"Kritérium (0 kredit)"},
 ];
 const PAGE_LABELS=Object.fromEntries(NAV_LINKS.map(x=>[x.id,x.label]));
+const SCHEDULE_VIEWS=["schedule","zoli"];
+const isScheduleView=v=>SCHEDULE_VIEWS.includes(v);
+const datasetFor=v=>v==="zoli"?ZOLI_EV:EV;
 const CATS={
  shopping:{label:"Bevásárlólista",icon:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>'},
  tasks:{label:"Feladatlista",icon:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>'},
@@ -486,18 +504,19 @@ function openChecklist(id){
 
 function rail(){
   const r=document.getElementById("rail");r.innerHTML="";
-  if(view!=="schedule"){
+  if(!isScheduleView(view)){
     const wrap=E("div");wrap.className="rail-label-wrap";
     const label=E("div");label.className="rail-label";
     label.textContent=view==="checklist"?((getChecklist(activeChecklistId)||{}).name||"Lista"):PAGE_LABELS[view];
     wrap.appendChild(label);r.appendChild(wrap);
     return;
   }
+  const dataset=datasetFor(view);
   DAYS.forEach((d,i)=>{
-    const n=EV.filter(e=>e[0]===i).length;
+    const n=dataset.filter(e=>e[0]===i).length;
     const b=E("button");b.className="dbtn"+(i===curDay?" on":"")+(n===0?" free":"");
     b.innerHTML=SHORT[i]+(n?`<span class="cnt">${n}</span>`:"");
-    b.onclick=()=>goto("schedule",i);
+    b.onclick=()=>goto(view,i);
     r.appendChild(b);
   });
 }
@@ -505,8 +524,8 @@ function rail(){
 function renderHead(){
   const t=document.getElementById("pageTitle");
   const d=document.getElementById("dateBox");
-  if(view==="schedule"){
-    t.innerHTML=`Órarend<span class="day" id="dayName">${DAYS[curDay]}</span>`;
+  if(isScheduleView(view)){
+    t.innerHTML=`${PAGE_LABELS[view]}<span class="day" id="dayName">${DAYS[curDay]}</span>`;
     d.hidden=false;
   }else if(view==="checklist"){
     const list=getChecklist(activeChecklistId);
@@ -519,15 +538,15 @@ function renderHead(){
 }
 
 function renderMain(){
-  document.getElementById("schedviews").hidden=view!=="schedule";
-  document.getElementById("codepage").hidden=view==="schedule";
-  if(view==="schedule"){day();week();}
+  document.getElementById("schedviews").hidden=!isScheduleView(view);
+  document.getElementById("codepage").hidden=isScheduleView(view);
+  if(isScheduleView(view)){day();week();}
   else if(view==="checklist"){renderChecklistItemsView();}
   else{renderCodepage();}
 }
 
 function day(){
-  const items=EV.filter(e=>e[0]===curDay);
+  const items=datasetFor(view).filter(e=>e[0]===curDay);
   document.getElementById("dCount").textContent=items.length||"0";
   const wrap=document.getElementById("list");wrap.innerHTML="";
   if(items.length===0){
@@ -544,7 +563,7 @@ function day(){
       `<div class="card ${type}${isNow?' now':''}">`+
         `<span class="arw">${svgArw}</span>`+
         `<div class="cn">${name}${pref?' <span class="pin">★</span>':''}</div>`+
-        `<div class="foot">${svgLoc}<span>${room} · ${who}</span></div>`+
+        `<div class="foot">${svgLoc}<span>${room}${who?' · '+who:''}</span></div>`+
       `</div>`;
     list.appendChild(it);
   });
@@ -776,10 +795,11 @@ document.getElementById("gearBtn").onclick=()=>toggleDrawer("settings");
 document.getElementById("scrim").onclick=closeDrawer;
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
 
-function buildWeekGrid(){
+function buildWeekGrid(dataset){
+  dataset=dataset||EV;
   const grid=E("div");grid.className="weekgrid";
   DAYS.forEach((d,i)=>{
-    const items=EV.filter(e=>e[0]===i);
+    const items=dataset.filter(e=>e[0]===i);
     const col=E("div");col.className="wcol"+(i===nowDay?" today":"")+(items.length===0?" freecol":"");
     col.innerHTML=`<div class="wh"><span class="wn">${d}</span><span class="wc">${items.length?items.length+" óra":"szabad"}</span></div>`;
     const cards=E("div");cards.className="wcards";
@@ -798,7 +818,7 @@ function buildWeekGrid(){
 }
 function week(){
   const w=document.getElementById("week");w.innerHTML="";
-  w.appendChild(buildWeekGrid());
+  w.appendChild(buildWeekGrid(datasetFor(view)));
 }
 
 /* ---------- export ---------- */
