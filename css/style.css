@@ -138,10 +138,15 @@
     --sheet-bg:var(--ea-bg);--sheet-tx:var(--ea-tx);--sheet-ac:var(--ea-ac);
     background:var(--bg);background-image:radial-gradient(120% 140px at 100% 0%,var(--sheet-bg) 0%,transparent 70%);
     border-radius:22px 22px 0 0;padding:10px 20px calc(20px + env(safe-area-inset-bottom,0px));
-    transform:translateY(100%);pointer-events:none;transition:transform 320ms var(--ease-drawer);
+    transform:translateY(100%);pointer-events:none;transition:transform 320ms var(--ease-drawer),opacity 260ms var(--ease-out);
     box-shadow:0 -16px 40px -16px rgba(20,24,36,.35);z-index:90}
   .sheet.show{transform:translateY(0);pointer-events:auto}
   .sheet-handle{width:36px;height:4px;background:var(--hair);border-radius:99px;margin:6px auto 16px}
+  .sheet-close{display:none;position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;
+    border:none;background:var(--surface-2);color:var(--ink-2);align-items:center;justify-content:center;
+    font-size:20px;line-height:1;cursor:pointer;transition:background 150ms ease,color 150ms ease,transform 140ms var(--ease-out)}
+  .sheet-close:hover{background:var(--hair);color:var(--ink)}
+  .sheet-close:active{transform:scale(.9)}
   .sheet-title{font-size:17px;font-weight:800;color:var(--sheet-tx);letter-spacing:-.01em}
   .sheet-sub{font-size:12.5px;color:var(--faint);font-weight:600;margin-top:3px;margin-bottom:16px}
   .sheet-action{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:14px 13px;border-radius:13px;
@@ -222,15 +227,19 @@
   .wcol:nth-child(4){animation-delay:120ms}
   .wcol:nth-child(5){animation-delay:160ms}
   .wcol .wh{display:flex;align-items:baseline;justify-content:space-between;padding:0 4px 12px;
-    border-bottom:2px solid var(--hair);margin-bottom:12px}
+    border-bottom:2px solid var(--hair);margin-bottom:12px;cursor:pointer;transition:border-color 150ms ease}
   .wcol .wh .wn{font-size:16px;font-weight:800;letter-spacing:-.01em}
   .wcol.today .wh .wn{color:var(--gy-ac)}
   .wcol.freecol .wh .wn{color:var(--faint)}
+  .wcol.selected .wh{border-bottom-color:var(--sel)}
   .wcol .wh .wc{font-size:11px;font-weight:700;color:var(--faint)}
   .wcol .wcards{display:flex;flex-direction:column;gap:10px}
-  .wcard{border-radius:14px;padding:11px 12px;position:relative;overflow:hidden}
+  .wcard{border-radius:14px;padding:11px 12px;position:relative;overflow:hidden;cursor:pointer;
+    transition:transform 140ms var(--ease-out)}
+  .wcard:active{transform:scale(.97)}
+  .wcard .warw{position:absolute;top:10px;right:10px;opacity:.45}
   .wcard .wt{font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;opacity:.85}
-  .wcard .wnm{font-size:13.5px;font-weight:700;line-height:1.2;margin:3px 0 4px;letter-spacing:-.01em}
+  .wcard .wnm{font-size:13.5px;font-weight:700;line-height:1.2;margin:3px 0 4px;letter-spacing:-.01em;padding-right:16px}
   .wcard .wr{font-size:11px;font-weight:600;opacity:.82;display:flex;gap:4px;align-items:flex-start}
   .wcard .wr svg{flex:0 0 auto;margin-top:1px;opacity:.7}
   .wcard.ea{background:var(--ea-bg);color:var(--ea-tx)}
@@ -333,6 +342,18 @@
     .week{display:block}
     .head .date{display:none}
     .head .title .day{display:none}
+    #rail .dbtn{display:none}
+
+    /* Course action sheet becomes a centered dialog instead of a mobile bottom sheet */
+    .sheet{left:50%;right:auto;bottom:auto;top:50%;margin:0;
+      width:min(440px,calc(100% - 48px));max-width:440px;
+      border-radius:20px;padding:22px 26px;
+      transform:translate(-50%,-50%) scale(.96);opacity:0;
+      box-shadow:0 24px 60px -20px rgba(20,24,36,.45)}
+    .sheet.show{transform:translate(-50%,-50%) scale(1);opacity:1}
+    .sheet-handle{display:none}
+    .sheet-close{display:flex}
+    .sheet-title{padding-right:36px}
   }
   @media(min-width:641px) and (max-width:1079px){
     .list,.freeday{max-width:none}

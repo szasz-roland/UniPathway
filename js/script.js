@@ -269,6 +269,7 @@ function closeCourseSheet(){
   sheetCourse=null;
 }
 document.getElementById("sheetScrim").onclick=closeCourseSheet;
+document.getElementById("sheetClose").onclick=closeCourseSheet;
 
 function rail(){
   const r=document.getElementById("rail");r.innerHTML="";
@@ -645,16 +646,19 @@ function buildWeekGrid(dataset){
   const grid=E("div");grid.className="weekgrid";
   DAYS.forEach((d,i)=>{
     const items=dataset.filter(e=>e[0]===i);
-    const col=E("div");col.className="wcol"+(i===nowDay?" today":"")+(items.length===0?" freecol":"");
+    const col=E("div");col.className="wcol"+(i===nowDay?" today":"")+(i===curDay?" selected":"")+(items.length===0?" freecol":"");
     col.innerHTML=`<div class="wh"><span class="wn">${d}</span><span class="wc">${items.length?items.length+" óra":"szabad"}</span></div>`;
+    col.querySelector(".wh").onclick=()=>{curDay=i;week();};
     const cards=E("div");cards.className="wcards";
     if(items.length===0){cards.innerHTML='<div class="wempty">Szabadnap</div>';}
     else items.forEach(e=>{
       const[,s,en,name,room,who,type,pref]=e;
       const isNow=i===nowDay&&nowMin>=mins(s)&&nowMin<mins(en);
       const c=E("div");c.className="wcard "+type+(isNow?" now":"");
-      c.innerHTML=`<div class="wt">${s}–${en}</div><div class="wnm">${name}${pref?' ★':''}</div>`+
+      c.innerHTML=`<span class="warw">${svgArw}</span>`+
+        `<div class="wt">${s}–${en}</div><div class="wnm">${name}${pref?' ★':''}</div>`+
         `<div class="wr">${svgLoc}<span>${room}</span></div>`;
+      c.onclick=()=>openCourseSheet({name,room,who,s,en,type});
       cards.appendChild(c);
     });
     col.appendChild(cards);grid.appendChild(col);
