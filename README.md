@@ -37,7 +37,7 @@ Edit the `EV`, `ONLINE`, `CODES`, `ZOLI_EV`, and `ROOMS` arrays in [js/script.js
 
 ## Deployment & access
 
-**Not live yet** — this is the planned architecture, not the current state. See [DEPLOYMENT.md](DEPLOYMENT.md) for real-time progress (currently paused on a `.hu` domain registration blocker, and this repo doesn't even have a GitHub remote configured yet). Once it is live: the public GitHub repo will not mean the live site is public. The stack:
+**Live, but not yet locked down.** The app is up at `https://orarend.szaszroland.hu` (Rackhost → Cloudflare DNS → Vercel, all connected and working) — but the Cloudflare Access step described below has not been set up yet, so despite the intent described here, the site is currently reachable by anyone with the URL. See [DEPLOYMENT.md](DEPLOYMENT.md) for the live status and what's left. The stack, once Access is actually in place:
 
 ```
 Rackhost (registrar for szaszroland.hu)
@@ -47,11 +47,11 @@ Cloudflare (DNS + Access)
 Vercel (static hosting of this repo)
 ```
 
-- **Vercel** hosts the site as-is (zero build config — it's a static site, `index.html` + `css/`/`js/`). `.vercelignore` keeps the legacy `android/` copy and the raw `.xlsx` exports out of the deployment. The project's auto-assigned `*.vercel.app` URL is set to redirect to the custom domain so it can't be used to bypass the access gate below.
-- **Cloudflare DNS** proxies (orange-cloud) `orarend.szaszroland.hu` to Vercel, with SSL/TLS mode "Full (strict)" and "Always Use HTTPS" on.
-- **Cloudflare Access** (Zero Trust → Access → Applications) sits in front of the domain as a login wall: nothing reaches the app until the visitor authenticates via a One-Time email PIN (or Google login, if added later) *and* matches an explicit email allow-list policy.
+- **Vercel** hosts the site as-is (zero build config — it's a static site, `index.html` + `css/`/`js/`). `.vercelignore` keeps the legacy `android/` copy and the raw `.xlsx` exports out of the deployment. The project's auto-assigned `*.vercel.app` URL should be set to redirect to the custom domain so it can't be used to bypass the access gate below — **not yet confirmed done**, see [DEPLOYMENT.md](DEPLOYMENT.md).
+- **Cloudflare DNS** proxies (orange-cloud) `orarend.szaszroland.hu` to Vercel. SSL/TLS mode is currently "Full" — upgrading to "Full (strict)" is a pending step, safe to do now that Vercel has issued a certificate for the domain.
+- **Cloudflare Access** (Zero Trust → Access → Applications) is meant to sit in front of the domain as a login wall — **this has not been set up yet**. Until it is, nothing stops any visitor from reaching the app directly.
 
-All access control lives at the Cloudflare edge, not in this repo's code — there is intentionally no password/auth logic in the app itself. See [CLAUDE.md](CLAUDE.md) for the reasoning.
+Once Access is actually configured, all access control will live at the Cloudflare edge, not in this repo's code — there is intentionally no password/auth logic in the app itself. See [CLAUDE.md](CLAUDE.md) for the reasoning.
 
 ## Roadmap
 

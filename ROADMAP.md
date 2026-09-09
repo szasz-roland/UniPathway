@@ -16,7 +16,7 @@
 - [ ] Add `manifest.json` (name, icons, theme color `#20242e`, background `#ffffff`, `display: standalone`)
 - [ ] Add `service-worker.js` caching the app shell for full offline support
 - [ ] Generate PWA icon sizes (192x192, 512x512, maskable) from `assets/icon.png`
-- [ ] Deploy to Vercel; point custom domain `orarend.szaszroland.hu` at it — see [DEPLOYMENT.md](DEPLOYMENT.md) for live progress (currently blocked on `.hu` registry status)
+- [x] Deploy to Vercel; point custom domain `orarend.szaszroland.hu` at it — **live and working**, but **not yet locked down** (Cloudflare Access still needs setting up — see [DEPLOYMENT.md](DEPLOYMENT.md), this is the actual priority right now, not a documentation afterthought)
 - [ ] Retire the `android/` Web2APK output once the installable PWA replaces it — also resolves the export/download limitation noted above, since an installed PWA runs through a real browser engine
 
 ## Phase 2 — Data management & dynamic updates
@@ -31,4 +31,4 @@
 
 ## Status
 
-_Last updated 2026-09-08._ Phase 1's file split is done (see above); the rest (manifest, service worker, actual hosting) hasn't started — feature work (dark mode, checklists, export, nav redesign, a second schedule, room search, the course action sheet, per-course info) took priority instead, see "Shipped" above. Deployment/hosting setup (domain, DNS, Access lock) is paused mid-way — see [DEPLOYMENT.md](DEPLOYMENT.md) for live status and current blockers. Schedule data is still hardcoded (now in `js/script.js` rather than inline in `index.html`). Git-wise: everything is committed locally on `main`, but **this repo has no GitHub remote yet** — nothing has been pushed anywhere.
+_Last updated 2026-09-09._ **The app is live at `orarend.szaszroland.hu`** (Rackhost → Cloudflare → Vercel, all connected) — but **Cloudflare Access is not set up yet, so the site is currently public**, not restricted to personal use like the project intends. That's the actual next priority, ahead of manifest/service-worker/PWA work. Repo is public on GitHub: [github.com/szasz-roland/UniPathway](https://github.com/szasz-roland/UniPathway). Schedule data is still hardcoded (in `js/script.js`). See [DEPLOYMENT.md](DEPLOYMENT.md) for exact live status.

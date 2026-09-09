@@ -2,7 +2,9 @@
 
 Live status of putting Órarend on `szaszroland.hu`, locked behind Cloudflare Access. This tracks progress across sessions/devices — the interactive checklist (link below) only saves to one browser's local storage.
 
-**Where things stand (2026-09-09):** the `.hu` domain is now **Active** at Rackhost (was stuck on "Hibás/hiányos megrendelés," resolved by the user directly with Rackhost) — the earlier registry blocker is gone. The GitHub repo is also live: **[github.com/szasz-roland/UniPathway](https://github.com/szasz-roland/UniPathway)** (note: repo name is `UniPathway`, not `orarend` — just a naming choice, doesn't affect anything), pushed via SSH, `main` tracking `origin/main`. Next up: switch the domain's nameservers to Cloudflare.
+**Where things stand (2026-09-09): the app is live at `https://orarend.szaszroland.hu`, served from Vercel through Cloudflare — but Cloudflare Access has NOT been set up yet.** That means the site is currently reachable by anyone with the URL, no login wall, which is the opposite of the original goal for this project (personal use only, not publicly accessible). **Setting up Access (Phase 4 below) is the one remaining step and should not be treated as optional or "later" — until it's done, treat the live URL as public.**
+
+Everything up through Vercel is done: domain Active at Rackhost, GitHub repo pushed ([github.com/szasz-roland/UniPathway](https://github.com/szasz-roland/UniPathway)), nameservers switched to Cloudflare, Vercel connected and serving `orarend.szaszroland.hu` correctly (confirmed working by the user directly).
 
 Full step-by-step with copy buttons: **[Órarend Launch checklist](https://claude.ai/code/artifact/abe2becf-0c3b-453e-aebf-eaa31cee53a5)**
 
@@ -29,14 +31,14 @@ Vercel (static hosting of this repo)
   - `braelyn.ns.cloudflare.com`
 - [x] Domain `szaszroland.hu` is **Active** in Rackhost (was stuck on "Hibás/hiányos megrendelés," now resolved)
 - [x] GitHub repo created and pushed: [github.com/szasz-roland/UniPathway](https://github.com/szasz-roland/UniPathway) (SSH remote, `main` tracking `origin/main`)
-- [ ] Switch `szaszroland.hu`'s nameserver profile from "Rackhost" to "Cloudflare" (Domainek → DNS profilok) — now unblocked, do this next
-- [ ] Wait for Cloudflare zone to show "Active" (propagation)
-- [ ] Cloudflare SSL/TLS → Full (strict) + Always Use HTTPS
-- [ ] Import `UniPathway` into Vercel and deploy (zero build config — static site)
-- [ ] Add `orarend.szaszroland.hu` as custom domain in Vercel; add matching proxied CNAME in Cloudflare DNS
-- [ ] Redirect Vercel's `*.vercel.app` alias to the custom domain
-- [ ] Cloudflare Zero Trust → Access: create application + allow-list policy for one email
-- [ ] Test: private-window visit hits Access login, not the app; wrong email is refused; raw vercel.app URL redirects and is still gated
+- [x] Switched `szaszroland.hu`'s nameserver profile from "Rackhost" to "Cloudflare"
+- [x] Cloudflare zone active (propagated)
+- [x] Imported `UniPathway` into Vercel and deployed (zero build config — static site)
+- [x] Added `orarend.szaszroland.hu` as custom domain in Vercel, with matching proxied CNAME (`orarend` → `cname.vercel-dns.com`) in Cloudflare DNS — confirmed loading correctly end to end
+- [ ] Cloudflare SSL/TLS mode is currently **Full** (confirmed), not yet upgraded to **Full (strict)** — safe to do now that Vercel has issued a real certificate for the domain
+- [ ] Redirect Vercel's auto-assigned `*.vercel.app` alias to the custom domain (not yet confirmed done — check Vercel → Settings → Domains) — otherwise that raw URL bypasses Cloudflare (and Access, once set up) entirely
+- [ ] **Cloudflare Zero Trust → Access: create application + allow-list policy for one email — NOT DONE YET, this is the actual security lock and the site is public without it**
+- [ ] Test after Access is set up: private-window visit hits Access login, not the app; wrong email is refused; raw vercel.app URL redirects and is still gated
 
 ## Known issues / open problems
 
@@ -49,10 +51,10 @@ After that fix and a full rebuild/reinstall, export **still** fails silently on-
 
 **This is very likely an inherent limitation of the current Web2APK wrapper, not a bug in `index.html`.** Fixing it properly would mean patching the wrapper's native Java/Kotlin (add a `DownloadListener` that hands the data off to Android's `DownloadManager` or `MediaStore`), which is out of scope for this repo and would need to be redone on every Web2APK rebuild unless committed upstream in that separate project.
 
-**Practical workaround today:** open the app in a real mobile browser (e.g. Chrome for Android) instead of the wrapped APK — either by serving this repo locally on the same network, or once hosting is live, at `orarend.szaszroland.hu` directly. Export works fully there.
+**Practical workaround today:** open the app in a real mobile browser (e.g. Chrome for Android) instead of the wrapped APK — either by serving this repo locally on the same network, or now that hosting is live, at `orarend.szaszroland.hu` directly (note: that URL is currently public, see the top of this file — fine for your own quick testing, just don't share the link until Access is set up). Export works fully there.
 
 **Recommended path:** deprioritize patching the native wrapper further and instead finish Phase 1 (PWA + hosting, see [ROADMAP.md](ROADMAP.md)). An installed PWA runs through the phone's actual browser engine, which has full native download support — this whole class of problem goes away once the Web2APK wrapper is retired, which was already the plan (see CLAUDE.md's History section).
 
 ## Resuming
 
-Pick up at the first unchecked box above: switching `szaszroland.hu`'s nameservers to Cloudflare.
+Pick up at the first unchecked box above: **set up Cloudflare Access.** The app is live and reachable, but not yet locked down — this is the priority, not a nice-to-have.
