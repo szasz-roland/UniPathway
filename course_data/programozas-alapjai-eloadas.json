@@ -1,0 +1,31 @@
+{
+  "name": "Programozás alapjai előadás",
+  "code": "IN1001EA",
+  "instructor": "Gergely Tamás, Dr.",
+  "summary": "Őszi félévben jelenléti előadás; tavasszal vizsgakurzusként hirdetik meg. A vizsgajelentkezés feltétele a gyakorlat teljesítése.",
+  "topics": [
+    "Programozás fázisai, algoritmusok, imperatív alapfogalmak, szintaxis",
+    "Vezérlési szerkezetek (szekvenciális, szelekciós, ismétléses, eljárás)",
+    "Adattípus fogalma, alapvető absztrakt adattípusok",
+    "Alapvető algoritmuspéldák, IO és fájlkezelés, tesztelés",
+    "Mindez Python nyelven"
+  ],
+  "grading": [
+    "Vizsga: CooSpace-es teszt és/vagy szóbeli rész, segédeszköz nem használható",
+    "50% alatt : elégtelen (1)",
+    "50%-tól : elégséges (2)",
+    "65%-tól : közepes (3)",
+    "80%-tól : jó (4)",
+    "90%-tól : jeles (5)"
+  ],
+  "rules": [
+    "Vizsgára jelentkezés feltétele: gyakorlat teljesítése",
+    "CooSpace-es teszt javítása automatikus"
+  ],
+  "links": [
+    "Eric Matthes: Python Crash Course (3rd ed.), No Starch Press, 2023, ISBN 978-1-71850-270-3",
+    "Quentin Charatan, Aaron Kans: Programming in Two Semesters, Springer, 2022, ISBN 978-3-031-01325-6",
+    "https://python-course.eu/"
+  ],
+  "updated": "2026. szept. 4."
+}

@@ -12,10 +12,10 @@
 
 ## Phase 1 — PWA conversion & hosting
 
-- [ ] Split [index.html](index.html) into `index.html`, `style.css`, `script.js`
+- [x] Split `index.html` into `index.html`, `css/style.css`, `js/script.js` — also moved `icon.png` → `assets/icon.png` and the raw Neptun exports → `data/` while at it
 - [ ] Add `manifest.json` (name, icons, theme color `#20242e`, background `#ffffff`, `display: standalone`)
 - [ ] Add `service-worker.js` caching the app shell for full offline support
-- [ ] Generate PWA icon sizes (192x192, 512x512, maskable) from `icon.png`
+- [ ] Generate PWA icon sizes (192x192, 512x512, maskable) from `assets/icon.png`
 - [ ] Deploy to Vercel; point custom domain `orarend.szaszroland.hu` at it — see [DEPLOYMENT.md](DEPLOYMENT.md) for live progress (currently blocked on `.hu` registry status)
 - [ ] Retire the `android/` Web2APK output once the installable PWA replaces it — also resolves the export/download limitation noted above, since an installed PWA runs through a real browser engine
 
@@ -31,4 +31,4 @@
 
 ## Status
 
-_Last updated 2026-09-07._ Phase 1 code work not started — feature work (dark mode, checklists, export, nav redesign, a second schedule, room search, the course action sheet) took priority instead, see "Shipped" above. Deployment/hosting setup (domain, DNS, Access lock) is paused mid-way — see [DEPLOYMENT.md](DEPLOYMENT.md) for live status and current blockers. App is currently a single static `index.html` with hardcoded schedule data. Git-wise: everything is committed locally on `main`, but **this repo has no GitHub remote yet** — nothing has been pushed anywhere.
+_Last updated 2026-09-08._ Phase 1's file split is done (see above); the rest (manifest, service worker, actual hosting) hasn't started — feature work (dark mode, checklists, export, nav redesign, a second schedule, room search, the course action sheet, per-course info) took priority instead, see "Shipped" above. Deployment/hosting setup (domain, DNS, Access lock) is paused mid-way — see [DEPLOYMENT.md](DEPLOYMENT.md) for live status and current blockers. Schedule data is still hardcoded (now in `js/script.js` rather than inline in `index.html`). Git-wise: everything is committed locally on `main`, but **this repo has no GitHub remote yet** — nothing has been pushed anywhere.

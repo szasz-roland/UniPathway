@@ -1,0 +1,28 @@
+{
+  "name": "IT-biztonság az SZTE-n",
+  "code": "XK001-ITSEC_SZTE-HU",
+  "instructor": "Tóthné Dr. Jancsó Katalin",
+  "summary": "Online kritérium kurzus az IT- és információbiztonsági tudatosságról: alapfogalmak, támadástípusok, veszélyforrások, védekezés és az SZTE biztonsági szabályai.",
+  "topics": [
+    "IT- és információbiztonsági alapok, biztonságtudatosság",
+    "Támadások fajtái, veszélyforrások, adathalászat",
+    "A felhasználó felelőssége és kötelezettségei",
+    "IT- és információbiztonság az SZTE-n, tiszta képernyő/asztal politika",
+    "Jelszó- és internethasználat",
+    "Videokonferenciák, otthoni biztonságos internethasználat",
+    "Elektronikus levelezés szabályai az SZTE-n"
+  ],
+  "grading": [
+    "Nincs pontszám/osztályzat skála megadva — a színtéren elérhető teszt kitöltése szükséges"
+  ],
+  "rules": [
+    "Teljesen online forma",
+    "A tananyag (oktatóanyag + oktatóvideók) elvégzése után a félév során elérhető teszt kitöltése szükséges"
+  ],
+  "links": [
+    "https://www.eset.com/hu/szemelyazonossag-lopas/",
+    "https://www.eset.com/hu/adathalaszat/",
+    "https://www.eset.com/hu/zsarolovirus/"
+  ],
+  "updated": "2026. aug. 20."
+}

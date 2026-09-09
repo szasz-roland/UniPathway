@@ -1,0 +1,35 @@
+{
+  "name": "Matematika informatikusoknak 1. ea.",
+  "code": "MN1841EA",
+  "instructor": "Dr. Dormán Miklós",
+  "summary": "Előadás: kedd 12-14, JATIK Kongresszusi terem. 2026/27 őszi félév.",
+  "topics": [
+    "Ítéletkalkulus, logikai műveletek, formulák, konjunktív normálforma, predikátumkalkulus",
+    "Halmazműveletek és azonosságok, Descartes-szorzat, leképezés, halmazok számossága",
+    "Relációk, tranzitív lezárás, rendezések, ekvivalenciarelációk és osztályozások",
+    "Gráfelmélet alapjai, fagráfok, Hamilton út, kombinatorika alapjai",
+    "Teljes indukció, rekurzív definíció, indirekt bizonyítás",
+    "Számrendszerek (2-es, 16-os), prímszámok, oszthatóság, lnko, lkkt",
+    "Komplex számok, trigonometrikus alak, egységgyökök, polinomok"
+  ],
+  "grading": [
+    "Vizsga írásban, 120 pontos, ponthatárok:",
+    "0-46 : elégtelen (1)",
+    "47-64 : elégséges (2)",
+    "65-82 : közepes (3)",
+    "83-100 : jó (4)",
+    "101-120 : jeles (5)",
+    "A gyakorlaton szerzett legalább elégséges (2) jegy vizsgajegyként is elfogadható, ha nem gyakorlati utóvizsgán szerezték"
+  ],
+  "rules": [
+    "Gyakorlat: max. 3 igazolatlan hiányzás felett a jegy 'nem értékelhető' lesz — nem tehet utóvizsgát/vizsgát",
+    "Elektronikus tesztek: https://www.math.u-szeged.hu/~mmaroti/tests/ (Neptun kóddal regisztrálva), 6 db × 4 pont, minimum 10/24 pont kell",
+    "2 zárthelyi a gyakorlaton: 2026. okt. 12-16. (6. hét) és 2026. dec. 7-11. (14. hét), együtt 72 pont, számológép/digitális eszköz tilos",
+    "Gyakorlaton további max. 24 pont szerezhető a gyakorlatvezető által meghatározott módon",
+    "Gyakorlati jegy pontszám alapján: 0-46 elégtelen, 47-64 elégséges, 65-82 közepes, 83-100 jó, 101-120 jeles",
+    "Elektronikus teszt minimumát el nem érő, de legfeljebb 3× igazolatlanul hiányzó hallgató automatikusan elégtelen gyakorlati jegyet kap",
+    "Javítás/pótlás: elektronikus tesztek nem pótolhatók; a minimumot elérők a vizsgaidőszak első hetében egy zárthelyit javíthatnak/pótolhatnak (nem egyszerre)"
+  ],
+  "links": [],
+  "updated": "2026. szept. 5."
+}

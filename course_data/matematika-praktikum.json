@@ -1,0 +1,28 @@
+{
+  "name": "Matematika praktikum",
+  "code": "MN1840GA",
+  "instructor": "Szalai Máté, Dr.",
+  "summary": "Heti egy 2 órás gyakorlat, célja a további matematikai tantárgyakhoz szükséges előismeretek megalapozása. A gyakorlatra járás fakultatív.",
+  "topics": [
+    "Hatványozás, gyökvonás azonosságai, nevezetes szorzatok, algebrai kifejezések, logaritmus",
+    "Elsőfokú/másodfokú egyenletek és egyenlőtlenségek, paraméteres, törtes, exponenciális, logaritmikus egyenletek",
+    "Egyenletrendszerek, szöveges feladatok",
+    "Függvénytani alapfogalmak, elemi függvények, függvénytranszformációk"
+  ],
+  "grading": [
+    "88-100 pont : jeles (5)",
+    "75-87 pont : jó (4)",
+    "62-74 pont : közepes (3)",
+    "51-61 pont : elégséges (2)",
+    "0-50 pont : elégtelen (1)",
+    "Legalább 80%-os emelt szintű matek érettségivel automatikus jeles (5)"
+  ],
+  "rules": [
+    "Emelt matek érettségi (80%+) nélkül: kiugró zárthelyi a szorgalmi időszak 1. hetén — 80%+ pont esetén automatikus jeles, nincs javítás/pótlás a kiugrón",
+    "6 db 10 pontos kisteszt a félév során, a legjobb 5 számít bele — nem javíthatók, pótlás csak orvosi igazolással",
+    "Nagy zárthelyi a félév utolsó hetén, 50 pont, nem javítható; pótlás a vizsgaidőszak 1. hetében, csak orvosi igazolással",
+    "Max. 100 pont szerezhető összesen; folyamatos számonkérés, utólagos javításra/pótlásra nincs lehetőség"
+  ],
+  "links": [],
+  "updated": "2026. szept. 3."
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Személyes és szociális készségek",
+  "code": "IN1005EA",
+  "instructor": "Holló Csaba, Dr.",
+  "summary": "Heti 2 óra, előadás típusú, beszámoló (ötfokozatú) értékeléssel. Nincs előfeltétele. Cél: személyes/szociális készségfejlesztés az egyetemi tanulmányok sikeréhez.",
+  "topics": [
+    "Az Informatikai Intézet képzéseinek működése, viselkedési normák, felelősségvállalás",
+    "Tanulásmódszertan, a programozás tanulásának módszertana, sikeres számonkérés",
+    "Időkezelés, célkitűzés, halogatás, figyelemkontroll, önfegyelem, kiégés, függőségek",
+    "Érzelmi intelligencia, nehéz helyzetek kezelése, önismeret, együttműködés",
+    "Személyes és online kommunikáció",
+    "Prezentáció felépítése, előadói készségek, lámpalázkezelés"
+  ],
+  "grading": [
+    "[0,60)% : elégtelen (1)",
+    "[60,70)% : elégséges (2)",
+    "[70,80)% : közepes (3)",
+    "[80,90)% : jó (4)",
+    "[90,100]% : jeles (5)",
+    "Heti tesztek átlaga alapján (10 tesztből legalább 8-at kell kitölteni)"
+  ],
+  "rules": [
+    "Előadás látogatása kötelező, de hiányzás formálisan nem akadálya a teljesítésnek — igazolás/pótlás nem szükséges/lehetséges",
+    "A szorgalmi időszak 5. hetétől (2026.10.05.) heti teszt, a regenerációs szünet (10.26-11.01.) kivételével — összesen 10 db",
+    "10-ből 2 kihagyott teszt nem számít az átlagba, az azon felüli kihagyás 0%-ként számít; folyamatos számonkérés, további javításra nincs lehetőség",
+    "Privát megkeresés csak CooSpace üzenetben, a kurzus pontos megnevezésével garantált válasz"
+  ],
+  "links": [],
+  "updated": "2026. szept. 7."
+}

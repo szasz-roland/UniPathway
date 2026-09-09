@@ -1,0 +1,27 @@
+{
+  "name": "Mesterséges intelligencia az egyetemi tanulmányokban",
+  "code": "XK001-MINI_SZTE-HU",
+  "instructor": "Sánta Péter",
+  "summary": "Teljesen online, aszinkron kritérium kurzus az MI tudatos, kritikus és felelős használatáról a tanulásban/munkában. Nem informatikusok/fejlesztők képzésére fókuszál.",
+  "topics": [
+    "Bevezetés: miért van szükség MI-alapműveltségre",
+    "1. fejezet: mi az MI és mi nem az",
+    "2. fejezet: hogyan működnek a ChatGPT-szerű rendszerek",
+    "3. fejezet: etikai, jogi, társadalmi kockázatok",
+    "4. fejezet: értelmes és felelős MI-használat",
+    "5. fejezet: gyakorlati útmutató (promptolás, ellenőrzés)"
+  ],
+  "grading": [
+    "Megfelelt / Nem felelt meg (nincs ötfokozatú jegy)",
+    "Megfelelt: bemeneti + záró beadandó megfelelő, minden fejezet ellenőrző kérdése 100%, minden fejezet tesztje legalább 80%"
+  ],
+  "rules": [
+    "Teljesítési időszak: 2026. szept. 7. 00:00 – 2026. dec. 12. 23:59",
+    "Bemeneti és záró beadandó is önálló hallgatói munka kell legyen — nem tartalmazhat átvett/MI-generált szöveget, sablont vagy bizalmas adatot",
+    "MI-eszköz a beadandóknál csak a promptok ellenőrzéséhez engedélyezett",
+    "Egy javítási lehetőség: 2026. dec. 13. 00:00 – 2027. jan. 17. 23:59 — csak a záró beadandó nyújtható be újra, tesztekre/ellenőrző kérdésekre nem vonatkozik",
+    "Egyéni megkeresésre (e-mail, privát üzenet) nincs válasz — csak a Kurzusfórumon"
+  ],
+  "links": [],
+  "updated": "2026. szept. 3."
+}

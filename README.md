@@ -6,7 +6,7 @@ Hungarian UI (Órarend = "schedule" / "timetable").
 
 ## Current state
 
-Single-file vanilla app: [index.html](index.html) (HTML + CSS + JS, no build step). Two small pinned CDN dependencies (`html2canvas`, `jsPDF`) power schedule export — see [CLAUDE.md](CLAUDE.md) for why those are the one exception. Beyond the core schedule, it also has:
+Vanilla static site, no build step: [index.html](index.html) (markup), [css/style.css](css/style.css), [js/script.js](js/script.js) — plain `<link>`/`<script src>`, no bundler. Two small pinned CDN dependencies (`html2canvas`, `jsPDF`) power schedule export — see [CLAUDE.md](CLAUDE.md) for why those are the one exception. Beyond the core schedule, it also has:
 
 - Light/dark theme toggle, with system-preference detection on first load
 - A checklist feature (shopping lists with running totals, task lists), saved to `localStorage`
@@ -15,7 +15,7 @@ Single-file vanilla app: [index.html](index.html) (HTML + CSS + JS, no build ste
 - "Teremkereső" — an own-design room search/finder covering the rooms your own classes are in, with an embedded-map toggle
 - A course action sheet: tap a class to see what you can do with it (currently: jump to its room in Teremkereső)
 
-Schedule data (`EV`, `ONLINE`, `CODES`, `ZOLI_EV`, `ROOMS`) is hardcoded near the top of the `<script>` block — see "Updating the schedule" below.
+Schedule data (`EV`, `ONLINE`, `CODES`, `ZOLI_EV`, `ROOMS`) is hardcoded near the top of [js/script.js](js/script.js) — see "Updating the schedule" below. Per-course info/requirements live in [course_data/](course_data) (one JSON file per course), and `assets/`/`data/` hold the app icon and the raw Neptun `.xlsx` exports respectively.
 
 The `android/` directory holds leftover assets from an earlier phase where this was wrapped into a native Android APK via [Web2APK](https://github.com/77AXEL/Web2APK). That approach is being retired in favor of a Progressive Web App — see [ROADMAP.md](ROADMAP.md). The wrapped APK still exists and mostly works, but has a known limitation where schedule export silently fails (see [DEPLOYMENT.md](DEPLOYMENT.md)).
 
@@ -33,7 +33,7 @@ Then open the printed URL in a browser.
 
 ## Updating the schedule
 
-Edit the `EV`, `ONLINE`, `CODES`, `ZOLI_EV`, and `ROOMS` arrays in [index.html](index.html). Each `EV`/`ZOLI_EV` entry is `[dayIndex(0=Mon), startTime, endTime, name, room, instructor, colorType, isOnlinePreferred?]`. See [CLAUDE.md](CLAUDE.md) for the shape of `ROOMS` (including how room-name aliases work) and how to add another person's schedule.
+Edit the `EV`, `ONLINE`, `CODES`, `ZOLI_EV`, and `ROOMS` arrays in [js/script.js](js/script.js). Each `EV`/`ZOLI_EV` entry is `[dayIndex(0=Mon), startTime, endTime, name, room, instructor, colorType, isOnlinePreferred?]`. See [CLAUDE.md](CLAUDE.md) for the shape of `ROOMS` (including how room-name aliases work) and how to add another person's schedule.
 
 ## Deployment & access
 
@@ -47,7 +47,7 @@ Cloudflare (DNS + Access)
 Vercel (static hosting of this repo)
 ```
 
-- **Vercel** hosts the site as-is (zero build config — it's a static `index.html`). The project's auto-assigned `*.vercel.app` URL is set to redirect to the custom domain so it can't be used to bypass the access gate below.
+- **Vercel** hosts the site as-is (zero build config — it's a static site, `index.html` + `css/`/`js/`). `.vercelignore` keeps the legacy `android/` copy and the raw `.xlsx` exports out of the deployment. The project's auto-assigned `*.vercel.app` URL is set to redirect to the custom domain so it can't be used to bypass the access gate below.
 - **Cloudflare DNS** proxies (orange-cloud) `orarend.szaszroland.hu` to Vercel, with SSL/TLS mode "Full (strict)" and "Always Use HTTPS" on.
 - **Cloudflare Access** (Zero Trust → Access → Applications) sits in front of the domain as a login wall: nothing reaches the app until the visitor authenticates via a One-Time email PIN (or Google login, if added later) *and* matches an explicit email allow-list policy.
 

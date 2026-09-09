@@ -1,0 +1,31 @@
+{
+  "name": "Egyetemi informatikai alapok",
+  "code": "IN1004LA",
+  "instructor": "Devosa Iván, Dr.",
+  "summary": "Egyetemi tanulmányokhoz szükséges informatikai alapismeretek. Nincs kontakt óra, folyamatosan elérhető videóanyagokból áll. Konzultáció opcionális (H-P 12-13:30, Irinyi 227), a teljesítéshez nem szükséges.",
+  "topics": [
+    "Stud regisztráció, e-mail, CooSpace, Neptun, Modulo, Moodle",
+    "Fájlrendszerek (Linux, Windows), fájlkezelés, tömörítés",
+    "Ingyenes egyetemi szoftverek, online oktatási platformok, gépelés",
+    "Kommunikációs eszközök, etikett, biztonság",
+    "Parancssoros fájlkezelés (Windows, Linux, WSL)",
+    "Telepítési alapismeretek (pycharm, webstorm, dual boot, virtualbox)",
+    "Hatékony infókeresés, MI-alapú eszközök használata",
+    "Kódgenerátorok etikus használata",
+    "Felhő alapú tárhelyek, adatbiztonság",
+    "Táblázatkezelés, dokumentum- és prezentációkészítés"
+  ],
+  "grading": [
+    "Teszt sikeres megírása (7. héttől folyamatosan elérhető, korlátlanul kitölthető)",
+    "61-70% : elégséges (2)",
+    "71-80% : közepes (3)",
+    "81-90% : jó (4)",
+    "91-100% : jeles (5)"
+  ],
+  "rules": [
+    "Nincs kontakt óra, konzultáció opcionális és nem feltétel",
+    "HATÁRIDŐ: csak a szorgalmi időszak utolsó napjáig teljesíthető, vizsgaidőszakban már nincs javítás/pótlás"
+  ],
+  "links": ["https://www.staff.u-szeged.hu/~divan/edu/eia/"],
+  "updated": "2026. szept. 5."
+}

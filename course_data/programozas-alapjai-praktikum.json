@@ -1,0 +1,33 @@
+{
+  "name": "Programozás alapjai praktikum",
+  "code": "IN1001SA",
+  "instructor": "Gergely Tamás, Dr.",
+  "summary": "Kötelező látogatású praktikum. Anyaga: https://okt.inf.szte.hu/progalap-py",
+  "topics": [
+    "Alapvető problémamegoldás, algoritmustervezés",
+    "Python nyelv alapjai, programfuttatás, programszerkezet",
+    "Python utasítások, függvények, változók, adattípusok",
+    "Alapvető IO és fájlkezelés, builtin függvények"
+  ],
+  "grading": [
+    "0-399 pont : elégtelen (1)",
+    "400-499 pont : elégséges (2)",
+    "500-599 pont : közepes (3)",
+    "600-699 pont : jó (4)",
+    "700-900 pont : jeles (5)",
+    "Max. 800 pont: 8 órán 100-100 pont feladatmegoldás; a 11. héten javító zh (a teljes félév anyagából — ha jobb jegyet ad, azzal javít); max. 100 plusz pont"
+  ],
+  "rules": [
+    "Kötelező látogatás — igazolatlan hiányzás esetén 'nem értékelhető', pótlásra nincs lehetőség",
+    "Hiányzást a következő alkalommal igazolni kell az oktató felé",
+    "A beadott munkák 'megvédése' kérésre bármikor elvárt; másolt megoldás vagy sikertelen védés 0 pontot és pontlevonást is jelenthet",
+    "Generatív AI használata NEM javasolt (alapkészség-fejlesztő kurzus); AI-használatot jelezni kell, javító ZH közben AI-használat TILOS"
+  ],
+  "links": [
+    "Eric Matthes: Python Crash Course (3rd ed.), No Starch Press, 2023, ISBN 978-1-71850-270-3",
+    "Quentin Charatan, Aaron Kans: Programming in Two Semesters, Springer, 2022, ISBN 978-3-031-01325-6",
+    "https://python-course.eu/",
+    "https://okt.inf.szte.hu/progalap-py"
+  ],
+  "updated": "2026. szept. 4."
+}

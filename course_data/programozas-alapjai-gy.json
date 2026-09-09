@@ -1,0 +1,35 @@
+{
+  "name": "Programozás alapjai gy.",
+  "code": "IN1001LA",
+  "instructor": "Gergely Tamás, Dr.",
+  "summary": "Laboratóriumi gyakorlat, kötelező látogatással. Anyaga: https://okt.inf.szte.hu/progalap-py",
+  "topics": [
+    "Alapvető problémamegoldás, algoritmustervezés",
+    "Python nyelv alapjai, programfuttatás, programszerkezet",
+    "Python utasítások (értékadás, kifejezések, if, for, while, else, return)",
+    "Python függvények, változók, adattípusok (bool, int, float, str, tuple, list, set, dict)",
+    "Alapvető IO és fájlkezelés, builtin függvények (abs, min, max, len, ...)"
+  ],
+  "grading": [
+    "0-39 pont : elégtelen (1)",
+    "40-49 pont : elégséges (2)",
+    "50-59 pont : közepes (3)",
+    "60-69 pont : jó (4)",
+    "70-90 pont : jeles (5)",
+    "Max. 80 pont: 10 pont órai feladatmegoldás (10 órán), 20 pont házi feladat (min. 6 pont), 50 pont zárthelyi (5 órán, min. 20 pont), ±10 plusz pont"
+  ],
+  "rules": [
+    "Kötelező látogatás — igazolatlan hiányzás esetén a gyakorlat csak 'nem értékelhető' vagy 'elégtelen' lehet, pótlásra nincs lehetőség",
+    "Hiányzást a következő gyakorlaton igazolni kell az oktató felé",
+    "GI/PTI BSc, ÜMI BProf szakokon a Praktikum sikeres teljesítése előfeltétel a gyakorlathoz",
+    "ZH-k során semmilyen segédeszköz nem használható; a beadott munkák 'megvédése' kérésre bármikor elvárt, sikertelen védés pontlevonással jár",
+    "Generatív AI: csak magyarázatra/megértés segítésére ajánlott, direkt kódgenerálásra nem javasolt; AI-használatot jelezni kell, ZH közben AI-használat TILOS"
+  ],
+  "links": [
+    "Eric Matthes: Python Crash Course (3rd ed.), No Starch Press, 2023, ISBN 978-1-71850-270-3",
+    "Quentin Charatan, Aaron Kans: Programming in Two Semesters, Springer, 2022, ISBN 978-3-031-01325-6",
+    "https://python-course.eu/",
+    "https://okt.inf.szte.hu/progalap-py"
+  ],
+  "updated": "2026. szept. 4."
+}

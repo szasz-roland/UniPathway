@@ -1,0 +1,33 @@
+{
+  "name": "Webfejlesztés alapjai (Coursera)",
+  "code": "IN1014EA / IN1014LA (Coursera)",
+  "instructor": "Holló Csaba, Dr.",
+  "summary": "Coursera-alapú teljesítés. Az előadás (IN1014EA-Coursera) és gyakorlat (IN1014LA-Coursera) is felveendő — a Coursera-kurzuslista teljesítése egyszerre teljesíti mindkettőt, ugyanazzal a jeggyel. Nincs hagyományos előadás/gyakorlat, nincs vizsga.",
+  "topics": [
+    "HTML és CSS szintaxis, oldalszerkezet, stílusok elhelyezése",
+    "Kijelölők, rangsor és hatás, mértékegységek",
+    "Szövegformázás, hivatkozások",
+    "Dobozmodell, háttér, margó, szegély, körvonal, túlcsordulás, helyzetmegadás",
+    "Felsorolások, menük, táblázatok, űrlapok, beágyazott elemek",
+    "Médialekérdezések, reszponzív design, folyékony rács, rácsszerkezet",
+    "Akadálymentes HTML kialakítás alapjai"
+  ],
+  "grading": [
+    "[0,66] pont : elégtelen (1)",
+    "[67,79] pont : elégséges (2)",
+    "[80,91] pont : közepes (3)",
+    "[92,102] pont : jó (4)",
+    "103 pont : jeles (5)",
+    "Csak a kijelölt Coursera-kurzusok teljesítése (tanúsítvány) számít, a %-os teljesítmény nem"
+  ],
+  "rules": [
+    "A kurzusokat 'Coursera for SZTE' bejelentkezéssel kell elvégezni (https://u-szeged.hu/coursera/reszvetel/mar-szegedi) — más bejelentkezéssel a tanúsítvány elfogadása nem garantált",
+    "A határidő a tanúsítvány BEADÁSÁRA vonatkozik (CooSpace-ben), nem a kurzus elvégzésének időpontjára — egyes kurzusoknál a tanúsítványhoz társértékelésre is várni kell",
+    "Csak az egyik (ea VAGY gy) is felvehető külön-külön, de ugyanazt kell teljesíteni hozzá",
+    "Ha csak az egyikre Coursera, a másikra normál kurzusra jelentkezik: az utóbbihoz a normál kurzus követelményeit is teljesíteni kell",
+    "Nem teljesített kurzus javítása: kizárólag vizsgaidőszakban, a kijelölt táblázat szerinti tanúsítvánnyal + egy CooSpace teszttel",
+    "MI és egyéb eszközök a Coursera és az adott kurzusok saját szabályai szerint használhatók"
+  ],
+  "links": ["https://u-szeged.hu/coursera/reszvetel/mar-szegedi"],
+  "updated": "2026. aug. 30."
+}

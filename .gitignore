@@ -30,6 +30,11 @@ yarn-error.log*
 # --- Local Claude Code skill packages (third-party, unclear license — keep out of the public repo) ---
 .claude/skills/
 
+# --- Raw source exports for course info/requirements (PDFs from unics.szte.hu) — kept locally only; the app reads processed data instead ---
+course_info_req/
+course_info/
+course_req/
+
 # --- OS / editor cruft ---
 .DS_Store
 Thumbs.db
