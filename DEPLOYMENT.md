@@ -2,7 +2,7 @@
 
 Live status of putting Órarend on `szaszroland.hu`, locked behind Cloudflare Access. This tracks progress across sessions/devices — the interactive checklist (link below) only saves to one browser's local storage.
 
-**Where things stand (2026-09-07):** nothing below has moved since it was first written — all work since then went into app features (dark mode, checklists, export, Zoli's schedule, room search, the course action sheet; see [ROADMAP.md](ROADMAP.md)). Hosting is still fully paused at the `.hu` "Pending" blocker. Also worth knowing: **this repo has no GitHub remote configured** — every commit is local-only on `main`, so "push repo to GitHub" below is still literally step zero, not just unchecked.
+**Where things stand (2026-09-09):** the `.hu` domain is now **Active** at Rackhost (was stuck on "Hibás/hiányos megrendelés," resolved by the user directly with Rackhost) — the earlier registry blocker is gone. The GitHub repo is also live: **[github.com/szasz-roland/UniPathway](https://github.com/szasz-roland/UniPathway)** (note: repo name is `UniPathway`, not `orarend` — just a naming choice, doesn't affect anything), pushed via SSH, `main` tracking `origin/main`. Next up: switch the domain's nameservers to Cloudflare.
 
 Full step-by-step with copy buttons: **[Órarend Launch checklist](https://claude.ai/code/artifact/abe2becf-0c3b-453e-aebf-eaa31cee53a5)**
 
@@ -27,11 +27,12 @@ Vercel (static hosting of this repo)
 - [x] Cloudflare "Cloudflare" nameserver profile created at Rackhost with:
   - `beau.ns.cloudflare.com`
   - `braelyn.ns.cloudflare.com`
-- [ ] **Blocked:** domain shows status **Pending** in Rackhost, not **Active** yet — this is a normal `.hu`-registry verification/delegation delay (same-day to a couple of business days), not an error. Nameserver profile can't be switched from "Rackhost" to "Cloudflare" until it clears. Check Rackhost's "Tennivalók" (To-dos) for anything blocking it.
-- [ ] Once Active: switch `szaszroland.hu`'s nameserver profile from "Rackhost" to "Cloudflare" (Domainek → DNS profilok)
+- [x] Domain `szaszroland.hu` is **Active** in Rackhost (was stuck on "Hibás/hiányos megrendelés," now resolved)
+- [x] GitHub repo created and pushed: [github.com/szasz-roland/UniPathway](https://github.com/szasz-roland/UniPathway) (SSH remote, `main` tracking `origin/main`)
+- [ ] Switch `szaszroland.hu`'s nameserver profile from "Rackhost" to "Cloudflare" (Domainek → DNS profilok) — now unblocked, do this next
 - [ ] Wait for Cloudflare zone to show "Active" (propagation)
 - [ ] Cloudflare SSL/TLS → Full (strict) + Always Use HTTPS
-- [ ] Create a GitHub repo (none exists yet — no `gh` CLI available locally either, so this needs to be done via github.com or by installing `gh`), add it as this repo's remote, push `main`; then import into Vercel and deploy
+- [ ] Import `UniPathway` into Vercel and deploy (zero build config — static site)
 - [ ] Add `orarend.szaszroland.hu` as custom domain in Vercel; add matching proxied CNAME in Cloudflare DNS
 - [ ] Redirect Vercel's `*.vercel.app` alias to the custom domain
 - [ ] Cloudflare Zero Trust → Access: create application + allow-list policy for one email
@@ -39,10 +40,7 @@ Vercel (static hosting of this repo)
 
 ## Known issues / open problems
 
-### 1. `.hu` domain stuck on "Pending" at Rackhost
-Last checked status (see Progress above): domain shows **Pending**, not **Active**, so the nameserver switch to Cloudflare can't happen yet. This is normal `.hu`-registry verification delay, not a misconfiguration — but it hasn't been re-checked since focus shifted to app features. **Next action: log into Rackhost and check current status before resuming hosting work.**
-
-### 2. Export (JPG/PDF) doesn't work in the Android APK wrapper
+### Export (JPG/PDF) doesn't work in the Android APK wrapper
 The settings-panel export feature (see [CLAUDE.md](CLAUDE.md)) works correctly in every real browser context it's been tested in (desktop Chrome, headless Chromium, both `http://` and `file://`) — but fails silently in the Web2APK-wrapped Android app installed on the phone.
 
 Root cause found and fixed: `~/Downloads/del/Web2APK-main/android/AndroidManifest.xml` (outside this repo — it's the separate Web2APK build tool, not tracked in git here) was missing `<uses-permission android:name="android.permission.INTERNET"/>` entirely, so Android blocked every outbound request the WebView made, including the two CDN `<script>` tags the export feature depends on. That's been added and confirmed to persist across rebuilds (`wa.py` never touches the manifest).
@@ -57,4 +55,4 @@ After that fix and a full rebuild/reinstall, export **still** fails silently on-
 
 ## Resuming
 
-Pick up at the first unchecked box above, or open the checklist link and continue from wherever its progress bar shows. Check the domain's Rackhost status first — it may have gone Active since this was last updated.
+Pick up at the first unchecked box above: switching `szaszroland.hu`'s nameservers to Cloudflare.
