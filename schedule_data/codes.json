@@ -1,0 +1,20 @@
+[
+  ["Kötelező tárgyak", [
+    ["IN1001EA", "Programozás alapjai (ea)"],
+    ["IN1001LA-16", "Programozás alapjai gy."],
+    ["IN1001SA-11", "Programozás alapjai praktikum"],
+    ["MN1841EA-1", "Matematika 1. ea."],
+    ["MN1841GA-14", "Matematika 1. gy."],
+    ["MN1840GA-9", "Matematika praktikum"],
+    ["IN1013EA", "Számítógép hálózatok"],
+    ["IN1004LA", "Egyetemi informatikai alapok"],
+    ["IN1005EA", "Személyes és szociális készségek"],
+    ["IN1014EA-Coursera", "Webfejlesztés (ea)"],
+    ["IN1014LA-Coursera", "Webfejlesztés gy."]
+  ]],
+  ["Kritérium (0 kredit)", [
+    ["XK001-ITSEC_SZTE-HU", "IT-biztonság az SZTE-n"],
+    ["XK001-MINI_SZTE-HU", "MI az egyetemi tanulmányokban"],
+    ["XA0031-ALK2", "Karrierépítés alapozó kurzus"]
+  ]]
+]

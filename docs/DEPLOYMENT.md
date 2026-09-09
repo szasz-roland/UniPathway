@@ -19,8 +19,8 @@ Vercel (static hosting of this repo)
 ```
 
 - Access control: Cloudflare Access (Zero Trust), self-hosted app on `orarend.szaszroland.hu`, policy = allow-list of a single email, login via One-Time PIN. No auth code in the app itself.
-- License: GPL-3.0 (see [LICENSE](LICENSE)).
-- Full reasoning in [README.md#deployment--access](README.md) and [CLAUDE.md](CLAUDE.md).
+- License: GPL-3.0 (see [LICENSE](../LICENSE)).
+- Full reasoning in [README.md#deployment--access](../README.md) and [CLAUDE.md](../CLAUDE.md).
 
 ## Progress
 
@@ -43,7 +43,7 @@ Vercel (static hosting of this repo)
 ## Known issues / open problems
 
 ### Export (JPG/PDF) doesn't work in the Android APK wrapper
-The settings-panel export feature (see [CLAUDE.md](CLAUDE.md)) works correctly in every real browser context it's been tested in (desktop Chrome, headless Chromium, both `http://` and `file://`) — but fails silently in the Web2APK-wrapped Android app installed on the phone.
+The settings-panel export feature (see [CLAUDE.md](../CLAUDE.md)) works correctly in every real browser context it's been tested in (desktop Chrome, headless Chromium, both `http://` and `file://`) — but fails silently in the Web2APK-wrapped Android app installed on the phone.
 
 Root cause found and fixed: `~/Downloads/del/Web2APK-main/android/AndroidManifest.xml` (outside this repo — it's the separate Web2APK build tool, not tracked in git here) was missing `<uses-permission android:name="android.permission.INTERNET"/>` entirely, so Android blocked every outbound request the WebView made, including the two CDN `<script>` tags the export feature depends on. That's been added and confirmed to persist across rebuilds (`wa.py` never touches the manifest).
 

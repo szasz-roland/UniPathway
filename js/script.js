@@ -1,52 +1,9 @@
 const DAYS=["Hétfő","Kedd","Szerda","Csütörtök","Péntek"];
 const SHORT=["H","K","Sz","Cs","P"];
 const mins=t=>{const[h,m]=t.split(":").map(Number);return h*60+m};
-const EV=[
- [0,"10:00","11:00","Számítógép hálózatok","TIK Alagsor I-II. Előadó","Bilicki Vilmos","ea"],
- [0,"12:00","14:00","Matematika praktikum","Bolyai János terem","Csuma-Kovács, Szalai","gy"],
- [0,"14:00","16:00","Programozás alapjai gy.","Irinyi 224 PC-terem","Gercső Márk, Báló, Gergely","gy",true],
- [0,"16:00","18:00","Személyes és szociális készségek","TIK Kongresszusi terem","Holló Csaba","ea"],
- [1,"08:00","10:00","Programozás alapjai ea.","TIK Kongresszusi terem","Gergely Tamás","ea"],
- [1,"12:00","14:00","Matematika 1. ea.","TIK Kongresszusi terem","Dormán Miklós","ea"],
- [1,"17:00","19:00","Matematika 1. gy.","Haar Alfréd terem","Galántai-Fekete, Dormán","mt"],
- [3,"15:00","16:00","Programozás alapjai praktikum","Irinyi 217 PC-terem","Kleisz, Oczkó, Gergely","pr"],
- [3,"16:00","18:00","Egyetemi informatikai alapok","Irinyi 213 PC-terem","Devosa Iván","gy"],
-];
-const ONLINE=[
- ["Webfejlesztés alapjai (ea)","Coursera · Holló Csaba"],
- ["Webfejlesztés alapjai gy.","Coursera · Holló Csaba"],
- ["IT-biztonság az SZTE-n","E-learning · kritérium"],
- ["MI az egyetemi tanulmányokban","E-learning · kritérium"],
- ["Karrierépítés alapozó kurzus","kritérium · 0 kredit"],
-];
-/* From Zoli's own Neptun export (zoliCourses.xlsx) — replaces the earlier screenshot-transcribed guesses. */
-const ZOLI_EV=[
- [0,"08:00","10:00","Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak","Irinyi 217 PC-terem","Bodnár Péter Dr.","ea"],
- [0,"10:00","12:00","Menedzselt programozás gy.","Irinyi 225 PC-terem","Dr. Vince Dániel, Dombi József Dániel Dr.","gy"],
- [0,"12:00","14:00","Digitális architektúrák","Kiss Árpád tanterem","Mingesz Róbert Zoltán Dr., Dr. Kelemen András Félix","ea"],
- [0,"16:00","18:00","Szoftvertesztelés","TIK Alagsor I-II. Előadó","Beszédes Árpád Dr.","ea"],
- [1,"10:00","12:00","Mesterséges intelligencia gy.","Irinyi 214 PC-terem","Czimbalmos Olivér","gy"],
- [1,"15:00","16:00","Szoftvertesztelés gy.","Irinyi 225 PC-terem","Dr. Tóth László, Beszédes Árpád Dr.","gy"],
- [1,"18:00","20:00","Menedzselt programozás","TIK Alagsor I-II. Előadó","Dombi József Dániel Dr.","ea"],
- [2,"08:00","10:00","Mesterséges intelligencia","TIK Kongresszusi terem","Jelasity Márk Dr.","ea"],
- [2,"14:00","16:00","Projektmunka I","Irinyi 225 PC-terem","Balogh Gergő","gy"],
- [2,"16:00","18:00","Informatikai biztonság","TIK Kongresszusi terem","Vidács László Dr.","ea"],
- [2,"18:00","20:00","Hogyan fejlesszünk pénzügyi kultúrát?","Navratil Ákos terem (IV.sz. tanterem)","Kosztopulosz Andreász Dr., Kovács Péter Dr., Rácz Tamás Attila, Szládek Dániel, Bodó Regina, Dobóné Dr. Nagy Krisztina","mt"],
-];
-const CODES=[
- ["Kötelező tárgyak",[
-   ["IN1001EA","Programozás alapjai (ea)"],["IN1001LA-16","Programozás alapjai gy."],
-   ["IN1001SA-11","Programozás alapjai praktikum"],["MN1841EA-1","Matematika 1. ea."],
-   ["MN1841GA-14","Matematika 1. gy."],["MN1840GA-9","Matematika praktikum"],
-   ["IN1013EA","Számítógép hálózatok"],["IN1004LA","Egyetemi informatikai alapok"],
-   ["IN1005EA","Személyes és szociális készségek"],["IN1014EA-Coursera","Webfejlesztés (ea)"],
-   ["IN1014LA-Coursera","Webfejlesztés gy."],
- ]],
- ["Kritérium (0 kredit)",[
-   ["XK001-ITSEC_SZTE-HU","IT-biztonság az SZTE-n"],["XK001-MINI_SZTE-HU","MI az egyetemi tanulmányokban"],
-   ["XA0031-ALK2","Karrierépítés alapozó kurzus"],
- ]],
-];
+/* EV/ONLINE/CODES/ZOLI_EV/ROOMS are semester data, loaded at startup from schedule_data/*.json
+   (see loadScheduleData()/init() below) instead of being hardcoded here — see CLAUDE.md. */
+let EV=[],ONLINE=[],ZOLI_EV=[],CODES=[];
 const NAV_LINKS=[
  {id:"schedule",label:"Órarend"},
  {id:"zoli",label:"Zoli órarend"},
@@ -55,17 +12,7 @@ const NAV_LINKS=[
  {id:"kriterium",label:"Kritérium (0 kredit)"},
  {id:"teremkereso",label:"Teremkereső"},
 ];
-/* Scraped from u-szeged.hu/teremkereso — only the rooms that appear in EV (your own timetable), not the full ~700-room database. See CLAUDE.md. */
-const ROOMS=[
- {id:718,code:"TIK-A01-0",name:"TIK Alagsor I. Előadó",dept:"Tanulmányi és Információs Központ",address:"Szeged, Ady tér 10",aliases:["TIK Alagsor I-II. Előadó"]},
- {id:719,code:"TIK-A02-0",name:"TIK Alagsor II. Előadó",dept:"Tanulmányi és Információs Központ",address:"Szeged, Ady tér 10",aliases:["TIK Alagsor I-II. Előadó"]},
- {id:151,code:"BO-216-3",name:"Bolyai János terem",dept:"Bolyai Intézet",address:"Szeged, Aradi vértanúk tere 1."},
- {id:150,code:"BO-215-3",name:"Haar Alfréd terem",dept:"Bolyai Intézet",address:"Szeged, Aradi vértanúk tere 1."},
- {id:717,code:"TIK-002-0",name:"TIK Nagyelőadó",dept:"Tanulmányi és Információs Központ",address:"Szeged, Ady tér 10",aliases:["TIK Kongresszusi terem"]},
- {id:345,code:"IR-213-3",name:"Irinyi 213 tanterem",dept:"TTIK Természettudományi és Informatikai Kar",address:"Szeged, Tisza Lajos krt. 103.",aliases:["Irinyi 213 PC-terem"]},
- {id:349,code:"IR-217-3",name:"Irinyi 217 PC-terem",dept:"Informatikai Intézet",address:"Szeged, Tisza Lajos krt. 103."},
- {id:355,code:"IR-224-3",name:"Irinyi 224 PC-terem",dept:"Informatikai Intézet",address:"Szeged, Tisza Lajos krt. 103."},
-];
+let ROOMS=[];
 const PAGE_LABELS=Object.fromEntries(NAV_LINKS.map(x=>[x.id,x.label]));
 const SCHEDULE_VIEWS=["schedule","zoli"];
 const isScheduleView=v=>SCHEDULE_VIEWS.includes(v);
@@ -90,6 +37,13 @@ function fetchLocal(url){
     xhr.onerror=()=>reject(new Error("network error"));
     xhr.send();
   });
+}
+async function loadScheduleData(){
+  const[ev,zoli,online,codes,rooms]=await Promise.all(
+    ["ev","zoli","online","codes","rooms"].map(n=>fetchLocal(`schedule_data/${n}.json`))
+  );
+  EV=JSON.parse(ev);ZOLI_EV=JSON.parse(zoli);ONLINE=JSON.parse(online);
+  CODES=JSON.parse(codes);ROOMS=JSON.parse(rooms);
 }
 const svgArw='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
 const svgLoc='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>';
@@ -439,7 +393,7 @@ function renderRoomSearch(){
   wrap.appendChild(input);
 
   const hint=E("div");hint.className="roomsearch-hint";
-  hint.textContent="A saját órarended "+ROOMS.length+" terme kereshető itt.";
+  hint.textContent="Az egyetem "+ROOMS.length+" terme kereshető itt.";
   wrap.appendChild(hint);
 
   const list=E("div");list.className="room-list";list.id="roomResultsList";
@@ -448,15 +402,21 @@ function renderRoomSearch(){
   el.appendChild(wrap);
   renderRoomResults();
 }
+const ROOM_RESULTS_LIMIT=50;
 function renderRoomResults(){
   const list=document.getElementById("roomResultsList");if(!list)return;
   list.innerHTML="";
   const q=roomQuery.trim();
-  const results=q?ROOMS.filter(r=>matchesRoom(r,q)):ROOMS;
-  if(results.length===0){
+  if(!q){
+    const empty=E("div");empty.className="roomsearch-empty";empty.textContent="Kezdj el gépelni a kereséshez.";
+    list.appendChild(empty);return;
+  }
+  const matches=ROOMS.filter(r=>matchesRoom(r,q));
+  if(matches.length===0){
     const empty=E("div");empty.className="roomsearch-empty";empty.textContent="Nincs találat.";
     list.appendChild(empty);return;
   }
+  const results=matches.slice(0,ROOM_RESULTS_LIMIT);
   results.forEach((r,i)=>{
     const colorKey=COLOR_CYCLE[r.id%COLOR_CYCLE.length];
     const isOpen=openRoomMaps.has(r.id);
@@ -480,6 +440,11 @@ function renderRoomResults(){
     }
     list.appendChild(card);
   });
+  if(matches.length>ROOM_RESULTS_LIMIT){
+    const more=E("div");more.className="roomsearch-hint";more.style.marginTop="10px";
+    more.textContent=`+${matches.length-ROOM_RESULTS_LIMIT} további találat — pontosítsd a keresést.`;
+    list.appendChild(more);
+  }
 }
 
 function renderChecklistItemsView(){
@@ -752,6 +717,17 @@ async function runExport(format,btn,errBox){
   finally{btn.disabled=false;btn.textContent=orig;}
 }
 
-rail();
-renderHead();
-renderMain();
+async function init(){
+  try{
+    await loadScheduleData();
+    rail();
+    renderHead();
+    renderMain();
+  }catch(e){
+    console.error(e);
+    document.getElementById("list").innerHTML=
+      '<div class="freeday"><div class="big">Hiba az adatok betöltésekor</div>'+
+      '<div class="s">Ellenőrizd a schedule_data/ mappa JSON fájljait.</div></div>';
+  }
+}
+init();

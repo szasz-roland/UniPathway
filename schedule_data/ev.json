@@ -1,0 +1,11 @@
+[
+  [0, "10:00", "11:00", "Számítógép hálózatok", "TIK Alagsor I-II. Előadó", "Bilicki Vilmos", "ea"],
+  [0, "12:00", "14:00", "Matematika praktikum", "Bolyai János terem", "Csuma-Kovács, Szalai", "gy"],
+  [0, "14:00", "16:00", "Programozás alapjai gy.", "Irinyi 224 PC-terem", "Gercső Márk, Báló, Gergely", "gy", true],
+  [0, "16:00", "18:00", "Személyes és szociális készségek", "TIK Kongresszusi terem", "Holló Csaba", "ea"],
+  [1, "08:00", "10:00", "Programozás alapjai ea.", "TIK Kongresszusi terem", "Gergely Tamás", "ea"],
+  [1, "12:00", "14:00", "Matematika 1. ea.", "TIK Kongresszusi terem", "Dormán Miklós", "ea"],
+  [1, "17:00", "19:00", "Matematika 1. gy.", "Haar Alfréd terem", "Galántai-Fekete, Dormán", "mt"],
+  [3, "15:00", "16:00", "Programozás alapjai praktikum", "Irinyi 217 PC-terem", "Kleisz, Oczkó, Gergely", "pr"],
+  [3, "16:00", "18:00", "Egyetemi informatikai alapok", "Irinyi 213 PC-terem", "Devosa Iván", "gy"]
+]

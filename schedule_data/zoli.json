@@ -1,0 +1,13 @@
+[
+  [0, "08:00", "10:00", "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak", "Irinyi 217 PC-terem", "Bodnár Péter Dr.", "ea"],
+  [0, "10:00", "12:00", "Menedzselt programozás gy.", "Irinyi 225 PC-terem", "Dr. Vince Dániel, Dombi József Dániel Dr.", "gy"],
+  [0, "12:00", "14:00", "Digitális architektúrák", "Kiss Árpád tanterem", "Mingesz Róbert Zoltán Dr., Dr. Kelemen András Félix", "ea"],
+  [0, "16:00", "18:00", "Szoftvertesztelés", "TIK Alagsor I-II. Előadó", "Beszédes Árpád Dr.", "ea"],
+  [1, "10:00", "12:00", "Mesterséges intelligencia gy.", "Irinyi 214 PC-terem", "Czimbalmos Olivér", "gy"],
+  [1, "15:00", "16:00", "Szoftvertesztelés gy.", "Irinyi 225 PC-terem", "Dr. Tóth László, Beszédes Árpád Dr.", "gy"],
+  [1, "18:00", "20:00", "Menedzselt programozás", "TIK Alagsor I-II. Előadó", "Dombi József Dániel Dr.", "ea"],
+  [2, "08:00", "10:00", "Mesterséges intelligencia", "TIK Kongresszusi terem", "Jelasity Márk Dr.", "ea"],
+  [2, "14:00", "16:00", "Projektmunka I", "Irinyi 225 PC-terem", "Balogh Gergő", "gy"],
+  [2, "16:00", "18:00", "Informatikai biztonság", "TIK Kongresszusi terem", "Vidács László Dr.", "ea"],
+  [2, "18:00", "20:00", "Hogyan fejlesszünk pénzügyi kultúrát?", "Navratil Ákos terem (IV.sz. tanterem)", "Kosztopulosz Andreász Dr., Kovács Péter Dr., Rácz Tamás Attila, Szládek Dániel, Bodó Regina, Dobóné Dr. Nagy Krisztina", "mt"]
+]

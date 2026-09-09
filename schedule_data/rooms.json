@@ -1,0 +1,5439 @@
+[
+  {
+    "id": 1,
+    "code": "AD-002-2",
+    "name": "PC labor",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 2,
+    "code": "AD-004-2",
+    "name": "Vajda György Mihály terem (IX.sz. tanterem)",
+    "dept": "Összehasonlitó Irodalomtudományi Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 3,
+    "code": "AD-006-2",
+    "name": "Orosz tolmácsterem",
+    "dept": "Szláv Filológiai Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 4,
+    "code": "AD-007-2",
+    "name": "Néprajzi szem.szoba",
+    "dept": "Néprajzi és Kult. Antropológiai Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 5,
+    "code": "AD-008-3",
+    "name": "Várkonyi tanterem",
+    "dept": "Pszichológiai Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 6,
+    "code": "AD-017-3",
+    "name": "Ásványtani tanszéki könyvtár",
+    "dept": "Ásványtani, Geokémiai és Kőzettani Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 7,
+    "code": "AD-022-3",
+    "name": "Ökológiai tanszéki labor",
+    "dept": "Ökológiai Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 8,
+    "code": "AD-025-2",
+    "name": "Tanszéki tárgyaló (KHIT)",
+    "dept": "Kulturális Örökség és Humán Információtudományi Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 9,
+    "code": "AD-026-2",
+    "name": "Tanszéki szemináriumi szoba (KHIT)",
+    "dept": "Kulturális Örökség és Humán Információtudományi Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 10,
+    "code": "AD-031-2",
+    "name": "X. tanterem",
+    "dept": "Angol-Amerikai Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 11,
+    "code": "AD-050-2",
+    "name": "107. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 12,
+    "code": "AD-051-2",
+    "name": "Régészeti szeminárium",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 13,
+    "code": "AD-052-2",
+    "name": "2. szeminárium",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 14,
+    "code": "AD-053-2",
+    "name": "3. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 15,
+    "code": "AD-054-2",
+    "name": "4. szeminárium",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 16,
+    "code": "AD-055-2",
+    "name": "5. szeminárium",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 17,
+    "code": "AD-056-2",
+    "name": "6. szeminárium (Bálint Sándor szeminárium)",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 18,
+    "code": "AD-057-2",
+    "name": "0317-es Bellon Tibor terem",
+    "dept": "Néprajzi és Kult. Antropológiai Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 19,
+    "code": "AD-058-2",
+    "name": "0319-es tanári és szemináriumi szoba",
+    "dept": "Néprajzi és Kult. Antropológiai Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 20,
+    "code": "AD-060-2",
+    "name": "Televízió Studió",
+    "dept": "Kommunikáció- és Médiatudományi Tanszék (BTK)",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 21,
+    "code": "AD-061-2",
+    "name": "Rádió Studió",
+    "dept": "Kommunikáció- és Médiatudományi Tanszék (BTK)",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 22,
+    "code": "AD-062-2",
+    "name": "Kommunikáció kutatószeminárium",
+    "dept": "Kommunikáció- és Médiatudományi Tanszék (BTK)",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 23,
+    "code": "AD-108-3",
+    "name": "Ásványtani tanszéki labor",
+    "dept": "Ásványtani, Geokémiai és Kőzettani Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 24,
+    "code": "AD-109-3",
+    "name": "Ásványtani színkép labor",
+    "dept": "Ásványtani, Geokémiai és Kőzettani Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 25,
+    "code": "AD-110-3",
+    "name": "Grasselly Gyula terem",
+    "dept": "Ásványtani, Geokémiai és Kőzettani Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 26,
+    "code": "AD-111-2",
+    "name": "Lektori szem.szoba",
+    "dept": "Szláv Filológiai Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 27,
+    "code": "AD-112-2",
+    "name": "VIII.sz. tanterem",
+    "dept": "Magyar Nyelvészeti Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 28,
+    "code": "AD-113-3",
+    "name": "Miháltz István terem",
+    "dept": "Földtani és Őslénytani Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 29,
+    "code": "AD-114-3",
+    "name": "Földtudományi Nagyelőadó",
+    "dept": "Növénybiológiai Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 30,
+    "code": "AD-116-3",
+    "name": "Növénytani előadó",
+    "dept": "Növénybiológiai Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 31,
+    "code": "AD-124-3",
+    "name": "Földtani tanszéki labor",
+    "dept": "Földtani és Őslénytani Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 32,
+    "code": "AD-126-3",
+    "name": "Informatórium",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 33,
+    "code": "AD-127-3",
+    "name": "Teleki számítógépterem",
+    "dept": "Földrajzi és Földtudományi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 34,
+    "code": "AD-130-2",
+    "name": "Klemm Antal szeminárium",
+    "dept": "Magyar Nyelvészeti Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 35,
+    "code": "AD-141-3",
+    "name": "Jakucs László tanterem",
+    "dept": "Földrajzi és Földtudományi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 36,
+    "code": "AD-142-3",
+    "name": "Prinz Gyula számítógépterem",
+    "dept": "Földrajzi és Földtudományi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 37,
+    "code": "AD-143-3",
+    "name": "Hallgatói labor (FFTCS)",
+    "dept": "Földrajzi és Földtudományi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 38,
+    "code": "AD-144-3",
+    "name": "Térinformatikai számítógépterem",
+    "dept": "Földrajzi és Földtudományi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 39,
+    "code": "AD-145-3",
+    "name": "GIS számítógépes labor",
+    "dept": "Földrajzi és Földtudományi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 40,
+    "code": "AD-150-3",
+    "name": "Szentpétery Zsigmond tanterem",
+    "dept": "Ásványtani, Geokémiai és Kőzettani Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 41,
+    "code": "AD-217-2",
+    "name": "III.sz. tanterem",
+    "dept": "Angol Tanszék (BTK)",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 42,
+    "code": "AD-218-2",
+    "name": "Mikola Tibor szeminárium",
+    "dept": "Magyar Nyelvészeti Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 43,
+    "code": "AD-219-2",
+    "name": "II.sz. tanterem (tolmácsterem)",
+    "dept": "Szláv Filológiai Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 44,
+    "code": "AD-220-2",
+    "name": "I.sz. tanterem (Auditórium-Maximum)",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 45,
+    "code": "AD-2203-2",
+    "name": "2203-as tanári szoba",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 46,
+    "code": "AD-221-2",
+    "name": "2210-es tanári szeminárium szoba",
+    "dept": "*** Törölt Klasszikus Magyar Irodalmi Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 47,
+    "code": "AD-223-2",
+    "name": "Német szem.szoba",
+    "dept": "Germán Filológiai Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 48,
+    "code": "AD-224-2",
+    "name": "Dézsi Lajos irodalmi szeminárium",
+    "dept": "Magyar Nyelvi és Irodalmi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 49,
+    "code": "AD-225-2",
+    "name": "Sík Sándor irodalomi olvasó",
+    "dept": "Magyar Nyelvi és Irodalmi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 50,
+    "code": "AD-226-2",
+    "name": "Angol tolmácsterem - BTK Nyelvi Labor II.",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 51,
+    "code": "AD-227-2",
+    "name": "BTK Nyelvi Labor I.",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 52,
+    "code": "AD-228-2",
+    "name": "Zolnai Béla tanterem",
+    "dept": "Francia Nyelvi és Irodalmi Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 53,
+    "code": "AD-229-2",
+    "name": "Lektori tanterem",
+    "dept": "Szláv Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 54,
+    "code": "AD-230-2",
+    "name": "Mészöly Gedeon szeminárium",
+    "dept": "Magyar Nyelvészeti Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 55,
+    "code": "AD-231-2",
+    "name": "Német irodalmi szeminárium 2.",
+    "dept": "Germán Filológiai Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 56,
+    "code": "AD-232-2",
+    "name": "2209-es tanári és szeminárium szoba",
+    "dept": "*** Törölt Modern Magyar Irodalmi Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 57,
+    "code": "AD-233-2",
+    "name": "2208-as szemináriumi szoba",
+    "dept": "Magyar Nyelvi és Irodalmi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 58,
+    "code": "AD-240-2",
+    "name": "2409-es finnugor tanári és szeminárium szoba",
+    "dept": "Finnugor Nyelvtudományi Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 59,
+    "code": "AD-241-2",
+    "name": "2135-ös finnugor tszv. és szemináriumi szoba",
+    "dept": "Finnugor Nyelvtudományi Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 60,
+    "code": "AD-242-2",
+    "name": "Bolgár szeminárium",
+    "dept": "Szláv Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 61,
+    "code": "AD-300-2",
+    "name": "Általános nyelvészeti szem.szoba",
+    "dept": "Általános Nyelvészeti Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 62,
+    "code": "AD-315-2",
+    "name": "Wittman Tibor terem (Történeti szeminárium)",
+    "dept": "Történeti Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 63,
+    "code": "AD-328-2",
+    "name": "Szádeczky-Kardoss Samu terem (IV.sz. tanterem)",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 64,
+    "code": "AD-330-2",
+    "name": "Angol szemináriumi szoba - 3302",
+    "dept": "Angol-Amerikai Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 65,
+    "code": "AD-331-3",
+    "name": "Marczell György tanterem",
+    "dept": "Éghajlattani és Tájföldrajzi Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 66,
+    "code": "AD-333-3",
+    "name": "Gazdaság és Társdalomföldrajz kisterem",
+    "dept": "Gazdaság- és Társadalomföldrajz Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 67,
+    "code": "AD-335-2",
+    "name": "Magyar történeti szeminárium",
+    "dept": "Történeti Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 68,
+    "code": "AD-336-2",
+    "name": "VII.sz. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 69,
+    "code": "AD-339-3",
+    "name": "Tárgyaló (GAF)",
+    "dept": "Gazdaság- és Társadalomföldrajz Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 70,
+    "code": "AD-340-3",
+    "name": "Krajkó Gyula tanterem",
+    "dept": "Földrajzi és Földtudományi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 71,
+    "code": "AD-341-3",
+    "name": "Adatfeldolgozó (GAF)",
+    "dept": "Földrajzi és Földtudományi Intézet",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 72,
+    "code": "AD-342-2",
+    "name": "Kristó Gyula terem (Tört. Tud. tanterem)",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 73,
+    "code": "AD-343-3",
+    "name": "Medievisztika szeminárium",
+    "dept": "Régészeti Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 74,
+    "code": "AD-345-2",
+    "name": "Latin szeminárium",
+    "dept": "Klasszika-Filológia Tanszék",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 75,
+    "code": "AD-S01-0",
+    "name": "Ady téri konditerem",
+    "dept": "Testnevelés Tanszék (Régi JATE)",
+    "address": "Szeged, Egyetem utca 2."
+  },
+  {
+    "id": 76,
+    "code": "AI-001-6",
+    "name": "Kis tanterem (Anatómia)",
+    "dept": "Anatómiai, Szövet- és Fejlődéstani Intézet",
+    "address": "Szeged, Kossuth L. sgt. 38"
+  },
+  {
+    "id": 77,
+    "code": "AI-100-6",
+    "name": "Gellért Albert terem (Anatómia)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Kossuth L. sgt. 38"
+  },
+  {
+    "id": 78,
+    "code": "AI-101-6",
+    "name": "Boncterem I.",
+    "dept": "Anatómiai, Szövet- és Fejlődéstani Intézet",
+    "address": "Szeged, Kossuth L. sgt. 38"
+  },
+  {
+    "id": 79,
+    "code": "AI-102-6",
+    "name": "Boncterem II.",
+    "dept": "Anatómiai, Szövet- és Fejlődéstani Intézet",
+    "address": "Szeged, Kossuth L. sgt. 38"
+  },
+  {
+    "id": 80,
+    "code": "AI-103-6",
+    "name": "Szövettani labor",
+    "dept": "Anatómiai, Szövet- és Fejlődéstani Intézet",
+    "address": "Szeged, Kossuth L. sgt. 38"
+  },
+  {
+    "id": 81,
+    "code": "AI-110-6",
+    "name": "Tanterem (Igazságügyi Orv.)",
+    "dept": "Igazságügyi Orvostani Intézet",
+    "address": "Szeged, Kossuth L. sgt. 38"
+  },
+  {
+    "id": 82,
+    "code": "AI-111-6",
+    "name": "Könyvtár (Igazságügyi Orv.)",
+    "dept": "Igazságügyi Orvostani Intézet",
+    "address": "Szeged, Kossuth L. sgt. 38"
+  },
+  {
+    "id": 83,
+    "code": "MF-001-10",
+    "name": "Tornaterem sportlétesítmény",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely, Andrássy út 15-17."
+  },
+  {
+    "id": 84,
+    "code": "MF-061-10",
+    "name": "Kutatási labor",
+    "dept": "Gazdálkodási és Vidékfejlesztési Intézet",
+    "address": "Hódmezővásárhely, Andrássy út 15-17."
+  },
+  {
+    "id": 85,
+    "code": "MF131-10",
+    "name": "A előadó",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely, Andrássy út 15-17."
+  },
+  {
+    "id": 86,
+    "code": "MF-146-10",
+    "name": "Oktatástechnikai gyakorló, 106-os",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely, Andrássy út 15-17."
+  },
+  {
+    "id": 87,
+    "code": "MF-147-10",
+    "name": "107-108. gyakorló",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely, Andrássy út 15-17."
+  },
+  {
+    "id": 88,
+    "code": "MF-149-10",
+    "name": "109-es gyakorló",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely, Andrássy út 15-17."
+  },
+  {
+    "id": 89,
+    "code": "MF-191-10",
+    "name": "Továbbképzési előadó",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely, Andrássy út 15-17."
+  },
+  {
+    "id": 90,
+    "code": "MF-231-10",
+    "name": "B előadó",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely, Andrássy út 15-17."
+  },
+  {
+    "id": 91,
+    "code": "MF-349-10",
+    "name": "Számítástechnikai gyakorló, 309-es",
+    "dept": "Gazdálkodási és Vidékfejlesztési Intézet",
+    "address": "Hódmezővásárhely, Andrássy út 15-17."
+  },
+  {
+    "id": 92,
+    "code": "MF-451",
+    "name": "Levelezős előadó",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely, Andrássy út 15-17."
+  },
+  {
+    "id": 93,
+    "code": "AG-152-6",
+    "name": "Tárgyaló terem (TO)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 107"
+  },
+  {
+    "id": 94,
+    "code": "NY-001-6",
+    "name": "Kulka Frigyes terem (Nagyelőadó)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Semmelweis u. 6. (Régi Nyomda)"
+  },
+  {
+    "id": 95,
+    "code": "NY-002-6",
+    "name": "2. számú Kisterem",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Semmelweis u. 6. (Régi Nyomda)"
+  },
+  {
+    "id": 96,
+    "code": "NY-003-6",
+    "name": "3. számú Kisterem",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Semmelweis u. 6. (Régi Nyomda)"
+  },
+  {
+    "id": 97,
+    "code": "NY-004-6",
+    "name": "Miskolczy Dezső terem (4-es)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Semmelweis u. 6. (Régi Nyomda)"
+  },
+  {
+    "id": 98,
+    "code": "BE-002-3",
+    "name": "Kiss Árpád tanterem",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 99,
+    "code": "BE-004-3",
+    "name": "KTCS VibLab",
+    "dept": "*** Törölt Fizikai Kémiai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 100,
+    "code": "BE-006-3",
+    "name": "AKKT Nanotechnológia labor",
+    "dept": "Alkalmazott és Környezeti Kémiai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 101,
+    "code": "BE-201-3",
+    "name": "Fizikus-kémikus számítógépes kabinet",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 102,
+    "code": "BE-202-3",
+    "name": "AKKT tanszéki tárgyaló",
+    "dept": "Alkalmazott és Környezeti Kémiai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 103,
+    "code": "BE-204-3",
+    "name": "Gerecs Árpád terem",
+    "dept": "Alkalmazott és Környezeti Kémiai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 104,
+    "code": "BE-205-3",
+    "name": "AKKT tanszéki labor",
+    "dept": "Alkalmazott és Környezeti Kémiai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 105,
+    "code": "BE-309-3",
+    "name": "Kis.Fizikai hallg.labor (gyógyszerész)",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 106,
+    "code": "BE-310-3",
+    "name": "Biofizika tanterem",
+    "dept": "Biofizikai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 107,
+    "code": "BE-311-3",
+    "name": "Kémiai labor",
+    "dept": "Biofizikai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 108,
+    "code": "BE-312-3",
+    "name": "Lézer labor",
+    "dept": "Biofizikai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 109,
+    "code": "BE-313-3",
+    "name": "Spektroszkópiai labor",
+    "dept": "Biofizikai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 110,
+    "code": "BE-401-3",
+    "name": "Fizikai Kémia IV.em Olvasó",
+    "dept": "*** Törölt Fizikai Kémiai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 111,
+    "code": "BE-402-3",
+    "name": "Fizikai Kémia IV. em.-i Tanuló",
+    "dept": "*** Törölt Fizikai Kémiai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 112,
+    "code": "BE-501-3",
+    "name": "Csillagda (V.em.)",
+    "dept": "Kísérleti Fizikai Tanszék",
+    "address": "Szeged, Rerrich Béla tér 1."
+  },
+  {
+    "id": 113,
+    "code": "BK-101-6",
+    "name": "Szemináriumi szoba",
+    "dept": "Biokémiai Intézet",
+    "address": "Szeged, Dóm tér 9."
+  },
+  {
+    "id": 114,
+    "code": "BI-024",
+    "name": "Kolosváry Gábor terem",
+    "dept": "Ökológiai Tanszék",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 115,
+    "code": "BI-025",
+    "name": "Számítógép terem I.",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 116,
+    "code": "BI-026",
+    "name": "Számítógépo terem II.",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 117,
+    "code": "BI-065",
+    "name": "Körtvélyessy László hallgatói laboratórium",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 118,
+    "code": "BI-105",
+    "name": "Genetika szemináriumi terem",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 119,
+    "code": "BI-132",
+    "name": "Ereky Károly terem",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 120,
+    "code": "BI-164",
+    "name": "Szent-Györgyi Albert terem",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 121,
+    "code": "BI-166",
+    "name": "Györffy István szemináriumi terem",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 122,
+    "code": "BI-167",
+    "name": "Ábrahám Ambrus terem",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 123,
+    "code": "BI-182",
+    "name": "Ferenczy Lajos terem",
+    "dept": "Élettani, Szervezettani és Idegtud.Tansz.",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 124,
+    "code": "BI-201",
+    "name": "Biokémia hallgatói laboratórium",
+    "dept": "Biokémiai és Molekuláris Biológiai Tanszék",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 125,
+    "code": "BI-227",
+    "name": "Greguss Pál szemináriumi terem",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 126,
+    "code": "BI-242",
+    "name": "Biokémiai szemináriumi szoba",
+    "dept": "Biokémiai és Molekuláris Biológiai Tanszék",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 127,
+    "code": "BI-262",
+    "name": "Zsoldos Ferenc hallgatói laboratórium",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 128,
+    "code": "BI-300-3",
+    "name": "III. emeleti tanterem",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 129,
+    "code": "BI-301",
+    "name": "Mikrobiológia hallgatói laboratórium",
+    "dept": "Mikrobiológiai Tanszék",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 130,
+    "code": "BI-343",
+    "name": "Kevei Ferenc szemináriumi terem",
+    "dept": "Mikrobiológiai Tanszék",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 131,
+    "code": "BI-401",
+    "name": "Összehasonlító Élettan hallgatói laboratórium",
+    "dept": "Élettani, Szervezettani és Idegtud.Tansz.",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 132,
+    "code": "BI-429",
+    "name": "Összehasonlító Élettani szemináriumi terem",
+    "dept": "Élettani, Szervezettani és Idegtud.Tansz.",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 133,
+    "code": "BI-521",
+    "name": "Hallgatói laboratórium",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 134,
+    "code": "BI-523",
+    "name": "Hallgatói laboratórium (mikroszkópos)",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 135,
+    "code": "BI-524",
+    "name": "Hallgatói laboratórium (V. emelet)",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 136,
+    "code": "BI-527",
+    "name": "Bartucz Lajos tanterem",
+    "dept": "Biológiai Intézet",
+    "address": "Szeged, Közép fasor 52."
+  },
+  {
+    "id": 137,
+    "code": "BO-001-3",
+    "name": "Elméleti Fizikai Tanszék Tárgyaló",
+    "dept": "Elméleti Fizikai Tanszék",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 138,
+    "code": "BO-006-3",
+    "name": "Bolyai labor",
+    "dept": "*** Törölt Fizikai Kémiai Tanszék",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 139,
+    "code": "BO-107-3",
+    "name": "Riesz Frigyes terem (I.emelet)",
+    "dept": "Bolyai Intézet",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 140,
+    "code": "BO-111-3",
+    "name": "Fröhlich Pál tanterem (Tisza Lajos krt 84-86.)",
+    "dept": "Kísérleti Fizikai Tanszék",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 141,
+    "code": "BO-112-3",
+    "name": "Ketskeméty István tanterem",
+    "dept": "Kísérleti Fizikai Tanszék",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 142,
+    "code": "BO-130-3",
+    "name": "Kalmár terem",
+    "dept": "Bolyai Intézet",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 143,
+    "code": "BO-202-3",
+    "name": "Bay Zoltán Tanterem",
+    "dept": "Elméleti Fizikai Tanszék",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 144,
+    "code": "BO-209-3",
+    "name": "Kerékjártó Béla terem",
+    "dept": "Bolyai Intézet",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 145,
+    "code": "BO-210-3",
+    "name": "Rédei terem (II. emelet)",
+    "dept": "Bolyai Intézet",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 146,
+    "code": "BO-211-3",
+    "name": "Szőkefalvi-Nagy terem (II. emelet)",
+    "dept": "Bolyai Intézet",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 147,
+    "code": "BO-212-3",
+    "name": "Vályi Gyula terem",
+    "dept": "Bolyai Intézet",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 148,
+    "code": "BO-213-3",
+    "name": "Grünwald Géza terem",
+    "dept": "Bolyai Intézet",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 149,
+    "code": "BO-214-3",
+    "name": "Farkas Gyula terem",
+    "dept": "Bolyai Intézet",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 150,
+    "code": "BO-215-3",
+    "name": "Haar Alfréd terem",
+    "dept": "Bolyai Intézet",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 151,
+    "code": "BO-216-3",
+    "name": "Bolyai János terem",
+    "dept": "Bolyai Intézet",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 152,
+    "code": "BO-225-3",
+    "name": "Lánczos Kornél tanterem",
+    "dept": "Elméleti Fizikai Tanszék",
+    "address": "Szeged, Aradi vértanúk tere 1."
+  },
+  {
+    "id": 153,
+    "code": "BR-001-6",
+    "name": "PUVA",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 154,
+    "code": "BR-002-6",
+    "name": "II. Ambulancia (Bőrklinika)",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 155,
+    "code": "BR-005-6",
+    "name": "Allergológia Ambulancia",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 156,
+    "code": "BR-006-6",
+    "name": "Lézer kezelő (Bőrklinika)",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 158,
+    "code": "BR-100-6",
+    "name": "Simon Miklós terem (Bőrgyógyászat)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 159,
+    "code": "BR-101-6",
+    "name": "Molekuláris biológia labor",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 160,
+    "code": "BR-102-6",
+    "name": "Immunlabor",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 161,
+    "code": "BR-104-6",
+    "name": "I. Észak társalgó (Bőrklinika)",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 162,
+    "code": "BR-105-6",
+    "name": "I. Dél társalgó (Bőrklinika)",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 163,
+    "code": "BR-107-6",
+    "name": "I. Észak kezelő (Bőrklinika)",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 164,
+    "code": "BR-108-6",
+    "name": "I. Dél kezelő (Bőrklinika)",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 165,
+    "code": "BR-109-6",
+    "name": "Lymphocíta labor",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 166,
+    "code": "BR-110-6",
+    "name": "Könyvtár (Bőrklinika)",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 167,
+    "code": "BR-200-6",
+    "name": "Plasztikai társalgó",
+    "dept": "Bőrgyógyászati és Allergológiai Klinika",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 168,
+    "code": "CS-101-6",
+    "name": "Oktató rendelő",
+    "dept": "Családorvosi Intézet és Rendelő",
+    "address": "Szeged, Tisza Lajos krt. 109."
+  },
+  {
+    "id": 169,
+    "code": "CS-102-6",
+    "name": "Rendelő 3",
+    "dept": "Családorvosi Intézet és Rendelő",
+    "address": "Szeged, Tisza Lajos krt. 109."
+  },
+  {
+    "id": 170,
+    "code": "CS-103-6",
+    "name": "Üzemorvosi rendelő 1",
+    "dept": "Családorvosi Intézet és Rendelő",
+    "address": "Szeged, Tisza Lajos krt. 109."
+  },
+  {
+    "id": 171,
+    "code": "CS-104-6",
+    "name": "Üzemorvosi rendelő 2",
+    "dept": "Családorvosi Intézet és Rendelő",
+    "address": "Szeged, Tisza Lajos krt. 109."
+  },
+  {
+    "id": 172,
+    "code": "CK-001-5",
+    "name": "Ledniczki terem",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged, Csongrádi sgt 1"
+  },
+  {
+    "id": 173,
+    "code": "CK-002-5",
+    "name": "Konferenciaterem (Kamara)",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged, Csongrádi sgt 1"
+  },
+  {
+    "id": 174,
+    "code": "CK-003-5",
+    "name": "Tárgyaló (Iparkamarában)",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged, Csongrádi sgt 1"
+  },
+  {
+    "id": 175,
+    "code": "D1-100-6",
+    "name": "Jancsó Miklós terem (Élettan)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 10."
+  },
+  {
+    "id": 176,
+    "code": "D1-101-6",
+    "name": "Gyakorlati terem (Élettan)",
+    "dept": "Élettani Intézet",
+    "address": "Szeged, Dóm tér 10."
+  },
+  {
+    "id": 177,
+    "code": "D1-102-6",
+    "name": "Könyvtár (Élettan)",
+    "dept": "Élettani Intézet",
+    "address": "Szeged, Dóm tér 10."
+  },
+  {
+    "id": 178,
+    "code": "D1-110-6",
+    "name": "Berencsi György terem (Népegészségtan)",
+    "dept": "Népegészségtani Intézet",
+    "address": "Szeged, Dóm tér 10."
+  },
+  {
+    "id": 179,
+    "code": "D1-120-6",
+    "name": "Labor 1 (Mikrobiológia)",
+    "dept": "Orvosi Mikrobiológiai és Immunológiai Intézet",
+    "address": "Szeged, Dóm tér 10."
+  },
+  {
+    "id": 180,
+    "code": "D1-121-6",
+    "name": "Labor 2 (Mikrobiológia)",
+    "dept": "Orvosi Mikrobiológiai és Immunológiai Intézet",
+    "address": "Szeged, Dóm tér 10."
+  },
+  {
+    "id": 181,
+    "code": "EA-007-8",
+    "name": "Képalkotó diagnosztikai oktató kabinet",
+    "dept": "Képi Diag. és Interv. Asszisztensképzés",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 182,
+    "code": "EA-009-8",
+    "name": "Mozgásanalitika",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 183,
+    "code": "EA-011-8",
+    "name": "Laboratórium",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 184,
+    "code": "EA-013-8",
+    "name": "Anatómia gyakorló",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 185,
+    "code": "EA-015-8",
+    "name": "Védőnő módszertan",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 186,
+    "code": "EA-016-8",
+    "name": "Demonstrációs terem 16.sz (IV.d)",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 187,
+    "code": "EA-019-8",
+    "name": "Demonstrációs terem 19.sz (I.d)",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 188,
+    "code": "EA-020-8",
+    "name": "Demonstrációs terem 20.sz (II.d)",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 189,
+    "code": "EA-022-8",
+    "name": "Demonstrációs terem 22.sz (III.d)",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 190,
+    "code": "EA-024-8",
+    "name": "Tornaterem II. (24.sz)",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 191,
+    "code": "EA-026-8",
+    "name": "Tornaterem I. (26.sz)",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 192,
+    "code": "EA-111-8",
+    "name": "Előadó terem 111.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 193,
+    "code": "EA-112-8",
+    "name": "Tankonyha",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 194,
+    "code": "EA-113-8",
+    "name": "Gyógytorn.gyakorló 113.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 195,
+    "code": "EA-119-8",
+    "name": "Szemináriumi terem 119.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 196,
+    "code": "EA-120-8",
+    "name": "Számítástechnika 120.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 197,
+    "code": "EA-121-8",
+    "name": "Egészségfejlesztés szaktanterem 1.",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 198,
+    "code": "EA-122-8",
+    "name": "Szemináriumi terem 122.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 199,
+    "code": "EA-123-8",
+    "name": "Szemináriumi terem 123.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 200,
+    "code": "EA-124-8",
+    "name": "Előadó terem 124.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 201,
+    "code": "EA-204-8",
+    "name": "Előadó terem 204.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 202,
+    "code": "EA-205-8",
+    "name": "Szemináriumi terem 205.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 203,
+    "code": "EA-207-8",
+    "name": "Előadó terem 207.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 204,
+    "code": "EA-209-8",
+    "name": "Előadó terem 209.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 205,
+    "code": "EA-212-8",
+    "name": "Gyógytorn. gyak. 212.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 206,
+    "code": "EA-213-8",
+    "name": "Gyógytorn. gyak. 213.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 207,
+    "code": "EA-215-8",
+    "name": "Szemináriumi terem 215.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 208,
+    "code": "EA-223-8",
+    "name": "Előadó terem 223.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 209,
+    "code": "EA-224-8",
+    "name": "Előadó terem 224.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 210,
+    "code": "EA-232-8",
+    "name": "Előadó terem 232.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Temesvári krt 31."
+  },
+  {
+    "id": 211,
+    "code": "EB-001-8",
+    "name": "Dr. Szél Éva terem",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 212,
+    "code": "EB-002-8",
+    "name": "Dr. Farkasinszky Teréz terem",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 213,
+    "code": "EB-003-8",
+    "name": "Előadó terem 3.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 214,
+    "code": "EB-004-8",
+    "name": "Előadó terem 4.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 215,
+    "code": "EB-009-8",
+    "name": "Klub szoba",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 216,
+    "code": "EB-101-8",
+    "name": "Előadó terem 101.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 217,
+    "code": "EB-104-8",
+    "name": "Szemináriumi terem 104.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 218,
+    "code": "EB-105-8",
+    "name": "Szemináriumi terem 105.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 219,
+    "code": "EB-106-8",
+    "name": "Szemináriumi terem 106.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 220,
+    "code": "EB-201-8",
+    "name": "Szemináriumi terem 201.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 221,
+    "code": "EB-204-8",
+    "name": "Egészségfejlesztés szaktanterem 2.",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 222,
+    "code": "EB-207-8",
+    "name": "Szemináriumi terem 207.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 223,
+    "code": "EB-208-8",
+    "name": "Szemináriumi terem 208.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 224,
+    "code": "EB-301-8",
+    "name": "Számítástechnika 301.sz",
+    "dept": "ETSZK Egészségtudományi és Szociális Képzési Kar",
+    "address": "Szeged, Bal fasor 39-45."
+  },
+  {
+    "id": 225,
+    "code": "FF-100-6",
+    "name": "Tanterem (Farmakológia)",
+    "dept": "Farmakológiai és Farmakoterápiai Intézet",
+    "address": "Szeged, Dóm tér 12."
+  },
+  {
+    "id": 226,
+    "code": "FF-101-6",
+    "name": "Labor 1",
+    "dept": "Farmakológiai és Farmakoterápiai Intézet",
+    "address": "Szeged, Dóm tér 12."
+  },
+  {
+    "id": 227,
+    "code": "FF-102-6",
+    "name": "Labor 2",
+    "dept": "Farmakológiai és Farmakoterápiai Intézet",
+    "address": "Szeged, Dóm tér 12."
+  },
+  {
+    "id": 228,
+    "code": "FF-103-6",
+    "name": "Labor 3",
+    "dept": "Farmakológiai és Farmakoterápiai Intézet",
+    "address": "Szeged, Dóm tér 12."
+  },
+  {
+    "id": 229,
+    "code": "FF-104-6",
+    "name": "PhD labor 3",
+    "dept": "Farmakológiai és Farmakoterápiai Intézet",
+    "address": "Szeged, Dóm tér 12."
+  },
+  {
+    "id": 230,
+    "code": "FF-110-6",
+    "name": "Tanterem (Térítéses Titkárság)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 12."
+  },
+  {
+    "id": 231,
+    "code": "FI-001-3",
+    "name": "Kis.Fizikai szakmódszertani labor",
+    "dept": "Kísérleti Fizikai Tanszék",
+    "address": "Szeged, Dóm tér 9."
+  },
+  {
+    "id": 232,
+    "code": "FI-101-3",
+    "name": "Budó Ágoston előadóterem",
+    "dept": "Kísérleti Fizikai Tanszék",
+    "address": "Szeged, Dóm tér 9."
+  },
+  {
+    "id": 233,
+    "code": "FI-104-3",
+    "name": "Kis.Fizikai hallg.labor (17.sz.)",
+    "dept": "Kísérleti Fizikai Tanszék",
+    "address": "Szeged, Dóm tér 9."
+  },
+  {
+    "id": 234,
+    "code": "FI-105-3",
+    "name": "Kis.Fizikai hallg.labor (18.sz.)",
+    "dept": "Kísérleti Fizikai Tanszék",
+    "address": "Szeged, Dóm tér 9."
+  },
+  {
+    "id": 235,
+    "code": "FI-115",
+    "name": "Optikai tanszéki labor (20.sz)",
+    "dept": "Optikai és Kvantumelektronikai Tanszék",
+    "address": "Szeged, Dóm tér 9."
+  },
+  {
+    "id": 236,
+    "code": "FI-116",
+    "name": "Optikai tanszéki labor (21.sz)",
+    "dept": "Optikai és Kvantumelektronikai Tanszék",
+    "address": "Szeged, Dóm tér 9."
+  },
+  {
+    "id": 237,
+    "code": "FI-117",
+    "name": "Optikai tanszéki labor (16.sz)",
+    "dept": "Optikai és Kvantumelektronikai Tanszék",
+    "address": "Szeged, Dóm tér 9."
+  },
+  {
+    "id": 238,
+    "code": "FK004-17",
+    "name": "Szájsebészet ambulancia",
+    "dept": "Szájsebészeti Tanszék",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 239,
+    "code": "FK006-17",
+    "name": "Orális Medicina I",
+    "dept": "Szájsebészeti Tanszék",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 240,
+    "code": "FK007-17",
+    "name": "Orális Medicina II.",
+    "dept": "Szájsebészeti Tanszék",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 241,
+    "code": "FK008-17",
+    "name": "Parodontológia II.",
+    "dept": "Konzerváló és Esztétikai Fogászati Tanszék",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 242,
+    "code": "FK010-17",
+    "name": "Fogszabályozás",
+    "dept": "Fogszabályozási és Gyermekfogászati Tanszék",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 243,
+    "code": "FK011-17",
+    "name": "Gyermekfogászat",
+    "dept": "Fogszabályozási és Gyermekfogászati Tanszék",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 244,
+    "code": "FK115-17",
+    "name": "Fogpótlástan II.",
+    "dept": "Fogpótlástani és Orális Biológiai Tanszék",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 245,
+    "code": "FK119-17",
+    "name": "Radiológia",
+    "dept": "Szájsebészeti Tanszék",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 246,
+    "code": "FK120-17",
+    "name": "OC I.",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 247,
+    "code": "FK121-17",
+    "name": "15 székes rendelő",
+    "dept": "Konzerváló és Esztétikai Fogászati Tanszék",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 248,
+    "code": "FK201-17",
+    "name": "OC II.",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 249,
+    "code": "FK220-17",
+    "name": "Szemináriumi terem (Fogklinika)",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 250,
+    "code": "FK221-17",
+    "name": "Tanterem (Fogklinika)",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 251,
+    "code": "FK223-17",
+    "name": "Tanlabor I.",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 252,
+    "code": "FK224-17",
+    "name": "Tanlabor II.",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 253,
+    "code": "FK301-17",
+    "name": "Tárgyaló (Fogklinika)",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 64-66."
+  },
+  {
+    "id": 254,
+    "code": "FL001-17",
+    "name": "Labor I.",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "6720 Szeged, Tisza Lajos körút 83."
+  },
+  {
+    "id": 255,
+    "code": "FL101-17",
+    "name": "Fantomlabor",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "6720 Szeged, Tisza Lajos körút 83."
+  },
+  {
+    "id": 256,
+    "code": "FL201-17",
+    "name": "Labor II.",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "6720 Szeged, Tisza Lajos körút 83."
+  },
+  {
+    "id": 257,
+    "code": "FL202-17",
+    "name": "Labor III.",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "6720 Szeged, Tisza Lajos körút 83."
+  },
+  {
+    "id": 258,
+    "code": "FL301-17",
+    "name": "Fehér terem",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "6720 Szeged, Tisza Lajos körút 83."
+  },
+  {
+    "id": 259,
+    "code": "FL302-17",
+    "name": "Sárga terem",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "6720 Szeged, Tisza Lajos körút 83."
+  },
+  {
+    "id": 260,
+    "code": "FL303-17",
+    "name": "Zöld terem",
+    "dept": "FOK Fogorvostudományi Kar",
+    "address": "6720 Szeged, Tisza Lajos körút 83."
+  },
+  {
+    "id": 261,
+    "code": "FO-100-6",
+    "name": "Kezelő",
+    "dept": "Fül-Orr-Gégészeti és Fej-Nyaksebészeti Klinika",
+    "address": "Szeged, Tisza Lajos krt. 111."
+  },
+  {
+    "id": 262,
+    "code": "FU-001-3",
+    "name": "Füvészkerti tanterem",
+    "dept": "Növénybiológiai Tanszék",
+    "address": "Szeged, Lövölde utca 42."
+  },
+  {
+    "id": 263,
+    "code": "GFF-001-16",
+    "name": "K-terem",
+    "dept": "GFF Gál Ferenc Főiskola",
+    "address": "Szeged, Dóm tér 6."
+  },
+  {
+    "id": 264,
+    "code": "GFF-002-16",
+    "name": "A-terem",
+    "dept": "GFF Gál Ferenc Főiskola",
+    "address": "Szeged, Dóm tér 6."
+  },
+  {
+    "id": 265,
+    "code": "GFF-003-16",
+    "name": "B-terem",
+    "dept": "GFF Gál Ferenc Főiskola",
+    "address": "Szeged, Dóm tér 6."
+  },
+  {
+    "id": 266,
+    "code": "GFF-004-16",
+    "name": "C-terem",
+    "dept": "GFF Gál Ferenc Főiskola",
+    "address": "Szeged, Dóm tér 6."
+  },
+  {
+    "id": 267,
+    "code": "GFF-005-16",
+    "name": "D-terem",
+    "dept": "GFF Gál Ferenc Főiskola",
+    "address": "Szeged, Dóm tér 6."
+  },
+  {
+    "id": 268,
+    "code": "GFF-006-16",
+    "name": "E-terem",
+    "dept": "GFF Gál Ferenc Főiskola",
+    "address": "Szeged, Dóm tér 6."
+  },
+  {
+    "id": 269,
+    "code": "GFF-007-16",
+    "name": "F-terem",
+    "dept": "GFF Gál Ferenc Főiskola",
+    "address": "Szeged, Dóm tér 6."
+  },
+  {
+    "id": 270,
+    "code": "GFF-008-16",
+    "name": "G-terem",
+    "dept": "GFF Gál Ferenc Főiskola",
+    "address": "Szeged, Dóm tér 6."
+  },
+  {
+    "id": 271,
+    "code": "GFF-009-16",
+    "name": "H-terem",
+    "dept": "GFF Gál Ferenc Főiskola",
+    "address": "Szeged, Dóm tér 6."
+  },
+  {
+    "id": 272,
+    "code": "KO-004-5",
+    "name": "Kálvária 004 terem",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged Kálvária sgt.1."
+  },
+  {
+    "id": 273,
+    "code": "KO-005-5",
+    "name": "Kálvária 005 terem",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged Kálvária sgt.1."
+  },
+  {
+    "id": 274,
+    "code": "KO-007-5",
+    "name": "Kálvária 007 terem",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged Kálvária sgt.1."
+  },
+  {
+    "id": 275,
+    "code": "KO-101-5",
+    "name": "Kálvária 101 terem",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged Kálvária sgt.1."
+  },
+  {
+    "id": 276,
+    "code": "KO-104-5",
+    "name": "Kálvária 104 terem",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged Kálvária sgt.1."
+  },
+  {
+    "id": 277,
+    "code": "KO-105-5",
+    "name": "Kálvária 105 terem",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged Kálvária sgt.1."
+  },
+  {
+    "id": 278,
+    "code": "KO-108-5",
+    "name": "Kálvária díszterem",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged Kálvária sgt.1."
+  },
+  {
+    "id": 279,
+    "code": "KO-410-5",
+    "name": "Kálvária 410 terem",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged Kálvária sgt.1."
+  },
+  {
+    "id": 280,
+    "code": "GY-100-6",
+    "name": "Waltner Károly terem (Gyermekgyógyászat)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Korányi fasor 14."
+  },
+  {
+    "id": 281,
+    "code": "GY-101-6",
+    "name": "Labor (Gyermekgyógyászat)",
+    "dept": "Gyermekgyógyászati Klinika és Gyermekegészségügyi Központ",
+    "address": "Szeged, Korányi fasor 14."
+  },
+  {
+    "id": 282,
+    "code": "GK-001-7",
+    "name": "III.sz tanterem (alagsor)",
+    "dept": "GYTK Gyógyszerésztudományi Kar",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 283,
+    "code": "GK-002-7",
+    "name": "IV.sz tanterem (alagsor)",
+    "dept": "GYTK Gyógyszerésztudományi Kar",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 284,
+    "code": "GK-003-7",
+    "name": "VII.sz tanterem (Tanácsterem)",
+    "dept": "GYTK Gyógyszerésztudományi Kar",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 285,
+    "code": "GK-004-7",
+    "name": "I.sz számítógépes labor (alagsor)",
+    "dept": "GYTK Gyógyszerésztudományi Kar",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 286,
+    "code": "GK-010-7",
+    "name": "V.sz tanterem",
+    "dept": "GYTK Gyógyszerésztudományi Kar",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 287,
+    "code": "GK-011-7",
+    "name": "VI.sz (számítógépes) tanterem",
+    "dept": "GYTK Gyógyszerésztudományi Kar",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 288,
+    "code": "GK-100-7",
+    "name": "I.sz tanterem",
+    "dept": "GYTK Gyógyszerésztudományi Kar",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 289,
+    "code": "GK-101-7",
+    "name": "II.sz tanterem",
+    "dept": "GYTK Gyógyszerésztudományi Kar",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 290,
+    "code": "GK-200-7",
+    "name": "Galenusi laboratórium",
+    "dept": "Gyógyszertechnológiai Intézet",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 291,
+    "code": "GK-201-7",
+    "name": "Drogismereti labor",
+    "dept": "Farmakognóziai Intézet",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 292,
+    "code": "GK-300-7",
+    "name": "Kedvessy tangyógyszertár",
+    "dept": "Gyógyszertechnológiai Intézet",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 293,
+    "code": "GK-301-7",
+    "name": "Tablettázó labor 1.",
+    "dept": "Gyógyszertechnológiai Intézet",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 294,
+    "code": "GK-302-7",
+    "name": "Tablettázó labor 2.",
+    "dept": "Gyógyszertechnológiai Intézet",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 295,
+    "code": "GK-303-7",
+    "name": "Injekciós laboratórium",
+    "dept": "Gyógyszertechnológiai Intézet",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 296,
+    "code": "GK-400-7",
+    "name": "Dávid Lajos laboratórium",
+    "dept": "Gyógyszertechnológiai Intézet",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 297,
+    "code": "GK-401-7",
+    "name": "Gy.növénytani labor",
+    "dept": "Farmakognóziai Intézet",
+    "address": "Szeged, Eötvös u. 6"
+  },
+  {
+    "id": 298,
+    "code": "HO-045-0",
+    "name": "IX. tanterem (41 iroda)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Honvéd tér 6."
+  },
+  {
+    "id": 299,
+    "code": "HO-046-0",
+    "name": "VIII. tanterem, számítógépes kabinet",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Honvéd tér 6."
+  },
+  {
+    "id": 300,
+    "code": "HO-058-0",
+    "name": "VII. tanterem (58 iroda)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Honvéd tér 6."
+  },
+  {
+    "id": 301,
+    "code": "HO-064-0",
+    "name": "VI. tanterem (58 iroda)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Honvéd tér 6."
+  },
+  {
+    "id": 302,
+    "code": "HO-065-0",
+    "name": "V. tanterem (65 iroda)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Honvéd tér 6."
+  },
+  {
+    "id": 303,
+    "code": "HO-066-0",
+    "name": "IV. tanterem (66 iroda)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Honvéd tér 6."
+  },
+  {
+    "id": 304,
+    "code": "HO-068-0",
+    "name": "III. tanterem (68 iroda)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Honvéd tér 6."
+  },
+  {
+    "id": 305,
+    "code": "HO-070-0",
+    "name": "II. tanterem (70 iroda)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Honvéd tér 6."
+  },
+  {
+    "id": 306,
+    "code": "HO-071-0",
+    "name": "I. tanterem (71 iroda)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Honvéd tér 6."
+  },
+  {
+    "id": 307,
+    "code": "B1-100-6",
+    "name": "Hetényi Géza terem (I.Belklinika)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Korányi fasor 8."
+  },
+  {
+    "id": 308,
+    "code": "B1-101-6",
+    "name": "Kelemen Endre terem (I.Belklinika)",
+    "dept": "I. sz. Belgyógyászati Klinika",
+    "address": "Szeged, Korányi fasor 8."
+  },
+  {
+    "id": 309,
+    "code": "B1-102-6",
+    "name": "Labor 6 (I.Belklinika)",
+    "dept": "I. sz. Belgyógyászati Klinika",
+    "address": "Szeged, Korányi fasor 8."
+  },
+  {
+    "id": 310,
+    "code": "B1-103-6",
+    "name": "Labor (Nukleáris Medicina)",
+    "dept": "Nukleáris Medicina Intézet",
+    "address": "Szeged, Korányi fasor 8."
+  },
+  {
+    "id": 311,
+    "code": "JM-001-6",
+    "name": "1. tanterem (Jancsó Miklós kollégium)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "6728 Szeged, Semmelweis utca 7."
+  },
+  {
+    "id": 312,
+    "code": "JM-002-6",
+    "name": "2. tanterem (Jancsó Miklós kollégium)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "6728 Szeged, Semmelweis utca 7."
+  },
+  {
+    "id": 313,
+    "code": "JM-003-6",
+    "name": "3. tanterem (Jancsó Miklós kollégium)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "6728 Szeged, Semmelweis utca 7."
+  },
+  {
+    "id": 314,
+    "code": "JM-004-6",
+    "name": "4. tanterem (Jancsó Miklós kollégium)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "6728 Szeged, Semmelweis utca 7."
+  },
+  {
+    "id": 315,
+    "code": "JM-005-6",
+    "name": "5. tanterem (Jancsó Miklós kollégium)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "6728 Szeged, Semmelweis utca 7."
+  },
+  {
+    "id": 316,
+    "code": "JM-006-6",
+    "name": "6. tanterem (Jancsó Miklós kollégium)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "6728 Szeged, Semmelweis utca 7."
+  },
+  {
+    "id": 317,
+    "code": "K2-101-6",
+    "name": "Németh András terem (Urológia)",
+    "dept": "Urológiai Klinika",
+    "address": "Szeged, Kálvária sgt. 57."
+  },
+  {
+    "id": 318,
+    "code": "K2-102-6",
+    "name": "Szemináriumi terem (Urológia)",
+    "dept": "Urológiai Klinika",
+    "address": "Szeged, Kálvária sgt. 57."
+  },
+  {
+    "id": 319,
+    "code": "B2-101-6",
+    "name": "Könyvtár",
+    "dept": "II.sz. Belgyógyászati Klinika és Kardiológiai Központ",
+    "address": "Szeged, Korányi fasor 6."
+  },
+  {
+    "id": 320,
+    "code": "IR-001-3",
+    "name": "Irinyi udvari tanterem",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 321,
+    "code": "IR-010-3",
+    "name": "Irinyi 010 szemináriumi terem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 322,
+    "code": "IR-011-3",
+    "name": "Irinyi 011 ipari inf.- labor",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 323,
+    "code": "IR-012-3",
+    "name": "Irinyi 012 képfeldolgozó labor",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 324,
+    "code": "IR-012A-3",
+    "name": "Irinyi 012A képfeldolgozó labor",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 325,
+    "code": "IR-012B-3",
+    "name": "Irinyi 012B képfeldolgozó labor",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 326,
+    "code": "IR-012C-3",
+    "name": "Irinyi 012C képfeldolgozó labor",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 327,
+    "code": "IR-020-3",
+    "name": "MAI (Műszaki Anyagtudományi Intézet) hallg. lab.",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 328,
+    "code": "IR-102-1",
+    "name": "Irinyi 102 tanterem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 329,
+    "code": "IR-103-1",
+    "name": "Irinyi 103 tanterem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 330,
+    "code": "IR-104-3",
+    "name": "Irinyi 104 PC-terem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 331,
+    "code": "IR-105-3",
+    "name": "Irinyi 105 tanterem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 332,
+    "code": "IR-106-3",
+    "name": "Irinyi 106 tanterem",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 333,
+    "code": "IR-107-3",
+    "name": "Irinyi 107 szoftverminőség labor",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 334,
+    "code": "IR-108-3",
+    "name": "Irinyi 108 hálozatok labor",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 335,
+    "code": "IR-109-3",
+    "name": "Irinyi 109 beágyazott labor",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 336,
+    "code": "IR-110-3",
+    "name": "Irinyi 110 mobil- és AAL- labor",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 337,
+    "code": "IR-111-3",
+    "name": "Irinyi 111 általános labor",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 338,
+    "code": "IR-116-3",
+    "name": "Irinyi 116 Méréstechnika laboratórium",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 339,
+    "code": "IR-116r-0",
+    "name": "Lektori Előadó V. (116)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 340,
+    "code": "IR-117-0",
+    "name": "Idegennyelvi terem",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 341,
+    "code": "IR-118-0",
+    "name": "Szemináriumi szoba (118)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 342,
+    "code": "IR-119-0",
+    "name": "Lektori Labor (119)",
+    "dept": "Idegennyelvi Kommunikációs Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 343,
+    "code": "IR-121-2",
+    "name": "Hungarológia szeminárium",
+    "dept": "Hungarológia és Közép-Európa Tanulmányok",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 344,
+    "code": "IR-212-3",
+    "name": "Irinyi 212 tanterem",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 345,
+    "code": "IR-213-3",
+    "name": "Irinyi 213 tanterem",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Tisza Lajos krt. 103.",
+    "aliases": [
+      "Irinyi 213 PC-terem"
+    ]
+  },
+  {
+    "id": 346,
+    "code": "IR-214-3",
+    "name": "Irinyi 214 tanterem",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 347,
+    "code": "IR-215-3",
+    "name": "Irinyi 215 tanterem",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 348,
+    "code": "IR-216-3",
+    "name": "Irinyi 216 PC-terem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 349,
+    "code": "IR-217-3",
+    "name": "Irinyi 217 PC-terem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 350,
+    "code": "IR-218-3",
+    "name": "Irinyi 218 tanterem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 351,
+    "code": "IR-219-3",
+    "name": "Irinyi 219 tanterem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 352,
+    "code": "IR-221-3",
+    "name": "Irinyi 221 tanterem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 353,
+    "code": "IR-222-3",
+    "name": "Irinyi 222 PC-terem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 354,
+    "code": "IR-223-3",
+    "name": "Irinyi 223 PC-terem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 355,
+    "code": "IR-224-3",
+    "name": "Irinyi 224 PC-terem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 356,
+    "code": "IR-225-3",
+    "name": "Irinyi 225 PC-terem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 357,
+    "code": "IR-226-3",
+    "name": "Irinyi 226 PC-terem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 358,
+    "code": "IR-227-3",
+    "name": "Irinyi 227 PC-terem",
+    "dept": "Informatikai Intézet",
+    "address": "Szeged, Tisza Lajos krt. 103."
+  },
+  {
+    "id": 359,
+    "code": "1",
+    "name": "Murália műhely – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 360,
+    "code": "2",
+    "name": "Kerámia műhely – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 361,
+    "code": "101",
+    "name": "Síküveg szakműhely – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 362,
+    "code": "102",
+    "name": "Tűzzománc szakműhely – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 363,
+    "code": "104",
+    "name": "Formatan szakműhely – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 364,
+    "code": "106",
+    "name": "Mintázás szakműhely – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 365,
+    "code": "107",
+    "name": "Műterem I. (rajz) – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 366,
+    "code": "108",
+    "name": "Fotó szakműhely – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 367,
+    "code": "111",
+    "name": "Grafika szakműhely – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 368,
+    "code": "202",
+    "name": "Multimédia szakműhely – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 369,
+    "code": "203",
+    "name": "Festészet műterem – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 370,
+    "code": "204",
+    "name": "Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 371,
+    "code": "214",
+    "name": "Módszertan szakműhely – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 372,
+    "code": "215",
+    "name": "Műterem II. (rajz) – gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Brüsszeli krt 37."
+  },
+  {
+    "id": 373,
+    "code": "112",
+    "name": "112 csoportszoba",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 374,
+    "code": "131",
+    "name": "131 Kémia előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 375,
+    "code": "132",
+    "name": "132 lab",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 376,
+    "code": "133",
+    "name": "133 lab",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 377,
+    "code": "134",
+    "name": "134 lab",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 378,
+    "code": "135",
+    "name": "135 lab",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 379,
+    "code": "139",
+    "name": "Oktatói szoba",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 380,
+    "code": "201",
+    "name": "201 Technika lab",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 381,
+    "code": "202",
+    "name": "202 Technika lab",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 382,
+    "code": "203",
+    "name": "203 Technika lab",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 384,
+    "code": "1009",
+    "name": "1009 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 385,
+    "code": "1023",
+    "name": "1023 - Számítógépterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 386,
+    "code": "1049",
+    "name": "1049 - csoportszoba",
+    "dept": "Alkalmazott Egészségtudományi és Egészségfejlesztési Intézet",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 387,
+    "code": "1051",
+    "name": "1051 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 388,
+    "code": "1058",
+    "name": "1058 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 389,
+    "code": "1060",
+    "name": "1060 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 390,
+    "code": "1071",
+    "name": "1071 - Díszterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 391,
+    "code": "1101",
+    "name": "1101 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 392,
+    "code": "1104",
+    "name": "1104 - Számítógépterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 393,
+    "code": "1108",
+    "name": "1108 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 394,
+    "code": "1109",
+    "name": "1109 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 395,
+    "code": "1111",
+    "name": "1111 - Gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 396,
+    "code": "1117",
+    "name": "1117 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 397,
+    "code": "1119",
+    "name": "1119 - Számítógépterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 398,
+    "code": "1121",
+    "name": "1121 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 399,
+    "code": "1131",
+    "name": "1131 - Gyakorlóterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 400,
+    "code": "1154",
+    "name": "1154 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 401,
+    "code": "1204",
+    "name": "1204 - Labor",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 402,
+    "code": "1208",
+    "name": "1208 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 403,
+    "code": "1218",
+    "name": "1218 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 404,
+    "code": "1220",
+    "name": "1220 - Számítógépterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 405,
+    "code": "1127/1129",
+    "name": "1127/1129 - Labor",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 406,
+    "code": "A103",
+    "name": "A103 - Gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 407,
+    "code": "A120",
+    "name": "A120 - Gyakorlati terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Boldogasszony sgt 6."
+  },
+  {
+    "id": 408,
+    "code": "7012",
+    "name": "7012 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 409,
+    "code": "7014",
+    "name": "7014 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 410,
+    "code": "7101",
+    "name": "7101 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 411,
+    "code": "7103",
+    "name": "7103 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 412,
+    "code": "7116",
+    "name": "7116 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 413,
+    "code": "8101",
+    "name": "8101 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 414,
+    "code": "8102",
+    "name": "8102 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 415,
+    "code": "8103",
+    "name": "8103 - Hangversenyterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 416,
+    "code": "8109",
+    "name": "8109 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 417,
+    "code": "8110",
+    "name": "8110 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 418,
+    "code": "8111",
+    "name": "8111 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 419,
+    "code": "3003",
+    "name": "3003 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 420,
+    "code": "3005",
+    "name": "3005 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 421,
+    "code": "3009",
+    "name": "3009 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 422,
+    "code": "3012",
+    "name": "3012 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 423,
+    "code": "3017",
+    "name": "3017 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 424,
+    "code": "3019",
+    "name": "3019 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 425,
+    "code": "3021",
+    "name": "3021 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 426,
+    "code": "3027",
+    "name": "3027 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 427,
+    "code": "3101",
+    "name": "3101 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 428,
+    "code": "3109",
+    "name": "3109 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 429,
+    "code": "3113",
+    "name": "3113 - Számítógépterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 430,
+    "code": "3119",
+    "name": "3119 - Műterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 431,
+    "code": "3124",
+    "name": "3124 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 432,
+    "code": "3128",
+    "name": "3128 - Számítógépterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 433,
+    "code": "4006",
+    "name": "4006 szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 434,
+    "code": "4007",
+    "name": "4007 szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 435,
+    "code": "4109",
+    "name": "4109 kiselőadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 436,
+    "code": "4111",
+    "name": "4111 panoráma terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 437,
+    "code": "5006",
+    "name": "5006 - Számítógépterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 438,
+    "code": "5108",
+    "name": "5108 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 439,
+    "code": "6003",
+    "name": "6003 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 440,
+    "code": "6005",
+    "name": "6005 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 441,
+    "code": "6025",
+    "name": "6025 - Zánthó Róbert Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 442,
+    "code": "6113",
+    "name": "6113 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 443,
+    "code": "6115",
+    "name": "6115 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 444,
+    "code": "6123",
+    "name": "6123 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 445,
+    "code": "6129",
+    "name": "6129 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 446,
+    "code": "171",
+    "name": "171 pályák",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Topolya sor 2-4."
+  },
+  {
+    "id": 447,
+    "code": "172",
+    "name": "172 szeminárium 1",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Topolya sor 2-4."
+  },
+  {
+    "id": 448,
+    "code": "173",
+    "name": "173 szeminárium 2",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Topolya sor 2-4."
+  },
+  {
+    "id": 449,
+    "code": "10007",
+    "name": "10007 - Szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 450,
+    "code": "10105",
+    "name": "10105 - Előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 451,
+    "code": "10108",
+    "name": "10108 - Számítógépterem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Hattyas sor 6-8."
+  },
+  {
+    "id": 452,
+    "code": "901",
+    "name": "901 szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Szilléri sgt 12."
+  },
+  {
+    "id": 453,
+    "code": "902",
+    "name": "902 - szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Szilléri sgt 12."
+  },
+  {
+    "id": 454,
+    "code": "911",
+    "name": "911 Könyvtár",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Szilléri sgt 12."
+  },
+  {
+    "id": 455,
+    "code": "912",
+    "name": "912 szeminárium",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Szilléri sgt 12."
+  },
+  {
+    "id": 457,
+    "code": "916",
+    "name": "916 PC terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Szilléri sgt 12."
+  },
+  {
+    "id": 458,
+    "code": "917",
+    "name": "917 PC terem",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Szilléri sgt 12."
+  },
+  {
+    "id": 460,
+    "code": "925",
+    "name": "925 előadó",
+    "dept": "JGYPK Juhász Gyula Pedagógusképző Kar",
+    "address": "Szeged, Szilléri sgt 12."
+  },
+  {
+    "id": 461,
+    "code": "JK-009-1",
+    "name": "Könyvtár szoba",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 462,
+    "code": "JK-010-1",
+    "name": "JK010JO Bónis terem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 463,
+    "code": "JK-012-1",
+    "name": "JK012JO Nagy Károly Szeminárium",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 464,
+    "code": "JK-101-1",
+    "name": "JK101JO Bibó terem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 465,
+    "code": "JK-102-1",
+    "name": "JK102JO Polay terem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 466,
+    "code": "JK-106-1",
+    "name": "JK106JO VIII. tanterem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 467,
+    "code": "JK-124-1",
+    "name": "JK124JO Dékánhelyettesi szoba",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 468,
+    "code": "JK-16-1",
+    "name": "Számítógép terem I",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 469,
+    "code": "JK-16-2",
+    "name": "Számítógép terem II",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 470,
+    "code": "JK-207-1",
+    "name": "JK207JO Erdei Ferenc terem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 471,
+    "code": "JK-208-1",
+    "name": "JK208JO Buza terem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 54."
+  },
+  {
+    "id": 479,
+    "code": "KE-003-3",
+    "name": "Szabó Zoltán tanterem (szervetlen)",
+    "dept": "Szervetlen és Analitikai Kémiai Tanszék",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 480,
+    "code": "KE-008-3",
+    "name": "Szervetlen Kémiai tanszéki szaklabor",
+    "dept": "Szervetlen és Analitikai Kémiai Tanszék",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 481,
+    "code": "KE-101-3",
+    "name": "101-es Hallgatói labor (piros)",
+    "dept": "Kémiai Intézet",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 482,
+    "code": "KE-104-3",
+    "name": "Szerves Kémiai tanszéki labor",
+    "dept": "Szerves Kémiai Tanszék",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 483,
+    "code": "KE-107-3",
+    "name": "107-es Hallgatói labor (kék)",
+    "dept": "Kémiai Intézet",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 484,
+    "code": "KE-112-3",
+    "name": "112-es Hallgatói labor (sárga)",
+    "dept": "Kémiai Intézet",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 485,
+    "code": "KE-114-3",
+    "name": "114-es Hallgatói labor (fehér)",
+    "dept": "Kémiai Intézet",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 486,
+    "code": "KE-123-3",
+    "name": "123-as Nagy Tanuló",
+    "dept": "Kémiai Intézet",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 487,
+    "code": "KE-124-3",
+    "name": "123-as Kis Tanuló",
+    "dept": "Kémiai Intézet",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 488,
+    "code": "KE-129-3",
+    "name": "129-es Hallgatói labor (zöld)",
+    "dept": "Kémiai Intézet",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 489,
+    "code": "KE-135-3",
+    "name": "135-ös Tanuló",
+    "dept": "Kémiai Intézet",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 490,
+    "code": "KE-137-3",
+    "name": "137-es Hallgatói labor (szürke)",
+    "dept": "Kémiai Intézet",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 491,
+    "code": "KE-204-3",
+    "name": "Szent-Györgyi Albert tanterem",
+    "dept": "Szerves Kémiai Tanszék",
+    "address": "Szeged, Dóm tér 7-8."
+  },
+  {
+    "id": 492,
+    "code": "OB-100-6",
+    "name": "Gyakorlati labor",
+    "dept": "Orvosi Biológiai Intézet",
+    "address": "Szeged, Somogyi B. u. 4 (Orvos Biol.)"
+  },
+  {
+    "id": 493,
+    "code": "OB-101-6",
+    "name": "Könyvtár",
+    "dept": "Orvosi Biológiai Intézet",
+    "address": "Szeged, Somogyi B. u. 4 (Orvos Biol.)"
+  },
+  {
+    "id": 494,
+    "code": "OB-102-6",
+    "name": "Számítógépes szoba",
+    "dept": "Orvosi Biológiai Intézet",
+    "address": "Szeged, Somogyi B. u. 4 (Orvos Biol.)"
+  },
+  {
+    "id": 495,
+    "code": "OB-400-6",
+    "name": "Gelei terem (Sejtbiológia Tanszék)",
+    "dept": "Orvosi Biológiai Intézet",
+    "address": "Szeged, Somogyi B. u. 4 (Orvos Biol.)"
+  },
+  {
+    "id": 496,
+    "code": "KM-100-6",
+    "name": "Tárgyaló",
+    "dept": "Klinikai Mikrobiológiai Diagnosztikai Intézet",
+    "address": "Szeged, Somogyi Béla tér 1."
+  },
+  {
+    "id": 497,
+    "code": "KM-102-6",
+    "name": "Laboratórium",
+    "dept": "Klinikai Mikrobiológiai Diagnosztikai Intézet",
+    "address": "Szeged, Somogyi Béla tér 1."
+  },
+  {
+    "id": 498,
+    "code": "KL-101-6",
+    "name": "Könyvtár (Kórélettan)",
+    "dept": "Kórélettani Intézet",
+    "address": "Szeged, Semmelweis u. 1."
+  },
+  {
+    "id": 499,
+    "code": "KL102-6",
+    "name": "Gyakorlatos terem (Kórélettan)",
+    "dept": "Kórélettani Intézet",
+    "address": "Szeged, Semmelweis u. 1."
+  },
+  {
+    "id": 500,
+    "code": "KL-103-6",
+    "name": "PhD labor 12 (Kórélettan)",
+    "dept": "Kórélettani Intézet",
+    "address": "Szeged, Semmelweis u. 1."
+  },
+  {
+    "id": 501,
+    "code": "NK-040-0",
+    "name": "Katolikus ház emeleti előadó (Dugonics tér 12.)",
+    "dept": "SZTE Szegedi Tudományegyetem",
+    "address": "NULL"
+  },
+  {
+    "id": 502,
+    "code": "NK-041-0",
+    "name": "Katolikus ház alagsor (Dugonics tér 12.)",
+    "dept": "Központi Oktatási Egységek",
+    "address": "NULL"
+  },
+  {
+    "id": 503,
+    "code": "NK-043-0",
+    "name": "Honvéd téri református templom oktatási terme",
+    "dept": "Vallástudományi Tanszék",
+    "address": "NULL"
+  },
+  {
+    "id": 504,
+    "code": "NK-045-0",
+    "name": "Baptista Imaház terme",
+    "dept": "Központi Oktatási Egységek",
+    "address": "NULL"
+  },
+  {
+    "id": 505,
+    "code": "NK-073-1",
+    "name": "MÁV Igazgatóság tanterem",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "NULL"
+  },
+  {
+    "id": 506,
+    "code": "NK-088-0",
+    "name": "SZIKK társalgó-előadó terem",
+    "dept": "Központi Oktatási Egységek",
+    "address": "NULL"
+  },
+  {
+    "id": 507,
+    "code": "NK-089-0",
+    "name": "SZIKK - Radnóti Könyvtár",
+    "dept": "Központi Oktatási Egységek",
+    "address": "NULL"
+  },
+  {
+    "id": 508,
+    "code": "MG-100-6",
+    "name": "Selye János terem (Magatartástud.)",
+    "dept": "Magatartástudományi Intézet",
+    "address": "Szeged, Szentháromság u. 5."
+  },
+  {
+    "id": 509,
+    "code": "MG-101-6",
+    "name": "Bálint Mihály terem (Magatartástud.)",
+    "dept": "Magatartástudományi Intézet",
+    "address": "Szeged, Szentháromság u. 5."
+  },
+  {
+    "id": 510,
+    "code": "MG-102-6",
+    "name": "Hippokratesz terem (Magatartástud.)",
+    "dept": "Magatartástudományi Intézet",
+    "address": "Szeged, Szentháromság u. 5."
+  },
+  {
+    "id": 511,
+    "code": "MG-103-6",
+    "name": "Intézeti könyvtár (Magatartástud.)",
+    "dept": "Magatartástudományi Intézet",
+    "address": "Szeged, Szentháromság u. 5."
+  },
+  {
+    "id": 512,
+    "code": "MT-100-6",
+    "name": "Tanterem (Tüdőgyógyászat)",
+    "dept": "Tüdőgyógyászati Tanszék",
+    "address": "Deszk, Alkotmány u. 36."
+  },
+  {
+    "id": 513,
+    "code": "MT-101-6",
+    "name": "Légzésfunkciós laboratórium",
+    "dept": "Tüdőgyógyászati Tanszék",
+    "address": "Deszk, Alkotmány u. 36."
+  },
+  {
+    "id": 514,
+    "code": "MT-102-6",
+    "name": "Bronchológiai Laboratórium",
+    "dept": "Tüdőgyógyászati Tanszék",
+    "address": "Deszk, Alkotmány u. 36."
+  },
+  {
+    "id": 515,
+    "code": "MT-103-6",
+    "name": "Vizsgálók - 4 (Tüdőgyógyászat)",
+    "dept": "Tüdőgyógyászati Tanszék",
+    "address": "Deszk, Alkotmány u. 36."
+  },
+  {
+    "id": 516,
+    "code": "MT-104-6",
+    "name": "Tornaterem (Tüdőgyógyászat)",
+    "dept": "Tüdőgyógyászati Tanszék",
+    "address": "Deszk, Alkotmány u. 36."
+  },
+  {
+    "id": 517,
+    "code": "MA-001",
+    "name": "Gépelemek-CAM labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 518,
+    "code": "MA-004",
+    "name": "Gépész tanműhely",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 519,
+    "code": "MA-009",
+    "name": "I. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 520,
+    "code": "MA-010",
+    "name": "II. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 521,
+    "code": "MA-012",
+    "name": "Rezgésdiagnosztika labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 522,
+    "code": "MA-117",
+    "name": "Kiselőadó",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 523,
+    "code": "MA-123",
+    "name": "Tornaterem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 524,
+    "code": "MA-125c",
+    "name": "Számítástechnikai kabinet II.",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 525,
+    "code": "MA-126",
+    "name": "I. előadó",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 526,
+    "code": "MA-203",
+    "name": "IV. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 527,
+    "code": "MA-205",
+    "name": "V. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 528,
+    "code": "MA-206",
+    "name": "VI. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 529,
+    "code": "MA-207",
+    "name": "III. előadó",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 530,
+    "code": "MA-210",
+    "name": "VII. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 531,
+    "code": "MA-211",
+    "name": "Számítástechnikai kabinet I.",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 532,
+    "code": "MA-212",
+    "name": "II. előadó",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 533,
+    "code": "MA-220",
+    "name": "Mikrobiológia labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 534,
+    "code": "MA-221",
+    "name": "Mikrobiológia kutató labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 535,
+    "code": "MA-225",
+    "name": "VIII. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 536,
+    "code": "MA-225a",
+    "name": "Kémia oktató labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 537,
+    "code": "MA-228",
+    "name": "Kémia labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 538,
+    "code": "MA-229",
+    "name": "Kémia kutató labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 539,
+    "code": "MA-230",
+    "name": "Kémia műszeres vizsgáló",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 540,
+    "code": "MA-231",
+    "name": "Kémia szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 7."
+  },
+  {
+    "id": 541,
+    "code": "MB-101",
+    "name": "M1 tanterem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 20."
+  },
+  {
+    "id": 542,
+    "code": "MB-102",
+    "name": "M2 tanterem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Mars tér 20."
+  },
+  {
+    "id": 543,
+    "code": "MC-108",
+    "name": "Vecsernyés terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 544,
+    "code": "MC-109",
+    "name": "Műveleti oktató, kutató labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 545,
+    "code": "MC-201",
+    "name": "Liszt labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 546,
+    "code": "MC-203",
+    "name": "*** törölt Műveleti előkészítő labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 547,
+    "code": "MC-204",
+    "name": "*** törölt Művelet labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 548,
+    "code": "MC-204b",
+    "name": "Analitika labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 549,
+    "code": "MC-214-9",
+    "name": "XIV. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 550,
+    "code": "MC-215-9",
+    "name": "Fizika labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 551,
+    "code": "MC-301",
+    "name": "XI. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 552,
+    "code": "MC-302",
+    "name": "XII. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 553,
+    "code": "MC-403",
+    "name": "Huszka terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 554,
+    "code": "MC-501",
+    "name": "Granulometria labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 555,
+    "code": "MC-501c",
+    "name": "Gabonaminősítő labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 556,
+    "code": "MC-502",
+    "name": "Hús-baromfi műhely",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 557,
+    "code": "MC-502b",
+    "name": "Sütőipari műhely",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 558,
+    "code": "MC-503",
+    "name": "Édesipari műhely",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 559,
+    "code": "MC-504",
+    "name": "Tejipari műhely",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 560,
+    "code": "MC-535",
+    "name": "XIII. szemináriumi terem",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 561,
+    "code": "MC-701",
+    "name": "Érzészervi labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 562,
+    "code": "MC-702",
+    "name": "Spektroszkópiai labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 563,
+    "code": "MC-806",
+    "name": "Kemény- és puhacukorka műhely",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 5-7."
+  },
+  {
+    "id": 564,
+    "code": "MD-012-9",
+    "name": "Anyagvizsgálati labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 565,
+    "code": "MD-014-9",
+    "name": "Transzportfolyamatok labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 566,
+    "code": "MD-105-9",
+    "name": "Diagnosztikai labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 567,
+    "code": "MD-112-9",
+    "name": "Biomérnök labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 568,
+    "code": "MD-113-9",
+    "name": "Környezetmérnök labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 569,
+    "code": "MD-114/1-9",
+    "name": "Galéria",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 570,
+    "code": "MD-114-9",
+    "name": "Hő- és áramlástan labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 571,
+    "code": "MD-204-9",
+    "name": "Elektrotechnika labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 572,
+    "code": "MD-205-9",
+    "name": "Mechatronika labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 573,
+    "code": "MD-304-9",
+    "name": "Számítástechnika kabinet III.",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 574,
+    "code": "MD-305-9",
+    "name": "Számítástechnika kabinet CAE labor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 575,
+    "code": "MD-F13",
+    "name": "Gépészeti alaplabor",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Moszkvai krt. 9."
+  },
+  {
+    "id": 576,
+    "code": "MKo-201b",
+    "name": "Előadóterem (MK kollégium)",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Kollégiumi út 11."
+  },
+  {
+    "id": 577,
+    "code": "MKo-221",
+    "name": "Számítástechnika kabinet B",
+    "dept": "MK Mérnöki Kar",
+    "address": "Szeged, Kollégiumi út 11."
+  },
+  {
+    "id": 578,
+    "code": "MO-001-1",
+    "name": "Móra I. tanterem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 579,
+    "code": "MO-002/A-2",
+    "name": "Móra II/A. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 580,
+    "code": "MO-002-2",
+    "name": "Móra II. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 581,
+    "code": "MO-003-1",
+    "name": "Móra III. tanterem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 582,
+    "code": "MO-004-1",
+    "name": "Móra IV. tanterem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 583,
+    "code": "MO-005-2",
+    "name": "Móra V. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 584,
+    "code": "MO-006-2",
+    "name": "Móra VI. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 585,
+    "code": "MO-007-2",
+    "name": "Móra VII. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 586,
+    "code": "MO-008-2",
+    "name": "Móra VIII. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 587,
+    "code": "MO-009-2",
+    "name": "Móra IX. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 588,
+    "code": "MO-010-1",
+    "name": "Móra X. tanterem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 589,
+    "code": "MO-011-1",
+    "name": "Móra XI. tanterem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 590,
+    "code": "MO-012-2",
+    "name": "Móra XII. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Zoltán u. 14."
+  },
+  {
+    "id": 591,
+    "code": "GO-005-5",
+    "name": "Pisztóry Mór terem (Szemináriumi szoba)",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged, Feketesas u 28."
+  },
+  {
+    "id": 592,
+    "code": "GO-100-5",
+    "name": "Surányi-Unger Tivadar terem (I.sz. tanterem)",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged, Feketesas u 28."
+  },
+  {
+    "id": 593,
+    "code": "GO-200-5",
+    "name": "ifj. Boér Elek terem (II.sz. tanterem)",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged, Feketesas u 28."
+  },
+  {
+    "id": 594,
+    "code": "GO-300-5",
+    "name": "Laky Dezső terem (III.sz. tanterem)",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged, Feketesas u 28."
+  },
+  {
+    "id": 595,
+    "code": "GO-400-5",
+    "name": "Navratil Ákos terem (IV.sz. tanterem)",
+    "dept": "GTK Gazdaságtudományi Kar",
+    "address": "Szeged, Feketesas u 28."
+  },
+  {
+    "id": 596,
+    "code": "GO-401-1",
+    "name": "Monnet terem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Feketesas u 28."
+  },
+  {
+    "id": 597,
+    "code": "GO-402-1",
+    "name": "Schuman terem",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Feketesas u 28."
+  },
+  {
+    "id": 598,
+    "code": "OM-101-6",
+    "name": "Tanterem (OMSZ)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Kossuth L.sgt. 15."
+  },
+  {
+    "id": 599,
+    "code": "VI-100-6",
+    "name": "Könyvtár",
+    "dept": "Orvosi Vegytani Intézet",
+    "address": "Szeged, Dóm tér 8."
+  },
+  {
+    "id": 600,
+    "code": "VI-101-6",
+    "name": "Banga Ilona terem (Szemináriumi terem)",
+    "dept": "Orvosi Vegytani Intézet",
+    "address": "Szeged, Dóm tér 8."
+  },
+  {
+    "id": 601,
+    "code": "VI-102-6",
+    "name": "PhD-Kutató laboratórium I.",
+    "dept": "Orvosi Vegytani Intézet",
+    "address": "Szeged, Dóm tér 8."
+  },
+  {
+    "id": 602,
+    "code": "VI-103-6",
+    "name": "PHD-Kutató laboratórium II.",
+    "dept": "Orvosi Vegytani Intézet",
+    "address": "Szeged, Dóm tér 8."
+  },
+  {
+    "id": 603,
+    "code": "PI-100-6",
+    "name": "Boncterem",
+    "dept": "Pathológiai Intézet",
+    "address": "Szeged, Állomás u. 2."
+  },
+  {
+    "id": 604,
+    "code": "PI-101-6",
+    "name": "Szövettan terem",
+    "dept": "Pathológiai Intézet",
+    "address": "Szeged, Állomás u. 2."
+  },
+  {
+    "id": 605,
+    "code": "Pi-102-6",
+    "name": "Szervdemonstrációs terem",
+    "dept": "Pathológiai Intézet",
+    "address": "Szeged, Állomás u. 2."
+  },
+  {
+    "id": 606,
+    "code": "PE-001-2",
+    "name": "Lektori szoba (alagsor 18)",
+    "dept": "Altajisztika Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 607,
+    "code": "PE-003-2",
+    "name": "Hispanisztika szem.szoba",
+    "dept": "Hispanisztika Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 608,
+    "code": "PE-006-2",
+    "name": "Petőfi I.sz. tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 609,
+    "code": "PE-008-2",
+    "name": "IV.sz. tanterem",
+    "dept": "Német Nyelvészeti Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 610,
+    "code": "PE-009-2",
+    "name": "Altajisztika szem.szoba",
+    "dept": "Altajisztika Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 611,
+    "code": "PE-013-2",
+    "name": "Spanyol előadó",
+    "dept": "Hispanisztika Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 612,
+    "code": "PE-021-2",
+    "name": "Lektori szoba (PE021)",
+    "dept": "Altajisztika Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 613,
+    "code": "PE-100-2",
+    "name": "Petőfi II. tanterem",
+    "dept": "Vallástudományi Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 614,
+    "code": "PE-109-2",
+    "name": "Olasz szem.szoba",
+    "dept": "Olasz Nyelvi és Irodalmi Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 615,
+    "code": "PE-110-2",
+    "name": "Német nyelvészeti szem.szoba",
+    "dept": "Német Nyelvészeti Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 616,
+    "code": "PE-111-2",
+    "name": "V.sz. tanterem",
+    "dept": "Angol Tanszék (BTK)",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 617,
+    "code": "PE-122-2",
+    "name": "Francia nyelvészeti szem.szoba (Fsz.)",
+    "dept": "Francia Nyelvi és Irodalmi Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 618,
+    "code": "PE-123-2",
+    "name": "PE123 szeminárium",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 619,
+    "code": "PE-126-2",
+    "name": "Finnugor szem.szoba (PE126)",
+    "dept": "Finnugor Nyelvtudományi Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 620,
+    "code": "PE-129-2",
+    "name": "PE129 tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 621,
+    "code": "PE-130-2",
+    "name": "Koltay terem (I.em.)",
+    "dept": "Olasz Nyelvi és Irodalmi Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 622,
+    "code": "PE-131-2",
+    "name": "Fogarasi terem (I.em.)",
+    "dept": "Olasz Nyelvi és Irodalmi Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 623,
+    "code": "PE-141-2",
+    "name": "Szeminárium (I.em.)",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 624,
+    "code": "PE-142-2",
+    "name": "Vallástudomány szemináriumi szoba",
+    "dept": "Vallástudományi Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 625,
+    "code": "PE-202-2",
+    "name": "Filozófia szem. szoba (PE202)",
+    "dept": "Filozófia Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 626,
+    "code": "PE-206-2",
+    "name": "PE206 tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 627,
+    "code": "PE-209-2",
+    "name": "Filozófia szeminárium (PE209)",
+    "dept": "Filozófia Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 628,
+    "code": "PE-212-2",
+    "name": "Filozófia tárgyaló (PE212)",
+    "dept": "Filozófia Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 629,
+    "code": "PE-213-2",
+    "name": "Filozófia Tanszék I.sz. tanterem (PE213)",
+    "dept": "Filozófia Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 630,
+    "code": "PE-214-2",
+    "name": "Amerikanisztika szem.szoba (PE214)",
+    "dept": "Angol Tanszék (BTK)",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 631,
+    "code": "PE-215-2",
+    "name": "Filozófia Tanszék szem.szoba",
+    "dept": "Filozófia Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 632,
+    "code": "PE-222-2",
+    "name": "Szociológiai labor (PE222)",
+    "dept": "Szociológia Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 633,
+    "code": "PE-223-2",
+    "name": "Szociológia Tanszék tanterem (PE223)",
+    "dept": "Szociológia Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 634,
+    "code": "PE-315-2",
+    "name": "XI.sz. tanterem",
+    "dept": "Neveléstudományi Intézet",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 635,
+    "code": "PE-316-2",
+    "name": "Pedagógiai szeminárium",
+    "dept": "Neveléstudományi Intézet",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 636,
+    "code": "PE-317-2",
+    "name": "XII.sz. tanterem",
+    "dept": "Neveléstudományi Intézet",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 637,
+    "code": "PE-318-2",
+    "name": "Doktorandusz szoba (Pedagógia)",
+    "dept": "Neveléstudományi Intézet",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 638,
+    "code": "PE-319-2",
+    "name": "PED-PSZI szeminárium",
+    "dept": "Neveléstudományi Intézet",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 639,
+    "code": "PE-320-2",
+    "name": "PED-PSZI előadó (MS PC-terem)",
+    "dept": "Neveléstudományi Intézet",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 640,
+    "code": "PE-420-2",
+    "name": "PET 7. szeminárium",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 641,
+    "code": "PE-421-2",
+    "name": "PET.8. Könyvtár szeminárium",
+    "dept": "Kulturális Örökség és Humán Információtudományi Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 642,
+    "code": "PE-422-2",
+    "name": "PET.9. szeminárium",
+    "dept": "Filozófia Tanszék",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 643,
+    "code": "PE-423-2",
+    "name": "História szeminárium",
+    "dept": "Történeti Intézet",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 644,
+    "code": "PE-424-2",
+    "name": "PET.10/A IKT terem",
+    "dept": "Neveléstudományi Intézet",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 645,
+    "code": "PE-425-2",
+    "name": "PET.11A tanterem",
+    "dept": "BTK Bölcsészettudományi Kar",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 646,
+    "code": "PE-426-2",
+    "name": "PET.10/B Mikroterem",
+    "dept": "Neveléstudományi Intézet",
+    "address": "Szeged, Petőfi Sándor sgt. 32-34."
+  },
+  {
+    "id": 647,
+    "code": "KK-001-6",
+    "name": "Nyelvi labor (alagsor 1)",
+    "dept": "Orvosi Szaknyelvi Kommunikációs és Fordítóképző Csoport",
+    "address": "Szeged, Korányi fasor 9. (Kis Okt. Ép.)"
+  },
+  {
+    "id": 648,
+    "code": "KK-002-6",
+    "name": "Nyelvi labor (alagsor 2)",
+    "dept": "Orvosi Szaknyelvi Kommunikációs és Fordítóképző Csoport",
+    "address": "Szeged, Korányi fasor 9. (Kis Okt. Ép.)"
+  },
+  {
+    "id": 649,
+    "code": "KK-003-6",
+    "name": "Nyelvi labor (alagsor 3)",
+    "dept": "Orvosi Szaknyelvi Kommunikációs és Fordítóképző Csoport",
+    "address": "Szeged, Korányi fasor 9. (Kis Okt. Ép.)"
+  },
+  {
+    "id": 650,
+    "code": "KK-004-6",
+    "name": "Oktatóterem (alagsor 4)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Korányi fasor 9. (Kis Okt. Ép.)"
+  },
+  {
+    "id": 651,
+    "code": "KK-006-6",
+    "name": "Oktatóterem (alagsor 6)",
+    "dept": "Kórélettani Intézet",
+    "address": "Szeged, Korányi fasor 9. (Kis Okt. Ép.)"
+  },
+  {
+    "id": 652,
+    "code": "KK-012-6",
+    "name": "Oktatóterem (földszint 12)",
+    "dept": "Élettani Intézet",
+    "address": "Szeged, Korányi fasor 9. (Kis Okt. Ép.)"
+  },
+  {
+    "id": 653,
+    "code": "KK-013-6",
+    "name": "Labor (földszint 13)",
+    "dept": "Orvosi Vegytani Intézet",
+    "address": "Szeged, Korányi fasor 9. (Kis Okt. Ép.)"
+  },
+  {
+    "id": 654,
+    "code": "KK-015-6",
+    "name": "Labor (földszint 15)",
+    "dept": "Orvosi Vegytani Intézet",
+    "address": "Szeged, Korányi fasor 9. (Kis Okt. Ép.)"
+  },
+  {
+    "id": 655,
+    "code": "KK-016-6",
+    "name": "Oktatóterem (földszint 16)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Korányi fasor 9. (Kis Okt. Ép.)"
+  },
+  {
+    "id": 656,
+    "code": "KK-017-6",
+    "name": "Nyelvi labor (földszint 17)",
+    "dept": "Orvosi Szaknyelvi Kommunikációs és Fordítóképző Csoport",
+    "address": "Szeged, Korányi fasor 9. (Kis Okt. Ép.)"
+  },
+  {
+    "id": 657,
+    "code": "RA-503-1",
+    "name": "503-as tárgyaló (Rákóczi tér V.em.)",
+    "dept": "ÁJTK Állam- és Jogtudományi Kar",
+    "address": "Szeged, Rákoczi tér 1."
+  },
+  {
+    "id": 658,
+    "code": "RE-014",
+    "name": "Cisco labor",
+    "dept": "TTIK Természettudományi és Informatikai Kar",
+    "address": "Szeged, Dugonics tér 13."
+  },
+  {
+    "id": 659,
+    "code": "RE-015",
+    "name": "Beágyazott rendszerek labor (Honvéd tér 6.sz)",
+    "dept": "Szoftverfejlesztési Tanszék",
+    "address": "Szeged, Dugonics tér 13."
+  },
+  {
+    "id": 660,
+    "code": "SI-019-0",
+    "name": "Informatika 19",
+    "dept": "Ságvári Endre Gyakorló Gimnázium",
+    "address": "Szeged, Szentháromság u. 2."
+  },
+  {
+    "id": 661,
+    "code": "SI-112-3",
+    "name": "112-es terem (Gimnázium)",
+    "dept": "Ságvári Endre Gyakorló Gimnázium",
+    "address": "Szeged, Szentháromság u. 2."
+  },
+  {
+    "id": 662,
+    "code": "SI-206-3",
+    "name": "206-os terem (Gimnázium)",
+    "dept": "Ságvári Endre Gyakorló Gimnázium",
+    "address": "Szeged, Szentháromság u. 2."
+  },
+  {
+    "id": 663,
+    "code": "SI-309-3",
+    "name": "Általános Iskola 309-es terem",
+    "dept": "Ságvári Endre Gyakorló Általános Iskola",
+    "address": "Szeged, Szentháromság u. 2."
+  },
+  {
+    "id": 664,
+    "code": "SI-402-3",
+    "name": "402-es terem (Gimnázium)",
+    "dept": "Ságvári Endre Gyakorló Gimnázium",
+    "address": "Szeged, Szentháromság u. 2."
+  },
+  {
+    "id": 665,
+    "code": "SI-403-3",
+    "name": "403-as terem (Gimnázium)",
+    "dept": "Ságvári Endre Gyakorló Gimnázium",
+    "address": "Szeged, Szentháromság u. 2."
+  },
+  {
+    "id": 666,
+    "code": "SI-405-3",
+    "name": "405-ös terem (Gimnázium)",
+    "dept": "Ságvári Endre Gyakorló Gimnázium",
+    "address": "Szeged, Szentháromság u. 2."
+  },
+  {
+    "id": 667,
+    "code": "SK-100-6",
+    "name": "Könyvtár (Sebészeti Műtéttan)",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Szőkefalvi-Nagy Béla u. 4(Pécsi)"
+  },
+  {
+    "id": 668,
+    "code": "SK-101-6",
+    "name": "Hallgatói műtő 1 (Sebészeti Műtéttan)",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Szőkefalvi-Nagy Béla u. 4(Pécsi)"
+  },
+  {
+    "id": 669,
+    "code": "SK-102-6",
+    "name": "Hallgatói műtő 2 (Sebészeti Műtéttan)",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Szőkefalvi-Nagy Béla u. 4(Pécsi)"
+  },
+  {
+    "id": 670,
+    "code": "SK-103-6",
+    "name": "Mikrosebészeti laboratórium (Sebészeti Műtéttan)",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Szőkefalvi-Nagy Béla u. 4(Pécsi)"
+  },
+  {
+    "id": 671,
+    "code": "SK-104-6",
+    "name": "Számítógépes labor (Sebészeti Műtéttan)",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Szőkefalvi-Nagy Béla u. 4(Pécsi)"
+  },
+  {
+    "id": 672,
+    "code": "SK-110-6",
+    "name": "Petri Gábor terem (Sebészet)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Szőkefalvi-Nagy Béla u. 4(Pécsi)"
+  },
+  {
+    "id": 673,
+    "code": "SK-111-6",
+    "name": "Könyvtár (Sebészet)",
+    "dept": "Sebészeti Klinika",
+    "address": "Szeged, Szőkefalvi-Nagy Béla u. 4(Pécsi)"
+  },
+  {
+    "id": 674,
+    "code": "SE-001-7",
+    "name": "Semmelweis I. előadó",
+    "dept": "GYTK Gyógyszerésztudományi Kar",
+    "address": "Semmelweis utca 4.sz"
+  },
+  {
+    "id": 675,
+    "code": "SE-002-7",
+    "name": "Semmelweis II. számítógépes terem",
+    "dept": "GYTK Gyógyszerésztudományi Kar",
+    "address": "Semmelweis utca 4.sz"
+  },
+  {
+    "id": 676,
+    "code": "SP-001-0",
+    "name": "Kondicionáló terem",
+    "dept": "Sportközpont",
+    "address": "Hattyas sor 10."
+  },
+  {
+    "id": 677,
+    "code": "SP-002-0",
+    "name": "Zenés A-terem",
+    "dept": "Sportközpont",
+    "address": "Hattyas sor 10."
+  },
+  {
+    "id": 678,
+    "code": "SP-003-0",
+    "name": "Zenés B-terem",
+    "dept": "Sportközpont",
+    "address": "Hattyas sor 10."
+  },
+  {
+    "id": 679,
+    "code": "SP-004-0",
+    "name": "Zenés C-D-terem",
+    "dept": "Sportközpont",
+    "address": "Hattyas sor 10."
+  },
+  {
+    "id": 680,
+    "code": "RI-101-6",
+    "name": "Cserháti István terem (I. Rendelőintézet)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Tisza Lajos krt. 97."
+  },
+  {
+    "id": 681,
+    "code": "SO-100-6",
+    "name": "Kukán Ferenc terem (Szemészet)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Korányi fasor 10-11."
+  },
+  {
+    "id": 682,
+    "code": "SO-101-6",
+    "name": "Ambilancia",
+    "dept": "Szemészeti Klinika",
+    "address": "Szeged, Korányi fasor 10-11."
+  },
+  {
+    "id": 683,
+    "code": "SO-102-6",
+    "name": "Ultrahang ambulancia",
+    "dept": "Szemészeti Klinika",
+    "address": "Szeged, Korányi fasor 10-11."
+  },
+  {
+    "id": 684,
+    "code": "SO-103-6",
+    "name": "Laser ambulancia",
+    "dept": "Szemészeti Klinika",
+    "address": "Szeged, Korányi fasor 10-11."
+  },
+  {
+    "id": 685,
+    "code": "SO-104-6",
+    "name": "VEP ambulancia",
+    "dept": "Szemészeti Klinika",
+    "address": "Szeged, Korányi fasor 10-11."
+  },
+  {
+    "id": 686,
+    "code": "SO-105-6",
+    "name": "Kontaktlencse ambulancia",
+    "dept": "Szemészeti Klinika",
+    "address": "Szeged, Korányi fasor 10-11."
+  },
+  {
+    "id": 687,
+    "code": "SO-106-6",
+    "name": "Kahán Ágost terem (Könyvtár)",
+    "dept": "Szemészeti Klinika",
+    "address": "Szeged, Korányi fasor 10-11."
+  },
+  {
+    "id": 688,
+    "code": "SO-107-6",
+    "name": "Labor",
+    "dept": "Szemészeti Klinika",
+    "address": "Szeged, Korányi fasor 10-11."
+  },
+  {
+    "id": 689,
+    "code": "SO-305-6",
+    "name": "Tanterem (Családorvosi)",
+    "dept": "Családorvosi Intézet és Rendelő",
+    "address": "Szeged, Korányi fasor 10-11."
+  },
+  {
+    "id": 690,
+    "code": "OE-001-6",
+    "name": "Szemináriumi terem 1",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 691,
+    "code": "OE-002-6",
+    "name": "Szemináriumi terem 2A",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 692,
+    "code": "OE-003-6",
+    "name": "Szemináriumi terem 2B",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 693,
+    "code": "OE-004-6",
+    "name": "Általános gyakorló terem",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 694,
+    "code": "OE-005-6",
+    "name": "Felnőtt szimulátor terem",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 695,
+    "code": "OE-006-6",
+    "name": "Gyermek szimulátor terem",
+    "dept": "Sebészeti Műtéttani Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 696,
+    "code": "OE-115-6",
+    "name": "Kistanterem (15-ös)",
+    "dept": "ÁOK - Elméleti Intézetek",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 697,
+    "code": "OE-116-6",
+    "name": "Kistanterem (16-os)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 698,
+    "code": "OE-118-6",
+    "name": "Ivánovics György terem (Nagyelőadó)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 699,
+    "code": "OE-224-6",
+    "name": "Kistanterem (24-es)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 700,
+    "code": "OE-225-6",
+    "name": "Kistanterem (25-ös)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 701,
+    "code": "OE-226-6",
+    "name": "Kistanterem (26-os)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 702,
+    "code": "OE-227-6",
+    "name": "Kistanterem (27-es)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 703,
+    "code": "OE-228-6",
+    "name": "Kistanterem(28-as)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 704,
+    "code": "OE-229-6",
+    "name": "Kistanterem (29-as)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 705,
+    "code": "OE-349-6",
+    "name": "Issekutz Béla terem (49-es)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 706,
+    "code": "OE-350-6",
+    "name": "Huszák István terem (50-es)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 707,
+    "code": "OE-401-7",
+    "name": "Gyógyszerkémiai labor 1.",
+    "dept": "Gyógyszerkémiai Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 708,
+    "code": "OE-402-7",
+    "name": "Gyógyszerkémiai labor 2.",
+    "dept": "Gyógyszerkémiai Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 709,
+    "code": "OE-403-7",
+    "name": "Gyógyszerkémiai labor 3.",
+    "dept": "Gyógyszerkémiai Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 710,
+    "code": "OE-404-7",
+    "name": "Gy.Analitikai labor",
+    "dept": "Gyógyszeranalitikai Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 711,
+    "code": "OE-445-6",
+    "name": "Labor 1 (Oktatási épület)",
+    "dept": "Biokémiai Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 712,
+    "code": "OE-447-6",
+    "name": "Labor 2 (Oktatási épület)",
+    "dept": "Biokémiai Intézet",
+    "address": "Szeged, Dóm tér 13. (Oktatástechn. Közp)"
+  },
+  {
+    "id": 713,
+    "code": "NO-100-6",
+    "name": "Szontágh Ferenc terem (Nőgyógyászat)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Semmelweis u. 1."
+  },
+  {
+    "id": 714,
+    "code": "NO-101-6",
+    "name": "Oktató kabinet (Nőgyógyászat)",
+    "dept": "Szülészeti és Nőgyógyászati Klinika",
+    "address": "Szeged, Semmelweis u. 1."
+  },
+  {
+    "id": 715,
+    "code": "TK-001-10",
+    "name": "Takács Ferenc Továbbképző Központ tanterem",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely, Tanya 1431"
+  },
+  {
+    "id": 716,
+    "code": "TIK-0.007",
+    "name": "Egyetemi Könyvtár földszint számitógépes terem",
+    "dept": "Egyetemi Könyvtár",
+    "address": "Szeged, Ady tér 10"
+  },
+  {
+    "id": 717,
+    "code": "TIK-002-0",
+    "name": "TIK Nagyelőadó",
+    "dept": "Tanulmányi és Információs Központ",
+    "address": "Szeged, Ady tér 10",
+    "aliases": [
+      "TIK Kongresszusi terem"
+    ]
+  },
+  {
+    "id": 718,
+    "code": "TIK-A01-0",
+    "name": "TIK Alagsor I. Előadó",
+    "dept": "Tanulmányi és Információs Központ",
+    "address": "Szeged, Ady tér 10",
+    "aliases": [
+      "TIK Alagsor I-II. Előadó"
+    ]
+  },
+  {
+    "id": 719,
+    "code": "TIK-A02-0",
+    "name": "TIK Alagsor II. Előadó",
+    "dept": "Tanulmányi és Információs Központ",
+    "address": "Szeged, Ady tér 10",
+    "aliases": [
+      "TIK Alagsor I-II. Előadó"
+    ]
+  },
+  {
+    "id": 720,
+    "code": "UK-100-6",
+    "name": "Láng Imre terem (Új Klinika)",
+    "dept": "ÁOK Általános Orvostudományi Kar",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 721,
+    "code": "UK-101-6",
+    "name": "Könyvtár (Gyermek Pszichiátria)",
+    "dept": "Gyermek- és Ifjúságpszichiátriai Osztály",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 722,
+    "code": "UK-102-6",
+    "name": "Számítógépes terem (Neurológia)",
+    "dept": "Neurológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 723,
+    "code": "UK-103-6",
+    "name": "Aulatér",
+    "dept": "Neurológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 724,
+    "code": "UK-104-6",
+    "name": "Szemináriumi szoba (Neurológia)",
+    "dept": "Neurológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 725,
+    "code": "UK-105-6",
+    "name": "Labor (Neurológia)",
+    "dept": "Neurológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 726,
+    "code": "UK-106-6",
+    "name": "Rendelő (Neurológia)",
+    "dept": "Neurológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 727,
+    "code": "UK-107-6",
+    "name": "Számítógépes labor (Neurológia)",
+    "dept": "Neurológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 728,
+    "code": "UK-108-6",
+    "name": "Labor 1. (Neurológia)",
+    "dept": "Neurológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 729,
+    "code": "UK-115-6",
+    "name": "Oktató terem (Ortopédia)",
+    "dept": "Onkoterápiás Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 730,
+    "code": "UK-116-6",
+    "name": "Számítógépes labor (Traumatológia)",
+    "dept": "Traumatológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 731,
+    "code": "UK-118-6",
+    "name": "Tanterem-Rehabilitációs Osztály (Pszichiátria)",
+    "dept": "Pszichiátriai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 732,
+    "code": "UK-119-6",
+    "name": "Addiktológiai (Kálvária sgt.)",
+    "dept": "Pszichiátriai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 733,
+    "code": "UK-120-6",
+    "name": "Gyakorlati helység (Pszichiátria)",
+    "dept": "Pszichiátriai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 734,
+    "code": "UK-121-6",
+    "name": "Laboratórium (Pszichiátria)",
+    "dept": "Pszichiátriai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 735,
+    "code": "UK-125-6",
+    "name": "Oktató terem 1 (Radiológia)",
+    "dept": "Radiológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 736,
+    "code": "UK-126-6",
+    "name": "Oktató terem 2 (Radiológia)",
+    "dept": "Radiológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 737,
+    "code": "UK-200-6",
+    "name": "Rehabilitációs Osztály (Neurológia)",
+    "dept": "Neurológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 738,
+    "code": "UK-245-6",
+    "name": "Számítógépes munkaállomás 1 (Traumatológia)",
+    "dept": "Traumatológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 739,
+    "code": "UK-250-6",
+    "name": "Számítógépes munkaállomás 2 (Traumatológia)",
+    "dept": "Traumatológiai Klinika",
+    "address": "Szeged, Semmelweis u.6."
+  },
+  {
+    "id": 740,
+    "code": "WV-001-10",
+    "name": "Művészeti előadó tanterem",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely,Nagy Sándor u. 13."
+  },
+  {
+    "id": 741,
+    "code": "WV-002-10",
+    "name": "Művészeti előadó tanterem II.",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely,Nagy Sándor u. 13."
+  },
+  {
+    "id": 742,
+    "code": "WV-003-10",
+    "name": "Kerámia gyakorló gyakorló",
+    "dept": "MGK Mezőgazdasági Kar",
+    "address": "Hódmezővásárhely,Nagy Sándor u. 13."
+  },
+  {
+    "id": 743,
+    "code": "ZM-001-11",
+    "name": "Kis koncertterem",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 744,
+    "code": "ZM-002-11",
+    "name": "ZMK-02",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 745,
+    "code": "ZM-004-11",
+    "name": "ZMK-04",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 746,
+    "code": "ZM-005-11",
+    "name": "ZMK-05",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 747,
+    "code": "ZM-006-11",
+    "name": "ZMK-06",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 748,
+    "code": "ZM-007-11",
+    "name": "ZMK-07",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 749,
+    "code": "ZM-008-11",
+    "name": "ZMK-08",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 750,
+    "code": "ZM-009-11",
+    "name": "ZMK-09",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 751,
+    "code": "ZM-010-11",
+    "name": "ZMK-10",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 752,
+    "code": "ZM-011-11",
+    "name": "ZMK-11",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 753,
+    "code": "ZM-012-11",
+    "name": "ZMK-12",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 754,
+    "code": "ZM-013-11",
+    "name": "ZMK-13",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 755,
+    "code": "ZM-014-11",
+    "name": "ZMK-14",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 756,
+    "code": "ZM-015-11",
+    "name": "ZMK-15",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 757,
+    "code": "ZM-016-11",
+    "name": "ZMK-16",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 758,
+    "code": "ZM-017-11",
+    "name": "ZMK-17",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 759,
+    "code": "ZM-018-11",
+    "name": "ZMK-18",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 760,
+    "code": "ZM-019-11",
+    "name": "ZMK-19",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 761,
+    "code": "ZM-020-11",
+    "name": "ZMK-20",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 762,
+    "code": "ZM-021-11",
+    "name": "ZMK-21",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 763,
+    "code": "ZM-022-11",
+    "name": "ZMK-22",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 764,
+    "code": "ZM-023-11",
+    "name": "ZMK-23",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 765,
+    "code": "ZM-026-11",
+    "name": "ZMK-26",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 766,
+    "code": "ZM-027-11",
+    "name": "ZMK-27",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 767,
+    "code": "ZM-028-11",
+    "name": "ZMK-28",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 768,
+    "code": "ZM-029-11",
+    "name": "ZMK-29",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 769,
+    "code": "ZM-030-11",
+    "name": "ZMK-30",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 770,
+    "code": "ZM-031-11",
+    "name": "ZMK-31",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 771,
+    "code": "ZM-040-11",
+    "name": "Fricsay-koncertterem",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 772,
+    "code": "ZM-101-11",
+    "name": "ZMK-101",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 773,
+    "code": "ZM-102-11",
+    "name": "ZMK-102",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 774,
+    "code": "ZM-103-11",
+    "name": "ZMK-103",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 775,
+    "code": "ZM-104-11",
+    "name": "ZMK-104",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 776,
+    "code": "ZM-105-11",
+    "name": "ZMK-105",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 777,
+    "code": "ZM-106-11",
+    "name": "ZMK-106",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 778,
+    "code": "ZM-108-11",
+    "name": "ZMK-108",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 779,
+    "code": "ZM-109-11",
+    "name": "ZMK-109",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 780,
+    "code": "ZM-110-11",
+    "name": "ZMK-110",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 781,
+    "code": "ZM-111-11",
+    "name": "ZMK-111",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 782,
+    "code": "ZM-112-11",
+    "name": "ZMK-112",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 783,
+    "code": "ZM-113-11",
+    "name": "ZMK-113",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 784,
+    "code": "ZM-114-11",
+    "name": "ZMK-114",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 785,
+    "code": "ZM-201-11",
+    "name": "ZMK-P1",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  },
+  {
+    "id": 786,
+    "code": "ZM-202-11",
+    "name": "ZMK-P2",
+    "dept": "ZMK Zeneművészeti Kar",
+    "address": "Szeged, Tisza Lajos krt. 79-81."
+  }
+]
