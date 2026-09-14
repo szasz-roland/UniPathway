@@ -134,44 +134,45 @@
   .sheet-scrim{position:fixed;inset:0;background:rgba(20,24,36,.4);opacity:0;visibility:hidden;
     transition:opacity 250ms var(--ease-out),visibility 250ms;z-index:80}
   .sheet-scrim.show{opacity:1;visibility:visible}
-  .sheet{position:fixed;left:0;right:0;bottom:0;max-width:480px;margin:0 auto;
+  .sheet{position:fixed;left:0;right:0;bottom:0;max-width:520px;margin:0 auto;
     --sheet-bg:var(--ea-bg);--sheet-tx:var(--ea-tx);--sheet-ac:var(--ea-ac);
-    background:var(--bg);background-image:radial-gradient(120% 140px at 100% 0%,var(--sheet-bg) 0%,transparent 70%);
-    border-radius:22px 22px 0 0;padding:10px 20px calc(20px + env(safe-area-inset-bottom,0px));
+    background:var(--bg);background-image:radial-gradient(120% 160px at 100% 0%,var(--sheet-bg) 0%,transparent 70%);
+    border-radius:30px 30px 0 0;padding:14px 26px calc(28px + env(safe-area-inset-bottom,0px));
     transform:translateY(100%);pointer-events:none;transition:transform 320ms var(--ease-drawer),opacity 260ms var(--ease-out);
-    box-shadow:0 -16px 40px -16px rgba(20,24,36,.35);z-index:90}
+    box-shadow:0 -22px 56px -18px rgba(20,24,36,.28);z-index:90}
   .sheet.show{transform:translateY(0);pointer-events:auto}
-  .sheet-handle{width:36px;height:4px;background:var(--hair);border-radius:99px;margin:6px auto 16px}
-  .sheet-close{display:none;position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;
+  .sheet.sheet-wide{max-width:600px}
+  .sheet-handle{width:40px;height:5px;background:var(--hair);border-radius:99px;margin:8px auto 20px}
+  .sheet-close{display:none;position:absolute;top:18px;right:18px;width:34px;height:34px;border-radius:50%;
     border:none;background:var(--surface-2);color:var(--ink-2);align-items:center;justify-content:center;
     font-size:20px;line-height:1;cursor:pointer;transition:background 150ms ease,color 150ms ease,transform 140ms var(--ease-out)}
   .sheet-close:hover{background:var(--hair);color:var(--ink)}
   .sheet-close:active{transform:scale(.9)}
-  .sheet-title{font-size:17px;font-weight:800;color:var(--sheet-tx);letter-spacing:-.01em}
-  .sheet-sub{font-size:12.5px;color:var(--faint);font-weight:600;margin-top:3px;margin-bottom:16px}
-  .sheet-action{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:14px 13px;border-radius:13px;
-    border:none;background:var(--surface-2);color:var(--ink);font-family:var(--sans);font-weight:700;font-size:14px;
-    cursor:pointer;margin-bottom:8px;transition:background 150ms ease,transform 140ms var(--ease-out)}
+  .sheet-title{font-size:20px;font-weight:800;color:var(--sheet-tx);letter-spacing:-.01em}
+  .sheet-sub{font-size:13.5px;color:var(--faint);font-weight:600;margin-top:5px;margin-bottom:22px}
+  .sheet-action{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:17px 18px;border-radius:18px;
+    border:none;background:var(--surface-2);color:var(--ink);font-family:var(--sans);font-weight:700;font-size:15px;
+    cursor:pointer;margin-bottom:10px;transition:background 150ms ease,transform 140ms var(--ease-out)}
   .sheet-action:last-child{margin-bottom:0}
   .sheet-action:hover{background:var(--sheet-bg);color:var(--sheet-tx)}
   .sheet-action:active{transform:scale(.98)}
   .sheet-action svg{opacity:.7;flex:0 0 auto}
   .sheet-action svg{color:var(--sheet-ac)}
-  .sheet-back{width:auto;padding:8px 6px;background:transparent;margin-bottom:10px;color:var(--faint);font-size:13px}
+  .sheet-back{width:auto;padding:10px 8px;background:transparent;margin-bottom:14px;color:var(--faint);font-size:13.5px}
   .sheet-back:hover{background:transparent;color:var(--ink)}
   .sheet-doc{max-height:55vh;overflow-y:auto;padding-right:4px}
   .sheet-doc-empty{color:var(--faint);font-style:italic;font-size:14px}
   .doc-meta{display:inline-block;font-size:12px;color:var(--sheet-tx);background:var(--sheet-bg);font-weight:700;
     padding:5px 11px;border-radius:8px;margin-bottom:12px}
-  .doc-summary{font-size:14px;line-height:1.6;color:var(--ink);margin-bottom:18px}
-  .doc-section{margin-bottom:18px}
+  .doc-summary{font-size:14.5px;line-height:1.6;color:var(--ink);margin-bottom:20px}
+  .doc-section{margin-bottom:20px}
   .doc-section h4{display:flex;align-items:center;gap:7px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;
     color:var(--sheet-tx);font-weight:800;margin-bottom:9px}
   .doc-section h4::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sheet-ac);flex:0 0 auto}
-  .doc-list{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13.5px;line-height:1.55;color:var(--ink)}
+  .doc-list{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:7px;font-size:14px;line-height:1.55;color:var(--ink)}
   .doc-list li{position:relative;padding-left:14px}
   .doc-list li::before{content:"";position:absolute;left:0;top:9px;width:4px;height:4px;border-radius:50%;background:var(--faint)}
-  .doc-list li.doc-graded{padding:7px 10px 7px 12px;border-radius:9px;list-style:none}
+  .doc-list li.doc-graded{padding:9px 12px 9px 14px;border-radius:12px;list-style:none}
   .doc-list li.doc-graded::before{display:none}
   .doc-links a{color:var(--sheet-tx);font-weight:700;word-break:break-all}
   .doc-updated{font-size:11.5px;color:var(--faint);margin-top:4px}
@@ -337,7 +338,7 @@
 
   /* =========== BREAKPOINTS =========== */
   @media(min-width:1080px){
-    .main{padding:38px clamp(28px,4vw,64px) 72px;max-width:1500px}
+    .main{padding:38px clamp(28px,4vw,64px) 72px;max-width:1500px;margin-inline:auto}
     .list,.freeday{display:none}
     .week{display:block}
     .head .date{display:none}
@@ -346,14 +347,15 @@
 
     /* Course action sheet becomes a centered dialog instead of a mobile bottom sheet */
     .sheet{left:50%;right:auto;bottom:auto;top:50%;margin:0;
-      width:min(440px,calc(100% - 48px));max-width:440px;
-      border-radius:20px;padding:22px 26px;
+      width:min(520px,calc(100% - 48px));max-width:520px;
+      border-radius:28px;padding:32px 36px;
       transform:translate(-50%,-50%) scale(.96);opacity:0;
-      box-shadow:0 24px 60px -20px rgba(20,24,36,.45)}
+      box-shadow:0 32px 90px -24px rgba(20,24,36,.4)}
     .sheet.show{transform:translate(-50%,-50%) scale(1);opacity:1}
+    .sheet.sheet-wide{width:min(640px,calc(100% - 48px));max-width:640px}
     .sheet-handle{display:none}
     .sheet-close{display:flex}
-    .sheet-title{padding-right:36px}
+    .sheet-title{padding-right:40px}
   }
   @media(min-width:641px) and (max-width:1079px){
     .list,.freeday{max-width:none}
