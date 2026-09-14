@@ -122,7 +122,9 @@ const COURSE_DOC_ALIASES={
   "IT-biztonság az SZTE-n":"it-biztonsag-az-szte-n",
   "Karrierépítés alapozó kurzus":"karrierepites-alapozo-kurzus",
   "Matematika 1. ea.":"matematika-informatikusoknak-1-ea",
+  "Matematika 1. gy.":"matematika-informatikusoknak-1-gy",
   "Matematika praktikum":"matematika-praktikum",
+  "Számítógép hálózatok":"szamitogep-halozatok",
   "MI az egyetemi tanulmányokban":"mesterseges-intelligencia-az-egyetemi-tanulmanyokban",
   "Programozás alapjai ea.":"programozas-alapjai-eloadas",
   "Programozás alapjai gy.":"programozas-alapjai-gy",
@@ -377,6 +379,20 @@ function renderCodepage(){
   el.appendChild(wrap);
 }
 
+/* Only buildings we actually know the colloquial name of with confidence — the room database spans
+   ~55 building-code prefixes across the whole university (medical campus, arts campus, Hódmezővásárhely,
+   etc.), most of which we have no real-world knowledge of. Don't add a prefix here unless you're sure. */
+const BUILDING_NAMES={IR:"Irinyi",BO:"Bolyai",TIK:"TIK"};
+function parseRoomLocation(r){
+  const m=r.code.match(/^([A-Za-z]+)-([^-]+)(?:-(\d+))?$/);
+  if(!m)return null;
+  const prefix=m[1],roomPart=m[2];
+  const digitMatch=roomPart.match(/(\d)/);
+  if(!digitMatch)return null;
+  const floor=parseInt(digitMatch[1],10);
+  const floorLabel=floor===0?"földszint":floor+". emelet";
+  return {building:BUILDING_NAMES[prefix]||null,roomPart,floorLabel};
+}
 function matchesRoom(r,q){
   q=q.toLowerCase();
   return r.code.toLowerCase().includes(q)||r.name.toLowerCase().includes(q)||
@@ -423,10 +439,13 @@ function renderRoomResults(){
     const isOpen=openRoomMaps.has(r.id);
     const card=E("div");card.className="card room-card "+colorKey;
     card.style.animationDelay=Math.min(i*30,300)+"ms";
+    const loc=parseRoomLocation(r);
+    const primaryName=(loc&&loc.building)?`${loc.building}, ${loc.roomPart}. terem`:r.name;
+    const metaLine=[loc?loc.floorLabel:null,r.dept,r.address].filter(Boolean).join(" · ");
     card.innerHTML=
       `<div class="rc-code">${r.code}</div>`+
-      `<div class="rc-name">${r.name}</div>`+
-      `<div class="rc-meta">${svgLoc}<span>${r.dept} · ${r.address}</span></div>`+
+      `<div class="rc-name">${primaryName}</div>`+
+      `<div class="rc-meta">${svgLoc}<span>${metaLine}</span></div>`+
       `<button type="button" class="rc-mapbtn">${isOpen?"Térkép elrejtése":"Térkép mutatása"}</button>`;
     card.querySelector(".rc-mapbtn").onclick=()=>{
       if(isOpen)openRoomMaps.delete(r.id);else openRoomMaps.add(r.id);

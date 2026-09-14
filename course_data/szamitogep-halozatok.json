@@ -1,0 +1,24 @@
+{
+  "name": "Számítógép hálózatok",
+  "code": "IN1013EA",
+  "instructor": "Bilicki Vilmos, Dr.",
+  "summary": "A számítógép hálózatok bemutatása szoftverfejlesztőknek: IoT, köd- és felhő számítástechnika, számítógépes biztonság, valamint mélyebb protokollszintű ismeretek (http, proxy, dns).",
+  "topics": [
+    "Bevezető, a félév áttekintése",
+    "Biztonság, kriptográfia alapjai",
+    "Alkalmazási réteg: HTTP/WWW",
+    "Alkalmazási réteg: DNS",
+    "Alkalmazási réteg: P2P, videó folyamok, SMTP, POP3, IMAP, PGP",
+    "Szállítási réteg: TCP, Hálózati réteg: adatsík",
+    "Hálózati réteg: vezérlősík (AS-en belüli és AS-ek közötti)",
+    "Adatkapcsolati réteg: áttekintés, LAN",
+    "Adatkapcsolati/fizikai réteg: vezetékmentes kommunikáció (WiFi, 4G, Mobil IP)",
+    "Hálózati biztonság: infrastruktúra elemek"
+  ],
+  "grading": [
+    "Vizsga az év végén"
+  ],
+  "rules": [],
+  "links": [],
+  "updated": "2026. szept. 10."
+}
