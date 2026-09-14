@@ -143,6 +143,7 @@ function applySheetAccent(type){
 function openCourseSheet(course){
   sheetCourse=course;
   applySheetAccent(course.type);
+  document.getElementById("courseSheet").classList.remove("sheet-wide");
   const body=document.getElementById("sheetBody");body.innerHTML="";
   const title=E("div");title.className="sheet-title";title.textContent=course.name;
   const sub=E("div");sub.className="sheet-sub";
@@ -202,6 +203,7 @@ function docSection(label,items,gradeColored){
   return sec;
 }
 async function showCourseInfo(course){
+  document.getElementById("courseSheet").classList.add("sheet-wide");
   const body=document.getElementById("sheetBody");body.innerHTML="";
 
   const backBtn=E("button");backBtn.type="button";backBtn.className="sheet-action sheet-back";
@@ -266,6 +268,7 @@ async function showCourseInfo(course){
 }
 function closeCourseSheet(){
   document.getElementById("courseSheet").classList.remove("show");
+  document.getElementById("courseSheet").classList.remove("sheet-wide");
   document.getElementById("courseSheet").setAttribute("aria-hidden","true");
   document.getElementById("sheetScrim").classList.remove("show");
   sheetCourse=null;
