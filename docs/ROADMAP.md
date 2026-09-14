@@ -14,9 +14,9 @@
 ## Phase 1 — PWA conversion & hosting
 
 - [x] Split `index.html` into `index.html`, `css/style.css`, `js/script.js` — also moved `icon.png` → `assets/icon.png` and the raw Neptun exports → `data/` while at it
-- [ ] Add `manifest.json` (name, icons, theme color `#20242e`, background `#ffffff`, `display: standalone`)
+- [x] Add `manifest.json` (name, icons, theme color `#20242e`, background `#ffffff`, `display: standalone`) — this is what makes "Add to Home screen" on Android launch the app chromeless (no address bar/browser UI) instead of a bookmark shortcut
 - [ ] Add `service-worker.js` caching the app shell for full offline support
-- [ ] Generate PWA icon sizes (192x192, 512x512, maskable) from `assets/icon.png`
+- [x] Generate PWA icon sizes (192x192, 512x512, maskable) from `assets/icon.png` — upscaled from the 100x100 source since that's all that exists; fine for a flat vector-style icon, but a genuinely higher-res source would sharpen these if one ever turns up
 - [x] Deploy to Vercel; point custom domain `orarend.szaszroland.hu` at it — **live and working**, but **not yet locked down** (Cloudflare Access still needs setting up — see [DEPLOYMENT.md](DEPLOYMENT.md), this is the actual priority right now, not a documentation afterthought)
 - [ ] Retire the `android/` Web2APK output once the installable PWA replaces it — also resolves the export/download limitation noted above, since an installed PWA runs through a real browser engine
 
