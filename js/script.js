@@ -49,6 +49,15 @@ const svgArw='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke
 const svgLoc='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>';
 const svgInfo='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>';
 const svgBack='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>';
+/* Desktop sidebar nav icons (rail + drawer, ≥1080px only — see css/style.css) */
+const NAV_ICONS={
+ schedule:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+ zoli:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>',
+ kotelezo:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>',
+ online:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>',
+ kriterium:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>',
+ teremkereso:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+};
 const now=new Date();const nowDay=now.getDay()-1;const nowMin=now.getHours()*60+now.getMinutes();
 let curDay=(nowDay<0||nowDay>4)?0:nowDay;
 let view="schedule"; // "schedule" | "kotelezo" | "online" | "kriterium" | "checklist"
@@ -107,12 +116,13 @@ function goto(newView,dayIndex){
   view=newView;
   if(typeof dayIndex==="number")curDay=dayIndex;
   rail();
+  renderNavIcons();
   renderHead();
   renderMain();
 }
 function openChecklist(id){
   view="checklist";activeChecklistId=id;
-  rail();renderHead();renderMain();
+  rail();renderNavIcons();renderHead();renderMain();
 }
 
 /* ---------- course action sheet ---------- */
@@ -292,6 +302,18 @@ function rail(){
     b.innerHTML=SHORT[i]+(n?`<span class="cnt">${n}</span>`:"");
     b.onclick=()=>goto(view,i);
     r.appendChild(b);
+  });
+}
+
+/* Desktop-only (≥1080px) icon shortcuts for NAV_LINKS pages, alongside the hamburger drawer */
+function renderNavIcons(){
+  const wrap=document.getElementById("navIcons");wrap.innerHTML="";
+  NAV_LINKS.forEach(item=>{
+    const b=E("button");b.type="button";b.className="navicon"+(view===item.id?" active":"");
+    b.title=item.label;
+    b.innerHTML=NAV_ICONS[item.id];
+    b.onclick=()=>goto(item.id);
+    wrap.appendChild(b);
   });
 }
 
@@ -537,7 +559,7 @@ function renderNav(){
   const wrap=document.getElementById("navbody");wrap.innerHTML="";
   NAV_LINKS.forEach(item=>{
     const b=E("button");b.className="navlink"+(view===item.id?" active":"");
-    b.textContent=item.label;
+    b.innerHTML=`<span class="navlink-icon">${NAV_ICONS[item.id]}</span><span class="navlink-label">${item.label}</span>`;
     b.onclick=()=>{goto(item.id);closeDrawer();};
     wrap.appendChild(b);
   });
@@ -747,6 +769,7 @@ async function init(){
   try{
     await loadScheduleData();
     rail();
+    renderNavIcons();
     renderHead();
     renderMain();
   }catch(e){
