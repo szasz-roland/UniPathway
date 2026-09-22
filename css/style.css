@@ -64,6 +64,7 @@
   #rail .dbtn{height:44px;flex:0 0 44px;align-self:center}
   .rail-label-wrap{width:28px;height:200px;display:flex;align-items:center;justify-content:center;overflow:hidden}
   .rail-label{white-space:nowrap;font-size:13px;font-weight:800;letter-spacing:.03em;color:var(--rail-tx);transform:rotate(-90deg)}
+  .navicons{display:none}
   .rail .gear,.rail .checklist-btn{width:40px;height:40px;border:none;background:transparent;color:var(--rail-tx-2);
     cursor:pointer;border-radius:11px;display:grid;place-items:center;transition:background .15s,color .15s,transform 140ms var(--ease-out)}
   .rail .checklist-btn{margin-top:auto}
@@ -181,6 +182,7 @@
   .navlink{display:block;width:100%;text-align:left;border:none;background:transparent;color:var(--rail-tx);
     font-family:var(--sans);font-weight:700;font-size:14px;padding:13px 14px;border-radius:11px;cursor:pointer;
     transition:background 150ms ease,color 150ms ease,transform 140ms var(--ease-out)}
+  .navlink-icon{display:none}
   .navlink:hover{background:var(--rail-line);color:#fff}
   .navlink.active{background:var(--rail-line);color:#fff}
   .navlink:active{transform:scale(.98)}
@@ -344,6 +346,20 @@
     .head .date{display:none}
     .head .title .day{display:none}
     #rail .dbtn{display:none}
+    .rail-label-wrap{display:none}
+
+    .navicons{display:flex;flex-direction:column;align-items:center;gap:4px;flex:0 0 auto}
+    .navicon{width:40px;height:40px;border:none;background:transparent;color:var(--rail-tx-2);
+      cursor:pointer;border-radius:11px;display:grid;place-items:center;
+      transition:background .15s,color .15s,transform 140ms var(--ease-out)}
+    .navicon svg{width:20px;height:20px}
+    .navicon:hover{background:var(--rail-line);color:#fff}
+    .navicon:active{transform:scale(.9)}
+    .navicon.active{background:var(--rail-line);color:#fff}
+
+    .navlink{display:flex;align-items:center;gap:10px}
+    .navlink-icon{display:flex;align-items:center;justify-content:center;width:20px;height:20px;flex:0 0 20px}
+    .navlink-icon svg{display:block;width:20px;height:20px}
 
     /* Course action sheet becomes a centered dialog instead of a mobile bottom sheet */
     .sheet{left:50%;right:auto;bottom:auto;top:50%;margin:0;
