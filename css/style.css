@@ -95,16 +95,16 @@
   .list .item{cursor:pointer}
   .list .item:active .card{transform:scale(.98)}
   .card{border-radius:18px;padding:16px 18px;position:relative;cursor:default;overflow:hidden;transition:transform 140ms var(--ease-out);
-    border:1px solid transparent}
+    border:1.5px solid transparent}
   .card .arw{position:absolute;top:15px;right:16px;opacity:.5}
   .card .cn{font-size:17px;font-weight:700;letter-spacing:-.01em;padding-right:22px;line-height:1.2}
   .card .sub{font-size:13px;font-weight:600;opacity:.85;margin-top:3px}
   .card .foot{display:flex;align-items:center;gap:6px;margin-top:12px;font-size:12px;font-weight:600;opacity:.9}
   .card .foot svg{opacity:.7}
-  .card.ea{background:var(--ea-bg);color:var(--ea-tx)}  .card.ea .arw{color:var(--ea-ac)}
-  .card.gy{background:var(--gy-bg);color:var(--gy-tx)}  .card.gy .arw{color:var(--gy-ac)}
-  .card.pr{background:var(--pr-bg);color:var(--pr-tx)}  .card.pr .arw{color:var(--pr-ac)}
-  .card.mt{background:var(--mt-bg);color:var(--mt-tx)}  .card.mt .arw{color:var(--mt-ac)}
+  .card.ea{background:var(--ea-bg);color:var(--ea-tx);border-color:var(--ea-ac)}  .card.ea .arw{color:var(--ea-ac)}
+  .card.gy{background:var(--gy-bg);color:var(--gy-tx);border-color:var(--gy-ac)}  .card.gy .arw{color:var(--gy-ac)}
+  .card.pr{background:var(--pr-bg);color:var(--pr-tx);border-color:var(--pr-ac)}  .card.pr .arw{color:var(--pr-ac)}
+  .card.mt{background:var(--mt-bg);color:var(--mt-tx);border-color:var(--mt-ac)}  .card.mt .arw{color:var(--mt-ac)}
   .card.now{box-shadow:0 8px 24px -8px currentColor;animation:nowPulse 3200ms var(--ease-in-out) infinite}
   @keyframes nowPulse{0%,100%{box-shadow:0 8px 24px -8px currentColor}50%{box-shadow:0 12px 30px -6px currentColor}}
   .card .pin{font-weight:800}
@@ -114,12 +114,19 @@
   .freeday .s{font-size:14px;margin-top:8px}
 
   .drchips{display:flex;flex-direction:column;gap:6px;margin-bottom:4px}
-  .drchip{background:var(--surface-2);border-radius:11px;padding:10px 13px;cursor:pointer;
-    transition:background 150ms ease,transform 140ms var(--ease-out)}
-  .drchip:hover{background:var(--hair)}
+  /* Color-coded like the schedule's own class tiles (ea/gy/pr/mt) instead of a plain gray box —
+     same four accent pairs, cycled per chip (COLOR_CYCLE[i%4] in renderCodepage()), so an online
+     course tile looks like it belongs to the same family as a scheduled class card. */
+  .drchip{border-radius:11px;border:1.5px solid transparent;padding:10px 13px;cursor:pointer;
+    transition:filter 150ms ease,transform 140ms var(--ease-out)}
+  .drchip.ea{background:var(--ea-bg);color:var(--ea-tx);border-color:var(--ea-ac)}
+  .drchip.gy{background:var(--gy-bg);color:var(--gy-tx);border-color:var(--gy-ac)}
+  .drchip.pr{background:var(--pr-bg);color:var(--pr-tx);border-color:var(--pr-ac)}
+  .drchip.mt{background:var(--mt-bg);color:var(--mt-tx);border-color:var(--mt-ac)}
+  .drchip:hover{filter:brightness(.96)}
   .drchip:active{transform:scale(.98)}
   .drchip b{display:block;font-weight:700;font-size:13px}
-  .drchip span{color:var(--faint);font-size:11.5px}
+  .drchip span{color:inherit;opacity:.75;font-size:11.5px}
 
   .codepage{max-width:640px;animation:enterUp 260ms var(--ease-out) both}
 
@@ -189,16 +196,28 @@
 
   .grp{font-size:11px;font-weight:700;color:var(--faint);margin:14px 4px 8px}
   .grp:first-child{margin-top:2px}
-  .crow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:1px solid var(--hair);
-    background:var(--surface-2);border-radius:11px;padding:11px 13px;margin-bottom:6px;cursor:pointer;
-    font-family:var(--sans);color:var(--ink);transition:border-color 150ms ease,background-color 150ms ease,transform 140ms var(--ease-out)}
-  .crow:hover{border-color:var(--ea-ac)}
+  /* Actual tiles, not a full-width list: a responsive grid (mobile included — this is a color+shape
+     system, not a desktop-only layout) of compact, vertically-stacked cards, same idea as .drchip.
+     Color-coded like the schedule's own class tiles (ea/gy/pr/mt), cycled per row
+     (COLOR_CYCLE[i%4] in renderCodepage()). */
+  .crow-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+  /* The contrasty edge is a deliberate 1.5px border in each tile's own --xx-ac accent (the same
+     stronger token already used for arrow icons/sheet accents), not a browser default — .crow is a
+     <button>, and an unstyled button border happened to render close to this by accident before;
+     making it explicit keeps it consistent across browsers and ties it to the actual color system. */
+  .crow{display:flex;flex-direction:column;gap:4px;position:relative;text-align:left;border-radius:11px;
+    border:1.5px solid transparent;padding:12px 34px 12px 13px;cursor:pointer;font-family:var(--sans);
+    transition:filter 150ms ease,background-color 150ms ease,color 150ms ease,transform 140ms var(--ease-out)}
+  .crow.ea{background:var(--ea-bg);color:var(--ea-tx);border-color:var(--ea-ac)}
+  .crow.gy{background:var(--gy-bg);color:var(--gy-tx);border-color:var(--gy-ac)}
+  .crow.pr{background:var(--pr-bg);color:var(--pr-tx);border-color:var(--pr-ac)}
+  .crow.mt{background:var(--mt-bg);color:var(--mt-tx);border-color:var(--mt-ac)}
+  .crow:hover{filter:brightness(.96)}
   .crow:active{transform:scale(.98)}
-  .crow.copied{border-color:var(--mt-ac);background:var(--mt-bg)}
-  .crow .ck{font-family:ui-monospace,Menlo,monospace;font-size:13px;font-weight:700;min-width:128px;color:var(--ea-tx)}
-  .crow.copied .ck{color:var(--mt-tx)}
-  .crow .cnm{font-size:12px;color:var(--ink-2);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .crow .cic{font-size:12px;color:var(--faint)}
+  .crow.copied{background:var(--mt-bg);color:var(--mt-tx);border-color:var(--mt-ac)}
+  .crow .ck{font-family:ui-monospace,Menlo,monospace;font-size:13px;font-weight:700}
+  .crow .cnm{font-size:12px;opacity:.75;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .crow .cic{position:absolute;top:12px;right:13px;font-size:12px;opacity:.6}
   .roomsearch-input{width:100%;padding:13px 16px;border-radius:13px;border:1px solid var(--hair);background:var(--surface-2);
     color:var(--ink);font-family:var(--sans);font-size:14.5px}
   .roomsearch-input:focus{outline:2px solid var(--ea-ac);outline-offset:1px}
@@ -237,7 +256,7 @@
   .wcol.selected .wh{border-bottom-color:var(--sel)}
   .wcol .wh .wc{font-size:11px;font-weight:700;color:var(--faint)}
   .wcol .wcards{display:flex;flex-direction:column;gap:10px}
-  .wcard{border-radius:14px;padding:11px 12px;position:relative;overflow:hidden;cursor:pointer;
+  .wcard{border-radius:14px;border:1.5px solid transparent;padding:11px 12px;position:relative;overflow:hidden;cursor:pointer;
     transition:transform 140ms var(--ease-out)}
   .wcard:active{transform:scale(.97)}
   .wcard .warw{position:absolute;top:10px;right:10px;opacity:.45}
@@ -245,10 +264,10 @@
   .wcard .wnm{font-size:13.5px;font-weight:700;line-height:1.2;margin:3px 0 4px;letter-spacing:-.01em;padding-right:16px}
   .wcard .wr{font-size:11px;font-weight:600;opacity:.82;display:flex;gap:4px;align-items:flex-start}
   .wcard .wr svg{flex:0 0 auto;margin-top:1px;opacity:.7}
-  .wcard.ea{background:var(--ea-bg);color:var(--ea-tx)}
-  .wcard.gy{background:var(--gy-bg);color:var(--gy-tx)}
-  .wcard.pr{background:var(--pr-bg);color:var(--pr-tx)}
-  .wcard.mt{background:var(--mt-bg);color:var(--mt-tx)}
+  .wcard.ea{background:var(--ea-bg);color:var(--ea-tx);border-color:var(--ea-ac)}
+  .wcard.gy{background:var(--gy-bg);color:var(--gy-tx);border-color:var(--gy-ac)}
+  .wcard.pr{background:var(--pr-bg);color:var(--pr-tx);border-color:var(--pr-ac)}
+  .wcard.mt{background:var(--mt-bg);color:var(--mt-tx);border-color:var(--mt-ac)}
   .wcard.now{box-shadow:0 6px 18px -6px currentColor;animation:nowPulseSm 3200ms var(--ease-in-out) infinite}
   @keyframes nowPulseSm{0%,100%{box-shadow:0 6px 18px -6px currentColor}50%{box-shadow:0 9px 22px -5px currentColor}}
   .wempty{padding:26px 8px;text-align:center;color:var(--faint);font-size:12.5px;font-weight:600;
@@ -340,7 +359,12 @@
 
   /* =========== BREAKPOINTS =========== */
   @media(min-width:1080px){
-    .main{padding:38px clamp(28px,4vw,64px) 72px;max-width:1500px;margin-inline:auto}
+    /* width:100% is required here: .main is a CSS grid item (child of .shell) with no explicit
+       width, and it was shrink-wrapping to its content's intrinsic width instead of stretching to
+       fill its grid column — a pre-existing quirk that only became visually obvious once content
+       (Kurzusok) started relying on max-width+margin-inline:auto centering: centering math run
+       against the wrong (shrunk) base width produced the lopsided, near-empty-looking layout. */
+    .main{padding:38px clamp(28px,4vw,64px) 72px;max-width:1500px;margin-inline:auto;width:100%}
     .list,.freeday{display:none}
     .week{display:block}
     .head .date{display:none}
@@ -348,18 +372,55 @@
     #rail .dbtn{display:none}
     .rail-label-wrap{display:none}
 
-    .navicons{display:flex;flex-direction:column;align-items:center;gap:4px;flex:0 0 auto}
+    /* Persistent icon rail: collapsed (icon-only) by default, expands in place (no overlay drawer)
+       when the hamburger toggles nav-open — the SAME icon buttons grow into icon+label rows,
+       rather than a separate drawer duplicating the nav list. Alignment/padding/justify-content are
+       constant in both states (only width + label opacity actually change) so the open/close
+       transition is smooth — display:none/align-items/justify-content aren't animatable, so toggling
+       them mid-transition (the earlier version) caused a visible snap instead of a smooth resize. */
+    .shell{transition:grid-template-columns 260ms var(--ease-in-out)}
+    .navicons{display:flex;flex-direction:column;align-items:center;gap:4px;flex:0 0 auto;
+      width:100%;padding:0 8px}
     .navicon{width:40px;height:40px;border:none;background:transparent;color:var(--rail-tx-2);
-      cursor:pointer;border-radius:11px;display:grid;place-items:center;
-      transition:background .15s,color .15s,transform 140ms var(--ease-out)}
-    .navicon svg{width:20px;height:20px}
+      cursor:pointer;border-radius:11px;display:flex;align-items:center;justify-content:flex-start;gap:10px;
+      padding:0 10px;overflow:hidden;
+      transition:background .15s,color .15s,transform 140ms var(--ease-out),width 260ms var(--ease-in-out)}
+    .navicon svg{width:20px;height:20px;flex:0 0 20px}
+    .navicon-label{opacity:0;font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden;
+      text-overflow:ellipsis;transition:opacity 180ms var(--ease-out)}
     .navicon:hover{background:var(--rail-line);color:#fff}
     .navicon:active{transform:scale(.9)}
     .navicon.active{background:var(--rail-line);color:#fff}
 
-    .navlink{display:flex;align-items:center;gap:10px}
-    .navlink-icon{display:flex;align-items:center;justify-content:center;width:20px;height:20px;flex:0 0 20px}
-    .navlink-icon svg{display:block;width:20px;height:20px}
+    body.nav-open .shell{grid-template-columns:248px 1fr}
+    body.nav-open .drawer,body.nav-open .scrim{display:none}
+    body.nav-open .navicon{width:100%}
+    body.nav-open .navicon-label{opacity:1;transition-delay:80ms}
+
+    /* Logo/gear/checklist are pinned to their left inset permanently (not just when expanded) —
+       same offset as the collapsed 76px layout, just anchored left instead of centered, so they
+       never need to move (and thus never need to animate) when the rail width changes. */
+    .rail .logo{align-self:flex-start;margin-left:21px}
+    .rail .gear,.rail .checklist-btn{align-self:flex-start;margin-left:18px}
+
+    /* Codepage/room-search/checklist item pages: wider container + multi-column grid instead of
+       a single narrow mobile-derived column stretched into empty desktop space. (.drchips/.crow-grid
+       aren't repeated here — they're already a responsive grid at every width, see base rules above;
+       only Kurzusok's own contained-column treatment below still needs a desktop-specific override.) */
+    .codepage{max-width:1100px;margin-inline:auto}
+    .room-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;align-items:start}
+    .cl-items-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;align-items:start}
+
+    /* Kurzusok: one centered, contained reading column — not a multi-column grid. A grid pairing
+       (kötelező tárgyak: 11 rows next to kritérium: 3 rows) looks badly lopsided regardless of
+       width, and true centering via margin-inline:auto is robust to exact viewport math in a way
+       auto-fit/minmax column math wasn't. This is the deliberate desktop treatment: a calm,
+       comfortably-capped column with real margin on both sides, matching how most modern
+       content/settings pages (Notion, Linear, Stripe dashboards) present list-shaped content. */
+    .kurzus-grid{display:flex;flex-direction:column;gap:40px;max-width:720px;margin-inline:auto}
+    .kurzus-section-wide .drchips{display:flex;flex-direction:row;flex-wrap:wrap;gap:10px}
+    .kurzus-section-wide .drchip{flex:1 1 220px}
+    .shoprow,.taskrow{margin-bottom:0}
 
     /* Course action sheet becomes a centered dialog instead of a mobile bottom sheet */
     .sheet{left:50%;right:auto;bottom:auto;top:50%;margin:0;

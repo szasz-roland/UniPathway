@@ -7,9 +7,7 @@ let EV=[],ONLINE=[],ZOLI_EV=[],CODES=[];
 const NAV_LINKS=[
  {id:"schedule",label:"Órarend"},
  {id:"zoli",label:"Zoli órarend"},
- {id:"kotelezo",label:"Kötelező tárgyak"},
- {id:"online",label:"Rögzített időpont nélkül"},
- {id:"kriterium",label:"Kritérium (0 kredit)"},
+ {id:"kurzusok",label:"Kurzusok"},
  {id:"teremkereso",label:"Teremkereső"},
 ];
 let ROOMS=[];
@@ -53,14 +51,12 @@ const svgBack='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" strok
 const NAV_ICONS={
  schedule:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
  zoli:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>',
- kotelezo:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>',
- online:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>',
- kriterium:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>',
+ kurzusok:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>',
  teremkereso:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>',
 };
 const now=new Date();const nowDay=now.getDay()-1;const nowMin=now.getHours()*60+now.getMinutes();
 let curDay=(nowDay<0||nowDay>4)?0:nowDay;
-let view="schedule"; // "schedule" | "kotelezo" | "online" | "kriterium" | "checklist"
+let view="schedule"; // "schedule" | "zoli" | "kurzusok" | "teremkereso" | "checklist"
 let panelMode="nav"; // "nav" | "checklist" | "settings"
 let activeChecklistId=null;
 let checklistFormOpen=false;
@@ -311,7 +307,7 @@ function renderNavIcons(){
   NAV_LINKS.forEach(item=>{
     const b=E("button");b.type="button";b.className="navicon"+(view===item.id?" active":"");
     b.title=item.label;
-    b.innerHTML=NAV_ICONS[item.id];
+    b.innerHTML=NAV_ICONS[item.id]+`<span class="navicon-label">${item.label}</span>`;
     b.onclick=()=>goto(item.id);
     wrap.appendChild(b);
   });
@@ -371,26 +367,29 @@ function day(){
 function renderCodepage(){
   const el=document.getElementById("codepage");el.innerHTML="";
   const wrap=E("div");wrap.className="codepage";
-  if(view==="online"){
-    const oc=E("div");oc.className="drchips";
-    ONLINE.forEach(([n,m],i)=>{
-      const x=E("div");x.className="drchip";x.innerHTML=`<b>${n}</b><span>${m}</span>`;
-      x.onclick=()=>openCourseSheet({name:n,meta:m,online:true,type:COLOR_CYCLE[i%4]});
-      oc.appendChild(x);
-    });
-    wrap.appendChild(oc);
-  }else{
-    const[,rows]=CODES[view==="kotelezo"?0:1];
-    rows.forEach(([k,n])=>{
-      const r=E("button");r.className="crow";
+
+  /* "Kurzusok" combines all three thin course-list pages (kötelező tárgyak, kritérium, online) into
+     one page. Each is its own .kurzus-section (header + content) inside .kurzus-grid: on mobile these
+     just stack (default block flow, same as the old separate pages); on desktop .kurzus-grid lays
+     them out as side-by-side columns instead of one long stretched-out stack — see css/style.css. */
+  const grid=E("div");grid.className="kurzus-grid";
+
+  CODES.forEach(([title,rows])=>{
+    const section=E("div");section.className="kurzus-section";
+    const grp=E("div");grp.className="grp";grp.textContent=title;
+    section.appendChild(grp);
+    const rowsGrid=E("div");rowsGrid.className="crow-grid";
+    rows.forEach(([k,n],i)=>{
+      const r=E("button");r.className="crow "+COLOR_CYCLE[i%4];
       r.innerHTML=`<span class="ck">${k}</span><span class="cnm">${n}</span><span class="cic">⧉</span>`;
       r.onclick=()=>navigator.clipboard.writeText(k).then(()=>{
         r.classList.add("copied");r.querySelector(".cic").textContent="✓";
         setTimeout(()=>{r.classList.remove("copied");r.querySelector(".cic").textContent="⧉"},1200);
       });
-      wrap.appendChild(r);
+      rowsGrid.appendChild(r);
     });
-    const foot=E("div");foot.style.marginTop="16px";
+    section.appendChild(rowsGrid);
+    const foot=E("div");foot.style.marginTop="16px";foot.style.marginBottom="8px";
     const btn=E("button");btn.className="copyall";btn.textContent=`Mind a ${rows.length} kód másolása`;
     btn.onclick=()=>{
       const all=rows.map(r=>r[0]).join("\n");
@@ -399,8 +398,24 @@ function renderCodepage(){
         setTimeout(()=>btn.textContent=o,1500);
       });
     };
-    foot.appendChild(btn);wrap.appendChild(foot);
-  }
+    foot.appendChild(btn);section.appendChild(foot);
+    grid.appendChild(section);
+  });
+
+  const onlineSection=E("div");onlineSection.className="kurzus-section kurzus-section-wide";
+  const onlineGrp=E("div");onlineGrp.className="grp";onlineGrp.textContent="Rögzített időpont nélkül";
+  onlineSection.appendChild(onlineGrp);
+  const oc=E("div");oc.className="drchips";
+  ONLINE.forEach(([n,m],i)=>{
+    const x=E("div");x.className="drchip "+COLOR_CYCLE[i%4];x.innerHTML=`<b>${n}</b><span>${m}</span>`;
+    x.onclick=()=>openCourseSheet({name:n,meta:m,online:true,type:COLOR_CYCLE[i%4]});
+    oc.appendChild(x);
+  });
+  onlineSection.appendChild(oc);
+  grid.appendChild(onlineSection);
+
+  wrap.appendChild(grid);
+
   el.appendChild(wrap);
 }
 
@@ -515,6 +530,7 @@ function renderChecklistItemsView(){
     const empty=E("div");empty.className="checklist-empty";empty.textContent="Még nincs tétel ezen a listán.";
     wrap.appendChild(empty);
   }else if(list.category==="shopping"){
+    const itemsGrid=E("div");itemsGrid.className="cl-items-grid";
     list.items.forEach(item=>{
       const row=E("div");row.className="shoprow";
       const nm=E("span");nm.className="shopname";nm.textContent=item.name;
@@ -530,14 +546,16 @@ function renderChecklistItemsView(){
       delBtn.onclick=()=>{removeItem(list.id,item.id);renderChecklistItemsView();};
       priceWrap.appendChild(priceInput);priceWrap.appendChild(ftLabel);
       row.appendChild(nm);row.appendChild(priceWrap);row.appendChild(delBtn);
-      wrap.appendChild(row);
+      itemsGrid.appendChild(row);
     });
+    wrap.appendChild(itemsGrid);
     const sumRow=E("div");sumRow.className="sumrow";
     sumRow.innerHTML="<span>Összesen</span>";
     const sumEl=E("span");sumEl.id="checklistSum";sumEl.textContent=calcSum(list).toLocaleString("hu-HU")+" Ft";
     sumRow.appendChild(sumEl);
     wrap.appendChild(sumRow);
   }else{
+    const itemsGrid=E("div");itemsGrid.className="cl-items-grid";
     list.items.forEach(item=>{
       const row=E("label");row.className="taskrow";
       row.style.setProperty("--task-ac",`var(--${list.colorKey}-ac)`);
@@ -548,8 +566,9 @@ function renderChecklistItemsView(){
       const delBtn=E("button");delBtn.className="itemdel";delBtn.innerHTML="✕";delBtn.type="button";
       delBtn.onclick=(e)=>{e.preventDefault();e.stopPropagation();removeItem(list.id,item.id);renderChecklistItemsView();};
       row.appendChild(cb);row.appendChild(box);row.appendChild(txt);row.appendChild(delBtn);
-      wrap.appendChild(row);
+      itemsGrid.appendChild(row);
     });
+    wrap.appendChild(itemsGrid);
   }
   el.appendChild(wrap);
 }
@@ -559,7 +578,7 @@ function renderNav(){
   const wrap=document.getElementById("navbody");wrap.innerHTML="";
   NAV_LINKS.forEach(item=>{
     const b=E("button");b.className="navlink"+(view===item.id?" active":"");
-    b.innerHTML=`<span class="navlink-icon">${NAV_ICONS[item.id]}</span><span class="navlink-label">${item.label}</span>`;
+    b.textContent=item.label;
     b.onclick=()=>{goto(item.id);closeDrawer();};
     wrap.appendChild(b);
   });
@@ -658,6 +677,7 @@ function syncTriggerStates(){
   document.getElementById("burger").classList.toggle("active",open&&panelMode==="nav");
   document.getElementById("checklistBtn").classList.toggle("active",open&&panelMode==="checklist");
   document.getElementById("gearBtn").classList.toggle("active",open&&panelMode==="settings");
+  document.body.classList.toggle("nav-open",open&&panelMode==="nav");
 }
 function openDrawer(mode){
   panelMode=mode||"nav";
