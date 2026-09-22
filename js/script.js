@@ -464,11 +464,7 @@ function renderRoomResults(){
   const list=document.getElementById("roomResultsList");if(!list)return;
   list.innerHTML="";
   const q=roomQuery.trim();
-  if(!q){
-    const empty=E("div");empty.className="roomsearch-empty";empty.textContent="Kezdj el gépelni a kereséshez.";
-    list.appendChild(empty);return;
-  }
-  const matches=ROOMS.filter(r=>matchesRoom(r,q));
+  const matches=q?ROOMS.filter(r=>matchesRoom(r,q)):ROOMS;
   if(matches.length===0){
     const empty=E("div");empty.className="roomsearch-empty";empty.textContent="Nincs találat.";
     list.appendChild(empty);return;
@@ -484,8 +480,8 @@ function renderRoomResults(){
     const metaLine=[loc?loc.floorLabel:null,r.dept,r.address].filter(Boolean).join(" · ");
     card.innerHTML=
       `<div class="rc-code">${r.code}</div>`+
-      `<div class="rc-name">${primaryName}</div>`+
-      `<div class="rc-meta">${svgLoc}<span>${metaLine}</span></div>`+
+      `<div class="rc-name" title="${primaryName}">${primaryName}</div>`+
+      `<div class="rc-meta">${svgLoc}<span title="${metaLine}">${metaLine}</span></div>`+
       `<button type="button" class="rc-mapbtn">${isOpen?"Térkép elrejtése":"Térkép mutatása"}</button>`;
     card.querySelector(".rc-mapbtn").onclick=()=>{
       if(isOpen)openRoomMaps.delete(r.id);else openRoomMaps.add(r.id);

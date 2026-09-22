@@ -7,6 +7,7 @@
     --pr-bg:#eeeafb;   --pr-tx:#5a3fa8;   --pr-ac:#8b6de0;
     --mt-bg:#e8f1ea;   --mt-tx:#356148;   --mt-ac:#5fa87c;
     --sel:#f4b63f;
+    --card-overlay:rgba(255,255,255,.5); --card-overlay-hover:rgba(255,255,255,.8);
     --sans:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
     --ease-out:cubic-bezier(.23,1,.32,1);
     --ease-in-out:cubic-bezier(.77,0,.175,1);
@@ -18,6 +19,7 @@
     --gy-bg:#3a2a1e; --gy-tx:#f0b184; --gy-ac:#e8834b;
     --pr-bg:#2a2440; --pr-tx:#c3b3f2; --pr-ac:#8b6de0;
     --mt-bg:#1e3226; --mt-tx:#9bd6b0; --mt-ac:#5fa87c;
+    --card-overlay:rgba(0,0,0,.22); --card-overlay-hover:rgba(0,0,0,.35);
   }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 
@@ -226,13 +228,18 @@
   .room-list{display:flex;flex-direction:column;gap:10px}
   .room-card{cursor:default}
   .room-card .rc-code{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:800;letter-spacing:.02em;opacity:.8}
-  .room-card .rc-name{font-size:15.5px;font-weight:700;margin-top:3px;letter-spacing:-.01em;padding-right:0}
+  /* min-height+line-clamp (not just clamp alone) so every closed tile reserves the same space for
+     name/meta regardless of actual text length — a 1-line name and a 2-line name end up the same
+     tile height, and anything longer than 2 lines truncates instead of growing the tile further. */
+  .room-card .rc-name{font-size:15.5px;font-weight:700;margin-top:3px;letter-spacing:-.01em;padding-right:0;
+    line-height:1.25;min-height:2.5em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .room-card .rc-meta{display:flex;align-items:flex-start;gap:6px;margin-top:9px;font-size:12px;font-weight:600;opacity:.9;line-height:1.4}
   .room-card .rc-meta svg{opacity:.7;flex:0 0 auto;margin-top:1px}
-  .room-card .rc-mapbtn{margin-top:12px;border:none;background:rgba(255,255,255,.5);color:inherit;font-family:var(--sans);
+  .room-card .rc-meta span{min-height:2.8em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .room-card .rc-mapbtn{margin-top:12px;border:none;background:var(--card-overlay);color:inherit;font-family:var(--sans);
     font-weight:700;font-size:12.5px;padding:8px 14px;border-radius:10px;cursor:pointer;
     transition:background 150ms ease,transform 140ms var(--ease-out)}
-  .room-card .rc-mapbtn:hover{background:rgba(255,255,255,.8)}
+  .room-card .rc-mapbtn:hover{background:var(--card-overlay-hover)}
   .room-card .rc-mapbtn:active{transform:scale(.96)}
   .room-map{margin-top:12px;border-radius:12px;overflow:hidden;animation:enterUp 220ms var(--ease-out) both}
   .room-map iframe{width:100%;height:220px;border:0;display:block}
