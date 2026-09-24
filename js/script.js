@@ -11,7 +11,10 @@ const NAV_LINKS=[
  {id:"teremkereso",label:"Teremkereső"},
 ];
 let ROOMS=[];
-const PAGE_LABELS=Object.fromEntries(NAV_LINKS.map(x=>[x.id,x.label]));
+/* MODULES (registered via window.registerModule(), before this script loads — see index.html
+   and CLAUDE.md's module convention) are merged alongside NAV_LINKS everywhere pages are listed,
+   so an external module gets a nav entry/rail icon/page title for free, no code here per-module. */
+const PAGE_LABELS=Object.fromEntries([...NAV_LINKS,...MODULES].map(x=>[x.id,x.label]));
 const SCHEDULE_VIEWS=["schedule","zoli"];
 const isScheduleView=v=>SCHEDULE_VIEWS.includes(v);
 const datasetFor=v=>v==="zoli"?ZOLI_EV:EV;
@@ -304,10 +307,10 @@ function rail(){
 /* Desktop-only (≥1080px) icon shortcuts for NAV_LINKS pages, alongside the hamburger drawer */
 function renderNavIcons(){
   const wrap=document.getElementById("navIcons");wrap.innerHTML="";
-  NAV_LINKS.forEach(item=>{
+  [...NAV_LINKS,...MODULES].forEach(item=>{
     const b=E("button");b.type="button";b.className="navicon"+(view===item.id?" active":"");
     b.title=item.label;
-    b.innerHTML=NAV_ICONS[item.id]+`<span class="navicon-label">${item.label}</span>`;
+    b.innerHTML=(NAV_ICONS[item.id]||item.icon)+`<span class="navicon-label">${item.label}</span>`;
     b.onclick=()=>goto(item.id);
     wrap.appendChild(b);
   });
@@ -335,7 +338,13 @@ function renderMain(){
   if(isScheduleView(view)){day();week();}
   else if(view==="checklist"){renderChecklistItemsView();}
   else if(view==="teremkereso"){renderRoomSearch();}
-  else{renderCodepage();}
+  else if(view==="kurzusok"){renderCodepage();}
+  else{
+    /* Generic module dispatch — the only place this file ever "knows" a module exists,
+       and only by id lookup, never by name. See CLAUDE.md's module convention. */
+    const mod=MODULES.find(m=>m.id===view);
+    if(mod)mod.mount(document.getElementById("codepage"));
+  }
 }
 
 function day(){
@@ -572,7 +581,7 @@ function renderChecklistItemsView(){
 /* ---------- panels ---------- */
 function renderNav(){
   const wrap=document.getElementById("navbody");wrap.innerHTML="";
-  NAV_LINKS.forEach(item=>{
+  [...NAV_LINKS,...MODULES].forEach(item=>{
     const b=E("button");b.className="navlink"+(view===item.id?" active":"");
     b.textContent=item.label;
     b.onclick=()=>{goto(item.id);closeDrawer();};

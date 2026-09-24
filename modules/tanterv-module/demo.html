@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>try{var m=localStorage.getItem("orarend-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",m);}catch(e){}</script>
+<title>Tanterv – előnézet</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Preview only: the site's theme tokens, copied from css/style.css -->
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1d2233; --ink-2:#5a6178; --faint:#9aa0b4; --surface-2:#f5f6f9;
+    --rail:#20242e; --rail-line:#333949; --rail-tx:#aeb4c7; --rail-tx-2:#8a90a6;
+    --hair:#eef0f4;
+    --ea-bg:#e8f3f4;   --ea-tx:#1f6b74;   --ea-ac:#2fa8b5;
+    --gy-bg:#fdeee6;   --gy-tx:#a2542c;   --gy-ac:#e8834b;
+    --pr-bg:#eeeafb;   --pr-tx:#5a3fa8;   --pr-ac:#8b6de0;
+    --mt-bg:#e8f1ea;   --mt-tx:#356148;   --mt-ac:#5fa87c;
+    --sel:#f4b63f;
+    --card-overlay:rgba(255,255,255,.5); --card-overlay-hover:rgba(255,255,255,.8);
+    --sans:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    --ease-out:cubic-bezier(.23,1,.32,1);
+    --ease-in-out:cubic-bezier(.77,0,.175,1);
+    --ease-drawer:cubic-bezier(.32,.72,0,1);
+  }
+  [data-theme="dark"]{
+    --bg:#14161d; --ink:#eef0f4; --ink-2:#aeb4c7; --faint:#6c7288; --surface-2:#1c2029; --hair:#2a2f3b;
+    --ea-bg:#183638; --ea-tx:#7fd2da; --ea-ac:#2fa8b5;
+    --gy-bg:#3a2a1e; --gy-tx:#f0b184; --gy-ac:#e8834b;
+    --pr-bg:#2a2440; --pr-tx:#c3b3f2; --pr-ac:#8b6de0;
+    --mt-bg:#1e3226; --mt-tx:#9bd6b0; --mt-ac:#5fa87c;
+    --card-overlay:rgba(0,0,0,.22); --card-overlay-hover:rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);display:grid;grid-template-columns:76px 1fr;min-height:100vh}
+  .rail{background:var(--rail);display:flex;flex-direction:column;align-items:center;padding:20px 0}
+  .rail button{width:40px;height:40px;border:0;border-radius:11px;background:transparent;color:var(--rail-tx);cursor:pointer;font:700 12px var(--sans)}
+  .rail button:hover{background:var(--rail-line);color:#fff}
+  .main{padding:28px clamp(16px,4vw,40px) 40px;min-width:0}
+  .title{font-size:30px;font-weight:800;letter-spacing:-.02em;margin-bottom:4px}
+  @media(max-width:700px){body{grid-template-columns:1fr}.rail{flex-direction:row;padding:8px;justify-content:flex-end}}
+</style>
+<link rel="stylesheet" href="css/tanterv.css">
+</head>
+<body>
+  <aside class="rail"><button id="theme" title="Téma váltása">Téma</button></aside>
+  <main class="main">
+    <div class="title">Tanterv</div>
+    <div id="codepage"></div>
+  </main>
+<script src="js/tanterv.js"></script>
+<script>
+  Tanterv.mount(document.getElementById("codepage"), { dataUrl: "curriculum_data/umi_bprof.json" });
+  document.getElementById("theme").onclick = () => {
+    const m = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", m);
+    try { localStorage.setItem("orarend-theme", m); } catch (e) {}
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,3534 @@
+{
+ "version": 1,
+ "source": "umi_bprof_20250825.xlsx",
+ "program": {
+  "name": "Üzemmérnök-informatikus BProf",
+  "institution": "SZTE",
+  "semesters": 6,
+  "credits": 180,
+  "lead": "Dr. Beszédes Árpád"
+ },
+ "courses": {
+  "Matematika informatikusoknak I.": {
+   "n": "Matematika informatikusoknak I.",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Téma: Diszkrét matematika. / 1. félévben való teljesítése kritikus.",
+   "codes": [
+    "MN1841EA",
+    "MN1841GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [],
+   "pre": [],
+   "crit": true
+  },
+  "Matematika praktikum": {
+   "n": "Matematika praktikum",
+   "ea": 0,
+   "gy": 2,
+   "eao": 0,
+   "gyo": 2,
+   "note": "Kiugrási lehetőség.",
+   "codes": [
+    "TBD-Mat0"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [],
+   "pre": [],
+   "crit": false
+  },
+  "Programozás alapjai": {
+   "n": "Programozás alapjai",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "1. félévben való teljesítése kritikus.",
+   "codes": [
+    "IN1001EA",
+    "IN1001LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Gergely Tamás"
+   ],
+   "pre": [],
+   "crit": true
+  },
+  "Programozás alapjai praktikum": {
+   "n": "Programozás alapjai praktikum",
+   "ea": 0,
+   "gy": 2,
+   "eao": 0,
+   "gyo": 1,
+   "note": "",
+   "codes": [
+    "IN1001SA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Gergely Tamás"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Számítógép hálózatok": {
+   "n": "Számítógép hálózatok",
+   "ea": 2,
+   "gy": 0,
+   "eao": 1,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "IN1013EA"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Bilicki Vilmos"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Egyetemi informatikai alapok": {
+   "n": "Egyetemi informatikai alapok",
+   "ea": 0,
+   "gy": 2,
+   "eao": 0,
+   "gyo": 2,
+   "note": "Kiugrási lehetőség.",
+   "codes": [
+    "IN1004LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Holló Csaba"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Személyes és szociális készségek": {
+   "n": "Személyes és szociális készségek",
+   "ea": 2,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [],
+   "evals": [],
+   "teachers": [],
+   "pre": [],
+   "crit": false
+  },
+  "Webfejlesztés alapjai": {
+   "n": "Webfejlesztés alapjai",
+   "ea": 1,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "ea és gyak függetlenül teljesíthető / Téma: HTML és CSS",
+   "codes": [
+    "IN1014EA",
+    "IN1014LA"
+   ],
+   "evals": [
+    "Beszámoló, 5 fok",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Holló Csaba"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Optimalizálási algoritmusok": {
+   "n": "Optimalizálási algoritmusok",
+   "ea": 1,
+   "gy": 3,
+   "eao": 1,
+   "gyo": 2,
+   "note": "",
+   "codes": [
+    "IN1003EA",
+    "IN1003GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "London András"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Optimalizálási algoritmusok praktikum": {
+   "n": "Optimalizálási algoritmusok praktikum",
+   "ea": 0,
+   "gy": 2,
+   "eao": 0,
+   "gyo": 1,
+   "note": "",
+   "codes": [
+    "IN1003SA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Bánhelyi Balázs"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Marketing": {
+   "n": "Marketing",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "TBD-Marketing"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Dr. Prónay Szabolcs"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "A közgazdaságtan alapjai": {
+   "n": "A közgazdaságtan alapjai",
+   "ea": 2,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "TBD-KözgAlap"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Dr. Nagy Benedek"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Matematika informatikusoknak II.": {
+   "n": "Matematika informatikusoknak II.",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Téma: Folytonos matematika (kalkulus, lineáris algebra)",
+   "codes": [
+    "MN1842EA",
+    "MN1842GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [],
+   "pre": [],
+   "crit": false
+  },
+  "Operációs rendszerek": {
+   "n": "Operációs rendszerek",
+   "ea": 2,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "Programozás alapjai gy",
+   "codes": [
+    "IN1036EA"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Nagy Antal"
+   ],
+   "pre": [
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Számítógépes adatelemzés": {
+   "n": "Számítógépes adatelemzés",
+   "ea": 0,
+   "gy": 3,
+   "eao": 0,
+   "gyo": 2,
+   "note": "Programozás alapjai gy",
+   "codes": [
+    "IN1037LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Kőrösi Gábor"
+   ],
+   "pre": [
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Algoritmusok és adatszerkezetek": {
+   "n": "Algoritmusok és adatszerkezetek",
+   "ea": 2,
+   "gy": 4,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Programozás alapjai gy",
+   "codes": [
+    "IN1031EA",
+    "IN1031LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Békési József"
+   ],
+   "pre": [
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Objektumorientált programozás": {
+   "n": "Objektumorientált programozás",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Programozás alapjai gy / 2. félévben való teljesítése kritikus. / JAVA alapú OOP kurzus",
+   "codes": [
+    "IN1002EA",
+    "IN1002LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Ferenc Rudolf"
+   ],
+   "pre": [
+    "Programozás alapjai"
+   ],
+   "crit": true
+  },
+  "Szoftverfejlesztési folyamatok": {
+   "n": "Szoftverfejlesztési folyamatok",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 1,
+   "note": "Programozás alapjai gy előzetes teljesítése vagy párhuzamos felvétele, ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1017EA",
+    "IN1017LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Vidács László"
+   ],
+   "pre": [
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Adatbázisok": {
+   "n": "Adatbázisok",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Programozás alapjai gy; ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1041EA",
+    "IN1041LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Németh Gábor"
+   ],
+   "pre": [
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Digitális architektúrák": {
+   "n": "Digitális architektúrák",
+   "ea": 4,
+   "gy": 0,
+   "eao": 3,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "IN1092EA"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Mingesz Róbert"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Informatikai biztonság": {
+   "n": "Informatikai biztonság",
+   "ea": 2,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "Számítógép hálózatok",
+   "codes": [
+    "IN1034EA"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Vidács László"
+   ],
+   "pre": [
+    "Számítógép hálózatok"
+   ],
+   "crit": false
+  },
+  "Szoftvertesztelés": {
+   "n": "Szoftvertesztelés",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 1,
+   "note": "Szoftverfejlesztési folyamatok gy; Programozás alapjai gy",
+   "codes": [
+    "IN1091EA",
+    "IN1091LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Beszédes Árpád"
+   ],
+   "pre": [
+    "Szoftverfejlesztési folyamatok",
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Projektmunka I": {
+   "n": "Projektmunka I",
+   "ea": 0,
+   "gy": 3,
+   "eao": 0,
+   "gyo": 2,
+   "note": "Szoftverfejlesztési folyamatok ea; Szoftverfejlesztési folyamatok gy; Programozás alapjai gy",
+   "codes": [
+    "IN1081LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Beszédes Árpád"
+   ],
+   "pre": [
+    "Szoftverfejlesztési folyamatok",
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak": {
+   "n": "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "IN1061EA"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Tanács Attila"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Mesterséges intelligencia": {
+   "n": "Mesterséges intelligencia",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Algoritmusok és adatszerkezetek; ea és gyak függetlenül teljesíthető;",
+   "codes": [
+    "IN1068EA",
+    "IN1068LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Farkas Richárd"
+   ],
+   "pre": [
+    "Algoritmusok és adatszerkezetek"
+   ],
+   "crit": false
+  },
+  "Numerikus számítások": {
+   "n": "Numerikus számítások",
+   "ea": 1,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "Matematika informatikusoknak I.",
+   "codes": [
+    "IN1015EA",
+    "IN1015GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Csókás Eszter"
+   ],
+   "pre": [
+    "Matematika informatikusoknak I."
+   ],
+   "crit": false
+  },
+  "Szoftver architektúrák": {
+   "n": "Szoftver architektúrák",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Objektumorientált programozás gy; ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1070EA",
+    "IN1070LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Bilicki Vilmos"
+   ],
+   "pre": [
+    "Objektumorientált programozás"
+   ],
+   "crit": false
+  },
+  "Projektmunka II": {
+   "n": "Projektmunka II",
+   "ea": 0,
+   "gy": 5,
+   "eao": 0,
+   "gyo": 2,
+   "note": "Projektmunka I; Adatbázisok; párhuzamos: Szoftver architektúrák gy",
+   "codes": [
+    "IN1082LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Beszédes Árpád"
+   ],
+   "pre": [
+    "Szoftver architektúrák",
+    "Projektmunka I",
+    "Adatbázisok"
+   ],
+   "crit": false
+  },
+  "Természettudományi labor programozóknak": {
+   "n": "Természettudományi labor programozóknak",
+   "ea": 0,
+   "gy": 2,
+   "eao": 0,
+   "gyo": 2,
+   "note": "Digitális architektúrák",
+   "codes": [
+    "IN1096LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Mingesz Róbert"
+   ],
+   "pre": [
+    "Digitális architektúrák"
+   ],
+   "crit": false
+  },
+  "Rendszerüzemeltetés": {
+   "n": "Rendszerüzemeltetés",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Számítógép hálózatok; ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1058EA",
+    "IN1058LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Bilicki Vilmos"
+   ],
+   "pre": [
+    "Számítógép hálózatok"
+   ],
+   "crit": false
+  },
+  "Héjprogramozás": {
+   "n": "Héjprogramozás",
+   "ea": 0,
+   "gy": 2,
+   "eao": 0,
+   "gyo": 2,
+   "note": "Programozás alapjai gy",
+   "codes": [],
+   "evals": [],
+   "teachers": [],
+   "pre": [
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Szakdolgozat I": {
+   "n": "Szakdolgozat I",
+   "ea": 0,
+   "gy": 10,
+   "eao": 0,
+   "gyo": 1,
+   "note": "",
+   "codes": [
+    "IN2101DA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [],
+   "pre": [],
+   "crit": false
+  },
+  "Szakmai gyakorlat üzemmérnököknek": {
+   "n": "Szakmai gyakorlat üzemmérnököknek",
+   "ea": 0,
+   "gy": 23,
+   "eao": 0,
+   "gyo": 0,
+   "note": "160 óra",
+   "codes": [
+    "IN1112DA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Beszédes Árpád"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Szakdolgozat II": {
+   "n": "Szakdolgozat II",
+   "ea": 0,
+   "gy": 5,
+   "eao": 0,
+   "gyo": 1,
+   "note": "",
+   "codes": [
+    "IN2102DA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [],
+   "pre": [],
+   "crit": false
+  },
+  "Gazdasági informatika": {
+   "n": "Gazdasági informatika",
+   "ea": 1,
+   "gy": 3,
+   "eao": 1,
+   "gyo": 2,
+   "note": "",
+   "codes": [
+    "IN1033EA",
+    "IN1033GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Bánhelyi Balázs"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Fejlett Numerikus számítások": {
+   "n": "Fejlett Numerikus számítások",
+   "ea": 1,
+   "gy": 3,
+   "eao": 1,
+   "gyo": 2,
+   "note": "Numerikus számítások, Matematika infromatikusoknak II.",
+   "codes": [
+    "IN1039EA",
+    "IN1039GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Balogh János"
+   ],
+   "pre": [
+    "Numerikus számítások"
+   ],
+   "crit": false
+  },
+  "Natív programozás": {
+   "n": "Natív programozás",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Objektumorientált programozás gy; ea és gyak függetlenül teljesíthető / C++ alapú OOP kurzus",
+   "codes": [
+    "IN1040EA",
+    "IN1040LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Siket István"
+   ],
+   "pre": [
+    "Objektumorientált programozás"
+   ],
+   "crit": false
+  },
+  "Gépközeli programozás": {
+   "n": "Gépközeli programozás",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "Objektumorientált programozás gy / C programozás",
+   "codes": [
+    "IN1016EA",
+    "IN1016LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Jász Judit"
+   ],
+   "pre": [
+    "Objektumorientált programozás"
+   ],
+   "crit": false
+  },
+  "Pénzügyi alapismeretek": {
+   "n": "Pénzügyi alapismeretek",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "Közgazdaságtan alapjai",
+   "codes": [
+    "TBD-Pénzügy"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Dr. Kosztopulosz Andreász"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Információmenedzsment": {
+   "n": "Információmenedzsment",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Menedzsment",
+   "codes": [
+    "TBD-InfoMan"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Dr. Majó-Petri Zoltán"
+   ],
+   "pre": [
+    "Menedzsment"
+   ],
+   "crit": false
+  },
+  "Számítástudomány": {
+   "n": "Számítástudomány",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Matematika informatikusoknak I.",
+   "codes": [
+    "IN1018EA",
+    "IN1018LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Gazdag Zsolt"
+   ],
+   "pre": [
+    "Matematika informatikusoknak I."
+   ],
+   "crit": false
+  },
+  "Termelésmenedzsment": {
+   "n": "Termelésmenedzsment",
+   "ea": 1,
+   "gy": 1,
+   "eao": 1,
+   "gyo": 1,
+   "note": "Menedzsment",
+   "codes": [
+    "TBD-TermMan"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Dr. Megyeri Eszter"
+   ],
+   "pre": [
+    "Menedzsment"
+   ],
+   "crit": false
+  },
+  "Programozási paradigmák": {
+   "n": "Programozási paradigmák",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 1,
+   "note": "Objektumorientált programozás gy; ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1043EA",
+    "IN1043LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Kertész Attila"
+   ],
+   "pre": [
+    "Objektumorientált programozás"
+   ],
+   "crit": false
+  },
+  "Mobilalkalmazás-fejlesztés": {
+   "n": "Mobilalkalmazás-fejlesztés",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1046EA",
+    "IN1046LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Bilicki Vilmos"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Webfejlesztés keretrendszerek": {
+   "n": "Webfejlesztés keretrendszerek",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1052EA",
+    "IN1052LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Bilicki Vilmos"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "DevOps": {
+   "n": "DevOps",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "Programozás alapjai gy",
+   "codes": [
+    "IN1055EA",
+    "IN1055LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Antal Gábor"
+   ],
+   "pre": [
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Webprogramozás": {
+   "n": "Webprogramozás",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Programozás alapjai gy.; Webfejlesztés alapjai gy.; E és gyak függetlenül teljesíthető / JavaScript",
+   "codes": [
+    "IN1056EA",
+    "IN1056LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Dombi József Dániel"
+   ],
+   "pre": [
+    "Webfejlesztés alapjai",
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Backend programozás": {
+   "n": "Backend programozás",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 1,
+   "note": "Szoftver architektúrák gy; ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1057EA",
+    "IN1057LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Hegedűs Péter"
+   ],
+   "pre": [
+    "Szoftver architektúrák"
+   ],
+   "crit": false
+  },
+  "Projektmunka III": {
+   "n": "Projektmunka III",
+   "ea": 0,
+   "gy": 4,
+   "eao": 0,
+   "gyo": 2,
+   "note": "Projektmunka II; Szoftver architektúrák",
+   "codes": [
+    "IN1083LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Jánki Zoltán Richárd"
+   ],
+   "pre": [
+    "Szoftver architektúrák",
+    "Projektmunka II"
+   ],
+   "crit": false
+  },
+  "Nemfunkcionális tesztelés": {
+   "n": "Nemfunkcionális tesztelés",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "Szoftvertesztelés",
+   "codes": [
+    "IN1061EA",
+    "IN1061LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Gergely Tamás"
+   ],
+   "pre": [
+    "Szoftvertesztelés"
+   ],
+   "crit": false
+  },
+  "Szervezeti viselkedés": {
+   "n": "Szervezeti viselkedés",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "TBD-Szervezeti"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Kincsesné Vajda Beáta Dr."
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Adózás": {
+   "n": "Adózás",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "Pénzügyi alapismeretek",
+   "codes": [
+    "TBD-Adó"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Dr. Kovács Árpád"
+   ],
+   "pre": [
+    "Pénzügyi alapismeretek"
+   ],
+   "crit": false
+  },
+  "Matematika informatikusoknak IV.": {
+   "n": "Matematika informatikusoknak IV.",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Matematika informatikusoknak II. / Téma: haladóbb kalkulus",
+   "codes": [
+    "MN1844EA",
+    "MN1844GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [],
+   "pre": [
+    "Matematika informatikusoknak II."
+   ],
+   "crit": false
+  },
+  "Fejlett Optimalizálási Módszerek": {
+   "n": "Fejlett Optimalizálási Módszerek",
+   "ea": 1,
+   "gy": 3,
+   "eao": 1,
+   "gyo": 2,
+   "note": "Optimalizálási algoritmusok",
+   "codes": [
+    "IN1062EA",
+    "IN1062GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Gazdag-Tóth Boglárka"
+   ],
+   "pre": [
+    "Optimalizálási algoritmusok"
+   ],
+   "crit": false
+  },
+  "Vállalati pénzügyek": {
+   "n": "Vállalati pénzügyek",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "",
+   "codes": [
+    "TBD-VállPénz"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Kosztopulosz Andreász"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Számvitel alapjai": {
+   "n": "Számvitel alapjai",
+   "ea": 3,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "",
+   "codes": [
+    "TBD-SzámAlap"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Dr. Deák István"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Menedzsment": {
+   "n": "Menedzsment",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "TBD-Menedzsment"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Dr. Imreh Szabolcs"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Autoipari Szoftverek Tesztelése": {
+   "n": "Autoipari Szoftverek Tesztelése",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "Szoftvertesztelés",
+   "codes": [
+    "IN1130EA",
+    "IN1130LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Beszédes Árpád"
+   ],
+   "pre": [
+    "Szoftvertesztelés"
+   ],
+   "crit": false
+  },
+  "UX és UI tervezés": {
+   "n": "UX és UI tervezés",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 1,
+   "note": "Webfejlesztés alapjai; ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1044EA",
+    "IN1044LA"
+   ],
+   "evals": [
+    "Beszámoló, 5 fok",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Holló Csaba"
+   ],
+   "pre": [
+    "Webfejlesztés alapjai"
+   ],
+   "crit": false
+  },
+  "AI rendszerek fejlesztése": {
+   "n": "AI rendszerek fejlesztése",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "Projektmunka II gy; ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1045EA",
+    "IN1045LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Hegedűs Péter"
+   ],
+   "pre": [
+    "Projektmunka II"
+   ],
+   "crit": false
+  },
+  "Szkriptprogramozás": {
+   "n": "Szkriptprogramozás",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Programozás alapjai gy",
+   "codes": [
+    "IN1047EA",
+    "IN1047LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Antal Gábor"
+   ],
+   "pre": [
+    "Programozás alapjai"
+   ],
+   "crit": false
+  },
+  "Mobilalkalmazás-tesztelés": {
+   "n": "Mobilalkalmazás-tesztelés",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "Szoftvertesztelés",
+   "codes": [
+    "IN1048EA",
+    "IN1048LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Gergely Tamás"
+   ],
+   "pre": [
+    "Szoftvertesztelés"
+   ],
+   "crit": false
+  },
+  "Assembly programozás": {
+   "n": "Assembly programozás",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 2,
+   "note": "Natív programozás gy VAGY Gépközeli programozás (MI) gy VAGY Gépközeli programozás gy",
+   "codes": [
+    "IN1049EA",
+    "IN1049LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Kiss Ákos"
+   ],
+   "pre": [
+    "Gépközeli programozás",
+    "Natív programozás"
+   ],
+   "crit": false
+  },
+  "Menedzselt programozás": {
+   "n": "Menedzselt programozás",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Objektumorientált programozás gy; E és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1051EA",
+    "IN1051LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Dombi József Dániel"
+   ],
+   "pre": [
+    "Objektumorientált programozás"
+   ],
+   "crit": false
+  },
+  "Agilis fejlesztés": {
+   "n": "Agilis fejlesztés",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 2,
+   "note": "Szoftverfejlesztési folyamatok",
+   "codes": [
+    "IN1053EA",
+    "IN1053LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Beszédes Árpád"
+   ],
+   "pre": [
+    "Szoftverfejlesztési folyamatok"
+   ],
+   "crit": false
+  },
+  "Felhő és köd környezetek": {
+   "n": "Felhő és köd környezetek",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 2,
+   "note": "ea és gyak függetlenül teljesíthető",
+   "codes": [
+    "IN1054EA",
+    "IN1054LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Kertész Attila"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Tesztautomatizálás": {
+   "n": "Tesztautomatizálás",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "Szoftvertesztelés",
+   "codes": [
+    "IN1059EA",
+    "IN1059LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Gergely Tamás"
+   ],
+   "pre": [
+    "Szoftvertesztelés"
+   ],
+   "crit": false
+  },
+  "AI tesztelés": {
+   "n": "AI tesztelés",
+   "ea": 2,
+   "gy": 2,
+   "eao": 1,
+   "gyo": 1,
+   "note": "Szoftvertesztelés",
+   "codes": [
+    "IN1060EA",
+    "IN1060LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Beszédes Árpád"
+   ],
+   "pre": [
+    "Szoftvertesztelés"
+   ],
+   "crit": false
+  },
+  "Szerveroldali webprogramozás": {
+   "n": "Szerveroldali webprogramozás",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 1,
+   "note": "Backend programozás",
+   "codes": [
+    "IN1050EA",
+    "IN1050LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Tóth László"
+   ],
+   "pre": [
+    "Backend programozás"
+   ],
+   "crit": false
+  },
+  "Menedzsment alapismeretek (ea)": {
+   "n": "Menedzsment alapismeretek (ea)",
+   "ea": 2,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "TBD-ManBasic"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Imreh Szabolcs Dr."
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Makroökonómia": {
+   "n": "Makroökonómia",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "A közgazdaságtan alapjai; Az előadás a gyakorlattól függetlenül is felvehető és teljesíthető",
+   "codes": [
+    "TBD-Makro"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [],
+   "pre": [
+    "A közgazdaságtan alapjai"
+   ],
+   "crit": false
+  },
+  "Mikroökonómia": {
+   "n": "Mikroökonómia",
+   "ea": 3,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Gazdasági informatika; Az előadás a gyakorlattól függetlenül is felvehető és teljesíthető",
+   "codes": [
+    "TBD-Mikro"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [],
+   "pre": [
+    "Gazdasági informatika"
+   ],
+   "crit": false
+  },
+  "Energiajog": {
+   "n": "Energiajog",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "TBD-EnergiaJog"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [],
+   "pre": [],
+   "crit": false
+  },
+  "Gazdasági jog": {
+   "n": "Gazdasági jog",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "TBD-GazdaságiJog"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Farkas Csaba Dr."
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Művészet-, tárdsadalom- és tudományfilozófia": {
+   "n": "Művészet-, tárdsadalom- és tudományfilozófia",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "TBD-Művészet"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Pavlovits Tamás Dr."
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "EU alapismeretek": {
+   "n": "EU alapismeretek",
+   "ea": 2,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "TBD-EU"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [],
+   "pre": [],
+   "crit": false
+  },
+  "Matematika informatikusoknak III.": {
+   "n": "Matematika informatikusoknak III.",
+   "ea": 2,
+   "gy": 1,
+   "eao": 2,
+   "gyo": 1,
+   "note": "Matematika informatikusoknak II. / Téma: Valószínűségszámítás és statisztika alapjai",
+   "codes": [
+    "MN1843EA",
+    "MN1843GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [],
+   "pre": [
+    "Matematika informatikusoknak II."
+   ],
+   "crit": false
+  },
+  "Validált matematika ismeretek": {
+   "n": "Validált matematika ismeretek",
+   "ea": 0,
+   "gy": 4,
+   "eao": 0,
+   "gyo": 4,
+   "note": "",
+   "codes": [
+    "IN1020GA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [],
+   "pre": [],
+   "crit": false
+  },
+  "Validált informatika ismeretek": {
+   "n": "Validált informatika ismeretek",
+   "ea": 0,
+   "gy": 4,
+   "eao": 0,
+   "gyo": 4,
+   "note": "",
+   "codes": [
+    "IN1021GA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [],
+   "pre": [],
+   "crit": false
+  },
+  "Validalt mesterséges intelligencia ismeretek": {
+   "n": "Validalt mesterséges intelligencia ismeretek",
+   "ea": 0,
+   "gy": 4,
+   "eao": 0,
+   "gyo": 0,
+   "note": "Mesterséges intelligencia ea",
+   "codes": [
+    "IN1034LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Farkas Richárd"
+   ],
+   "pre": [
+    "Mesterséges intelligencia"
+   ],
+   "crit": false
+  },
+  "Validált képfeldolgozó ismeretek": {
+   "n": "Validált képfeldolgozó ismeretek",
+   "ea": 0,
+   "gy": 2,
+   "eao": 0,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "IN1150LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Nyúl László"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Validált gazdasági-humán ismeretek": {
+   "n": "Validált gazdasági-humán ismeretek",
+   "ea": 3,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Egymástól függetlenül felvehetők és elismerhetők",
+   "codes": [
+    "IN1122EA",
+    "IN1122GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Bánhelyi Balázs"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Diszkrét matematika 2": {
+   "n": "Diszkrét matematika 2",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Matematika informatikusoknak I.",
+   "codes": [
+    "MN1852EA",
+    "MN1852GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Walthauser Tamás"
+   ],
+   "pre": [
+    "Matematika informatikusoknak I."
+   ],
+   "crit": false
+  },
+  "Diszkrét matematika 3": {
+   "n": "Diszkrét matematika 3",
+   "ea": 2,
+   "gy": 3,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Diszkrét matematika 2",
+   "codes": [
+    "MN1853EA",
+    "MN1853GA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Maróti Miklós"
+   ],
+   "pre": [
+    "Diszkrét matematika 2"
+   ],
+   "crit": false
+  },
+  "Hardver-szoftver rendszerek verifikációja": {
+   "n": "Hardver-szoftver rendszerek verifikációja",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 1,
+   "note": "Matematika informatikusoknak I.",
+   "codes": [
+    "IN1134EA",
+    "IN1134LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Gazdag Zsolt"
+   ],
+   "pre": [
+    "Matematika informatikusoknak I."
+   ],
+   "crit": false
+  },
+  "Beágyazott rendszerek": {
+   "n": "Beágyazott rendszerek",
+   "ea": 2,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "Gépközeli programozás (MI); Irányítástechnika; Mérés és adatelemzés",
+   "codes": [
+    "IN1097EA"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Kelemen András"
+   ],
+   "pre": [
+    "Gépközeli programozás"
+   ],
+   "crit": false
+  },
+  "Adattudomány": {
+   "n": "Adattudomány",
+   "ea": 0,
+   "gy": 6,
+   "eao": 0,
+   "gyo": 4,
+   "note": "Számítógépes adatelemzés VAGY Mérés és adatelemzés",
+   "codes": [
+    "IN1137LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Kőrösi Gábor"
+   ],
+   "pre": [
+    "Számítógépes adatelemzés"
+   ],
+   "crit": false
+  },
+  "Mélytanulás": {
+   "n": "Mélytanulás",
+   "ea": 2,
+   "gy": 4,
+   "eao": 2,
+   "gyo": 2,
+   "note": "Mesterséges intelligencia gy",
+   "codes": [
+    "IN1135EA",
+    "IN1135LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Megyeri István"
+   ],
+   "pre": [
+    "Mesterséges intelligencia"
+   ],
+   "crit": false
+  },
+  "Nyelvtechnológia": {
+   "n": "Nyelvtechnológia",
+   "ea": 0,
+   "gy": 6,
+   "eao": 0,
+   "gyo": 4,
+   "note": "Mesterséges intelligencia gy",
+   "codes": [
+    "IN1136LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Szántó Zsolt"
+   ],
+   "pre": [
+    "Mesterséges intelligencia"
+   ],
+   "crit": false
+  },
+  "Számítógépes beszédelemzés": {
+   "n": "Számítógépes beszédelemzés",
+   "ea": 0,
+   "gy": 4,
+   "eao": 0,
+   "gyo": 2,
+   "note": "Mesterséges intelligencia gy",
+   "codes": [
+    "IN1138LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Gosztolya Gábor"
+   ],
+   "pre": [
+    "Mesterséges intelligencia"
+   ],
+   "crit": false
+  },
+  "Döntési rendszerek": {
+   "n": "Döntési rendszerek",
+   "ea": 1,
+   "gy": 3,
+   "eao": 1,
+   "gyo": 2,
+   "note": "",
+   "codes": [
+    "IN1042EA",
+    "IN1042SA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Pluhár András"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Megerősítéses tanulás": {
+   "n": "Megerősítéses tanulás",
+   "ea": 0,
+   "gy": 4,
+   "eao": 0,
+   "gyo": 2,
+   "note": "Mesterséges intelligencia gy",
+   "codes": [
+    "IN1139LA"
+   ],
+   "evals": [
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Szántó Zsolt"
+   ],
+   "pre": [
+    "Mesterséges intelligencia"
+   ],
+   "crit": false
+  },
+  "Nagy mennyiségű adatok feldolgozása (Lufthansa)": {
+   "n": "Nagy mennyiségű adatok feldolgozása (Lufthansa)",
+   "ea": 0,
+   "gy": 0,
+   "eao": 0,
+   "gyo": 0,
+   "note": "Adatbázisok",
+   "codes": [],
+   "evals": [],
+   "teachers": [],
+   "pre": [
+    "Adatbázisok"
+   ],
+   "crit": false
+  },
+  "Logika és informatikai alkalmazásai": {
+   "n": "Logika és informatikai alkalmazásai",
+   "ea": 2,
+   "gy": 2,
+   "eao": 2,
+   "gyo": 1,
+   "note": "Matematika informatikusoknak I.",
+   "codes": [
+    "IN1132EA",
+    "IN1132LA"
+   ],
+   "evals": [
+    "Koll.",
+    "Gy. jegy"
+   ],
+   "teachers": [
+    "Gazdag Zsolt"
+   ],
+   "pre": [
+    "Matematika informatikusoknak I."
+   ],
+   "crit": false
+  },
+  "Új elvű számítások az informatikában": {
+   "n": "Új elvű számítások az informatikában",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "Matematika informatikusoknak I.",
+   "codes": [
+    "IN1133EA"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Gazdag Zsolt"
+   ],
+   "pre": [
+    "Matematika informatikusoknak I."
+   ],
+   "crit": false
+  },
+  "Formális nyelvek és elemzők": {
+   "n": "Formális nyelvek és elemzők",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "Matematika informatikusoknak I. / Rendszertelenül tartva",
+   "codes": [
+    "IN1131EA"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Gazdag Zsolt"
+   ],
+   "pre": [
+    "Matematika informatikusoknak I."
+   ],
+   "crit": false
+  },
+  "Konvolúciós neurális hálók a képfeldolgozásban": {
+   "n": "Konvolúciós neurális hálók a képfeldolgozásban",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "IN1147EA"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Kató Zoltán"
+   ],
+   "pre": [],
+   "crit": false
+  },
+  "Mobil képalkotás és alkalmazásai": {
+   "n": "Mobil képalkotás és alkalmazásai",
+   "ea": 3,
+   "gy": 0,
+   "eao": 2,
+   "gyo": 0,
+   "note": "",
+   "codes": [
+    "IN1144EA"
+   ],
+   "evals": [
+    "Koll."
+   ],
+   "teachers": [
+    "Tanács Attila"
+   ],
+   "pre": [],
+   "crit": false
+  }
+ },
+ "plans": [
+  {
+   "id": "Tanterv",
+   "label": "Nincs specializáció",
+   "sems": {
+    "1": [
+     {
+      "n": "Matematika informatikusoknak I.",
+      "k": "req"
+     },
+     {
+      "n": "Matematika praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Számítógép hálózatok",
+      "k": "req"
+     },
+     {
+      "n": "Egyetemi informatikai alapok",
+      "k": "req"
+     },
+     {
+      "n": "Személyes és szociális készségek",
+      "k": "req"
+     },
+     {
+      "n": "Webfejlesztés alapjai",
+      "k": "req"
+     },
+     {
+      "n": "Optimalizálási algoritmusok",
+      "k": "opt"
+     },
+     {
+      "n": "Optimalizálási algoritmusok praktikum",
+      "k": "opt"
+     },
+     {
+      "n": "Marketing",
+      "k": "opt"
+     },
+     {
+      "n": "A közgazdaságtan alapjai",
+      "k": "opt"
+     }
+    ],
+    "2": [
+     {
+      "n": "Matematika informatikusoknak II.",
+      "k": "req"
+     },
+     {
+      "n": "Operációs rendszerek",
+      "k": "req"
+     },
+     {
+      "n": "Számítógépes adatelemzés",
+      "k": "req"
+     },
+     {
+      "n": "Algoritmusok és adatszerkezetek",
+      "k": "req"
+     },
+     {
+      "n": "Objektumorientált programozás",
+      "k": "req"
+     },
+     {
+      "n": "Szoftverfejlesztési folyamatok",
+      "k": "req"
+     },
+     {
+      "n": "Adatbázisok",
+      "k": "req"
+     }
+    ],
+    "3": [
+     {
+      "n": "Digitális architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Informatikai biztonság",
+      "k": "req"
+     },
+     {
+      "n": "Szoftvertesztelés",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka I",
+      "k": "req"
+     },
+     {
+      "n": "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak",
+      "k": "req"
+     },
+     {
+      "n": "Mesterséges intelligencia",
+      "k": "req"
+     }
+    ],
+    "4": [
+     {
+      "n": "Numerikus számítások",
+      "k": "req"
+     },
+     {
+      "n": "Szoftver architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka II",
+      "k": "req"
+     },
+     {
+      "n": "Természettudományi labor programozóknak",
+      "k": "req"
+     },
+     {
+      "n": "Rendszerüzemeltetés",
+      "k": "req"
+     },
+     {
+      "n": "Héjprogramozás",
+      "k": "opt"
+     }
+    ],
+    "5": [
+     {
+      "n": "Szakdolgozat I",
+      "k": "req"
+     }
+    ],
+    "6": [
+     {
+      "n": "Szakmai gyakorlat üzemmérnököknek",
+      "k": "req"
+     },
+     {
+      "n": "Szakdolgozat II",
+      "k": "req"
+     }
+    ]
+   },
+   "pools": [
+    {
+     "term": "ősz",
+     "items": [
+      "Gazdasági informatika",
+      "Fejlett Numerikus számítások",
+      "Natív programozás",
+      "Gépközeli programozás",
+      "Pénzügyi alapismeretek",
+      "Információmenedzsment",
+      "Számítástudomány",
+      "Termelésmenedzsment",
+      "Programozási paradigmák",
+      "Mobilalkalmazás-fejlesztés",
+      "Webfejlesztés keretrendszerek",
+      "DevOps",
+      "Webprogramozás",
+      "Backend programozás",
+      "Projektmunka III",
+      "Nemfunkcionális tesztelés",
+      "Szervezeti viselkedés"
+     ]
+    },
+    {
+     "term": "tavasz",
+     "items": [
+      "Adózás",
+      "Matematika informatikusoknak IV.",
+      "Fejlett Optimalizálási Módszerek",
+      "Vállalati pénzügyek",
+      "Számvitel alapjai",
+      "Menedzsment",
+      "Autoipari Szoftverek Tesztelése",
+      "UX és UI tervezés",
+      "AI rendszerek fejlesztése",
+      "Szkriptprogramozás",
+      "Mobilalkalmazás-tesztelés",
+      "Assembly programozás",
+      "Menedzselt programozás",
+      "Agilis fejlesztés",
+      "Felhő és köd környezetek",
+      "Tesztautomatizálás",
+      "AI tesztelés",
+      "Szerveroldali webprogramozás",
+      "Menedzsment alapismeretek (ea)",
+      "Makroökonómia",
+      "Mikroökonómia",
+      "Energiajog",
+      "Gazdasági jog",
+      "Művészet-, tárdsadalom- és tudományfilozófia"
+     ]
+    },
+    {
+     "term": "mindkettő",
+     "items": [
+      "EU alapismeretek",
+      "Matematika informatikusoknak III."
+     ]
+    },
+    {
+     "term": "bármikor",
+     "items": [
+      "Validált matematika ismeretek",
+      "Validált informatika ismeretek",
+      "Validalt mesterséges intelligencia ismeretek",
+      "Validált képfeldolgozó ismeretek",
+      "Validált gazdasági-humán ismeretek",
+      "Diszkrét matematika 2",
+      "Diszkrét matematika 3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Back-Umi",
+   "label": "Backend fejlesztő",
+   "sems": {
+    "1": [
+     {
+      "n": "Matematika informatikusoknak I.",
+      "k": "req"
+     },
+     {
+      "n": "Matematika praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Számítógép hálózatok",
+      "k": "req"
+     },
+     {
+      "n": "Egyetemi informatikai alapok",
+      "k": "req"
+     },
+     {
+      "n": "Személyes és szociális készségek",
+      "k": "req"
+     },
+     {
+      "n": "Webfejlesztés alapjai",
+      "k": "req"
+     }
+    ],
+    "2": [
+     {
+      "n": "Matematika informatikusoknak II.",
+      "k": "req"
+     },
+     {
+      "n": "Operációs rendszerek",
+      "k": "req"
+     },
+     {
+      "n": "Számítógépes adatelemzés",
+      "k": "req"
+     },
+     {
+      "n": "Algoritmusok és adatszerkezetek",
+      "k": "req"
+     },
+     {
+      "n": "Objektumorientált programozás",
+      "k": "req"
+     },
+     {
+      "n": "Szoftverfejlesztési folyamatok",
+      "k": "req"
+     },
+     {
+      "n": "Adatbázisok",
+      "k": "req"
+     }
+    ],
+    "3": [
+     {
+      "n": "Digitális architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Informatikai biztonság",
+      "k": "req"
+     },
+     {
+      "n": "Szoftvertesztelés",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka I",
+      "k": "req"
+     },
+     {
+      "n": "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak",
+      "k": "req"
+     },
+     {
+      "n": "Mesterséges intelligencia",
+      "k": "req"
+     },
+     {
+      "n": "Menedzselt programozás",
+      "k": "opt"
+     },
+     {
+      "n": "DevOps",
+      "k": "opt"
+     }
+    ],
+    "4": [
+     {
+      "n": "Numerikus számítások",
+      "k": "req"
+     },
+     {
+      "n": "Szoftver architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka II",
+      "k": "req"
+     },
+     {
+      "n": "Természettudományi labor programozóknak",
+      "k": "req"
+     },
+     {
+      "n": "Rendszerüzemeltetés",
+      "k": "req"
+     },
+     {
+      "n": "Szkriptprogramozás",
+      "k": "opt"
+     },
+     {
+      "n": "Webprogramozás",
+      "k": "opt"
+     }
+    ],
+    "5": [
+     {
+      "n": "Szakdolgozat I",
+      "k": "req"
+     },
+     {
+      "n": "Programozási paradigmák",
+      "k": "spec"
+     },
+     {
+      "n": "Backend programozás",
+      "k": "spec"
+     },
+     {
+      "n": "Projektmunka III",
+      "k": "opt"
+     }
+    ],
+    "6": [
+     {
+      "n": "Szakmai gyakorlat üzemmérnököknek",
+      "k": "req"
+     },
+     {
+      "n": "Szakdolgozat II",
+      "k": "req"
+     },
+     {
+      "n": "AI rendszerek fejlesztése",
+      "k": "spec"
+     },
+     {
+      "n": "Felhő és köd környezetek",
+      "k": "spec"
+     },
+     {
+      "n": "Agilis fejlesztés",
+      "k": "opt"
+     },
+     {
+      "n": "Szerveroldali webprogramozás",
+      "k": "opt"
+     }
+    ]
+   },
+   "pools": []
+  },
+  {
+   "id": "Front-Umi",
+   "label": "Frontend fejlesztő",
+   "sems": {
+    "1": [
+     {
+      "n": "Matematika informatikusoknak I.",
+      "k": "req"
+     },
+     {
+      "n": "Matematika praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Számítógép hálózatok",
+      "k": "req"
+     },
+     {
+      "n": "Egyetemi informatikai alapok",
+      "k": "req"
+     },
+     {
+      "n": "Személyes és szociális készségek",
+      "k": "req"
+     },
+     {
+      "n": "Webfejlesztés alapjai",
+      "k": "req"
+     }
+    ],
+    "2": [
+     {
+      "n": "Matematika informatikusoknak II.",
+      "k": "req"
+     },
+     {
+      "n": "Operációs rendszerek",
+      "k": "req"
+     },
+     {
+      "n": "Számítógépes adatelemzés",
+      "k": "req"
+     },
+     {
+      "n": "Algoritmusok és adatszerkezetek",
+      "k": "req"
+     },
+     {
+      "n": "Objektumorientált programozás",
+      "k": "req"
+     },
+     {
+      "n": "Szoftverfejlesztési folyamatok",
+      "k": "req"
+     },
+     {
+      "n": "Adatbázisok",
+      "k": "req"
+     }
+    ],
+    "3": [
+     {
+      "n": "Digitális architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Informatikai biztonság",
+      "k": "req"
+     },
+     {
+      "n": "Szoftvertesztelés",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka I",
+      "k": "req"
+     },
+     {
+      "n": "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak",
+      "k": "req"
+     },
+     {
+      "n": "Mesterséges intelligencia",
+      "k": "req"
+     },
+     {
+      "n": "Menedzselt programozás",
+      "k": "opt"
+     }
+    ],
+    "4": [
+     {
+      "n": "Numerikus számítások",
+      "k": "req"
+     },
+     {
+      "n": "Szoftver architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka II",
+      "k": "req"
+     },
+     {
+      "n": "Természettudományi labor programozóknak",
+      "k": "req"
+     },
+     {
+      "n": "Rendszerüzemeltetés",
+      "k": "req"
+     },
+     {
+      "n": "Webprogramozás",
+      "k": "spec"
+     }
+    ],
+    "5": [
+     {
+      "n": "Szakdolgozat I",
+      "k": "req"
+     },
+     {
+      "n": "Programozási paradigmák",
+      "k": "spec"
+     },
+     {
+      "n": "Webfejlesztés keretrendszerek",
+      "k": "spec"
+     },
+     {
+      "n": "Mobilalkalmazás-fejlesztés",
+      "k": "opt"
+     },
+     {
+      "n": "DevOps",
+      "k": "opt"
+     },
+     {
+      "n": "Projektmunka III",
+      "k": "opt"
+     }
+    ],
+    "6": [
+     {
+      "n": "Szakmai gyakorlat üzemmérnököknek",
+      "k": "req"
+     },
+     {
+      "n": "Szakdolgozat II",
+      "k": "req"
+     },
+     {
+      "n": "UX és UI tervezés",
+      "k": "spec"
+     },
+     {
+      "n": "Mobilalkalmazás-tesztelés",
+      "k": "opt"
+     },
+     {
+      "n": "Agilis fejlesztés",
+      "k": "opt"
+     },
+     {
+      "n": "Tesztautomatizálás",
+      "k": "opt"
+     }
+    ]
+   },
+   "pools": []
+  },
+  {
+   "id": "Test-Umi",
+   "label": "Szoftvertesztelő",
+   "sems": {
+    "1": [
+     {
+      "n": "Matematika informatikusoknak I.",
+      "k": "req"
+     },
+     {
+      "n": "Matematika praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Számítógép hálózatok",
+      "k": "req"
+     },
+     {
+      "n": "Egyetemi informatikai alapok",
+      "k": "req"
+     },
+     {
+      "n": "Személyes és szociális készségek",
+      "k": "req"
+     },
+     {
+      "n": "Webfejlesztés alapjai",
+      "k": "req"
+     }
+    ],
+    "2": [
+     {
+      "n": "Matematika informatikusoknak II.",
+      "k": "req"
+     },
+     {
+      "n": "Operációs rendszerek",
+      "k": "req"
+     },
+     {
+      "n": "Számítógépes adatelemzés",
+      "k": "req"
+     },
+     {
+      "n": "Algoritmusok és adatszerkezetek",
+      "k": "req"
+     },
+     {
+      "n": "Objektumorientált programozás",
+      "k": "req"
+     },
+     {
+      "n": "Szoftverfejlesztési folyamatok",
+      "k": "req"
+     },
+     {
+      "n": "Adatbázisok",
+      "k": "req"
+     }
+    ],
+    "3": [
+     {
+      "n": "Digitális architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Informatikai biztonság",
+      "k": "req"
+     },
+     {
+      "n": "Szoftvertesztelés",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka I",
+      "k": "req"
+     },
+     {
+      "n": "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak",
+      "k": "req"
+     },
+     {
+      "n": "Mesterséges intelligencia",
+      "k": "req"
+     },
+     {
+      "n": "DevOps",
+      "k": "opt"
+     }
+    ],
+    "4": [
+     {
+      "n": "Numerikus számítások",
+      "k": "req"
+     },
+     {
+      "n": "Szoftver architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka II",
+      "k": "req"
+     },
+     {
+      "n": "Természettudományi labor programozóknak",
+      "k": "req"
+     },
+     {
+      "n": "Rendszerüzemeltetés",
+      "k": "req"
+     },
+     {
+      "n": "Szkriptprogramozás",
+      "k": "opt"
+     }
+    ],
+    "5": [
+     {
+      "n": "Szakdolgozat I",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka III",
+      "k": "spec"
+     },
+     {
+      "n": "Nemfunkcionális tesztelés",
+      "k": "opt"
+     }
+    ],
+    "6": [
+     {
+      "n": "Szakmai gyakorlat üzemmérnököknek",
+      "k": "req"
+     },
+     {
+      "n": "Szakdolgozat II",
+      "k": "req"
+     },
+     {
+      "n": "Felhő és köd környezetek",
+      "k": "spec"
+     },
+     {
+      "n": "Tesztautomatizálás",
+      "k": "spec"
+     },
+     {
+      "n": "AI tesztelés",
+      "k": "spec"
+     },
+     {
+      "n": "Autoipari Szoftverek Tesztelése",
+      "k": "opt"
+     },
+     {
+      "n": "UX és UI tervezés",
+      "k": "opt"
+     },
+     {
+      "n": "Mobilalkalmazás-tesztelés",
+      "k": "opt"
+     }
+    ]
+   },
+   "pools": [
+    {
+     "term": "bármikor",
+     "items": [
+      "Hardver-szoftver rendszerek verifikációja"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "IoT-Umi",
+   "label": "IoT fejlesztő",
+   "sems": {
+    "1": [
+     {
+      "n": "Matematika informatikusoknak I.",
+      "k": "req"
+     },
+     {
+      "n": "Matematika praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Számítógép hálózatok",
+      "k": "req"
+     },
+     {
+      "n": "Egyetemi informatikai alapok",
+      "k": "req"
+     },
+     {
+      "n": "Személyes és szociális készségek",
+      "k": "req"
+     },
+     {
+      "n": "Webfejlesztés alapjai",
+      "k": "req"
+     }
+    ],
+    "2": [
+     {
+      "n": "Matematika informatikusoknak II.",
+      "k": "req"
+     },
+     {
+      "n": "Operációs rendszerek",
+      "k": "req"
+     },
+     {
+      "n": "Számítógépes adatelemzés",
+      "k": "req"
+     },
+     {
+      "n": "Algoritmusok és adatszerkezetek",
+      "k": "req"
+     },
+     {
+      "n": "Objektumorientált programozás",
+      "k": "req"
+     },
+     {
+      "n": "Szoftverfejlesztési folyamatok",
+      "k": "req"
+     },
+     {
+      "n": "Adatbázisok",
+      "k": "req"
+     }
+    ],
+    "3": [
+     {
+      "n": "Digitális architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Informatikai biztonság",
+      "k": "req"
+     },
+     {
+      "n": "Szoftvertesztelés",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka I",
+      "k": "req"
+     },
+     {
+      "n": "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak",
+      "k": "req"
+     },
+     {
+      "n": "Mesterséges intelligencia",
+      "k": "req"
+     },
+     {
+      "n": "Gépközeli programozás",
+      "k": "spec"
+     }
+    ],
+    "4": [
+     {
+      "n": "Numerikus számítások",
+      "k": "req"
+     },
+     {
+      "n": "Szoftver architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka II",
+      "k": "req"
+     },
+     {
+      "n": "Természettudományi labor programozóknak",
+      "k": "req"
+     },
+     {
+      "n": "Rendszerüzemeltetés",
+      "k": "req"
+     },
+     {
+      "n": "Assembly programozás",
+      "k": "spec"
+     }
+    ],
+    "5": [
+     {
+      "n": "Szakdolgozat I",
+      "k": "req"
+     },
+     {
+      "n": "Backend programozás",
+      "k": "spec"
+     },
+     {
+      "n": "Mobilalkalmazás-fejlesztés",
+      "k": "opt"
+     },
+     {
+      "n": "DevOps",
+      "k": "opt"
+     },
+     {
+      "n": "Projektmunka III",
+      "k": "opt"
+     },
+     {
+      "n": "Nemfunkcionális tesztelés",
+      "k": "opt"
+     }
+    ],
+    "6": [
+     {
+      "n": "Szakmai gyakorlat üzemmérnököknek",
+      "k": "req"
+     },
+     {
+      "n": "Szakdolgozat II",
+      "k": "req"
+     },
+     {
+      "n": "Felhő és köd környezetek",
+      "k": "spec"
+     },
+     {
+      "n": "Agilis fejlesztés",
+      "k": "opt"
+     }
+    ]
+   },
+   "pools": [
+    {
+     "term": "ősz",
+     "items": [
+      "Beágyazott rendszerek"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "DevOps-Umi",
+   "label": "DevOps",
+   "sems": {
+    "1": [
+     {
+      "n": "Matematika informatikusoknak I.",
+      "k": "req"
+     },
+     {
+      "n": "Matematika praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Számítógép hálózatok",
+      "k": "req"
+     },
+     {
+      "n": "Egyetemi informatikai alapok",
+      "k": "req"
+     },
+     {
+      "n": "Személyes és szociális készségek",
+      "k": "req"
+     },
+     {
+      "n": "Webfejlesztés alapjai",
+      "k": "req"
+     }
+    ],
+    "2": [
+     {
+      "n": "Matematika informatikusoknak II.",
+      "k": "req"
+     },
+     {
+      "n": "Operációs rendszerek",
+      "k": "req"
+     },
+     {
+      "n": "Számítógépes adatelemzés",
+      "k": "req"
+     },
+     {
+      "n": "Algoritmusok és adatszerkezetek",
+      "k": "req"
+     },
+     {
+      "n": "Objektumorientált programozás",
+      "k": "req"
+     },
+     {
+      "n": "Szoftverfejlesztési folyamatok",
+      "k": "req"
+     },
+     {
+      "n": "Adatbázisok",
+      "k": "req"
+     }
+    ],
+    "3": [
+     {
+      "n": "Digitális architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Informatikai biztonság",
+      "k": "req"
+     },
+     {
+      "n": "Szoftvertesztelés",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka I",
+      "k": "req"
+     },
+     {
+      "n": "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak",
+      "k": "req"
+     },
+     {
+      "n": "Mesterséges intelligencia",
+      "k": "req"
+     },
+     {
+      "n": "DevOps",
+      "k": "spec"
+     }
+    ],
+    "4": [
+     {
+      "n": "Numerikus számítások",
+      "k": "req"
+     },
+     {
+      "n": "Szoftver architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka II",
+      "k": "req"
+     },
+     {
+      "n": "Természettudományi labor programozóknak",
+      "k": "req"
+     },
+     {
+      "n": "Rendszerüzemeltetés",
+      "k": "req"
+     },
+     {
+      "n": "Szkriptprogramozás",
+      "k": "opt"
+     }
+    ],
+    "5": [
+     {
+      "n": "Szakdolgozat I",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka III",
+      "k": "spec"
+     },
+     {
+      "n": "Nemfunkcionális tesztelés",
+      "k": "opt"
+     }
+    ],
+    "6": [
+     {
+      "n": "Szakmai gyakorlat üzemmérnököknek",
+      "k": "req"
+     },
+     {
+      "n": "Szakdolgozat II",
+      "k": "req"
+     },
+     {
+      "n": "AI rendszerek fejlesztése",
+      "k": "spec"
+     },
+     {
+      "n": "Felhő és köd környezetek",
+      "k": "spec"
+     },
+     {
+      "n": "Agilis fejlesztés",
+      "k": "opt"
+     },
+     {
+      "n": "Tesztautomatizálás",
+      "k": "opt"
+     },
+     {
+      "n": "AI tesztelés",
+      "k": "opt"
+     }
+    ]
+   },
+   "pools": []
+  },
+  {
+   "id": "AI-Umi",
+   "label": "Mesterséges intelligencia",
+   "sems": {
+    "1": [
+     {
+      "n": "Matematika informatikusoknak I.",
+      "k": "req"
+     },
+     {
+      "n": "Matematika praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Számítógép hálózatok",
+      "k": "req"
+     },
+     {
+      "n": "Egyetemi informatikai alapok",
+      "k": "req"
+     },
+     {
+      "n": "Személyes és szociális készségek",
+      "k": "req"
+     },
+     {
+      "n": "Webfejlesztés alapjai",
+      "k": "req"
+     }
+    ],
+    "2": [
+     {
+      "n": "Matematika informatikusoknak II.",
+      "k": "req"
+     },
+     {
+      "n": "Operációs rendszerek",
+      "k": "req"
+     },
+     {
+      "n": "Számítógépes adatelemzés",
+      "k": "req"
+     },
+     {
+      "n": "Algoritmusok és adatszerkezetek",
+      "k": "req"
+     },
+     {
+      "n": "Objektumorientált programozás",
+      "k": "req"
+     },
+     {
+      "n": "Szoftverfejlesztési folyamatok",
+      "k": "req"
+     },
+     {
+      "n": "Adatbázisok",
+      "k": "req"
+     }
+    ],
+    "3": [
+     {
+      "n": "Digitális architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Informatikai biztonság",
+      "k": "req"
+     },
+     {
+      "n": "Szoftvertesztelés",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka I",
+      "k": "req"
+     },
+     {
+      "n": "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak",
+      "k": "req"
+     },
+     {
+      "n": "Mesterséges intelligencia",
+      "k": "req"
+     },
+     {
+      "n": "Adattudomány",
+      "k": "spec"
+     }
+    ],
+    "4": [
+     {
+      "n": "Numerikus számítások",
+      "k": "req"
+     },
+     {
+      "n": "Szoftver architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka II",
+      "k": "req"
+     },
+     {
+      "n": "Természettudományi labor programozóknak",
+      "k": "req"
+     },
+     {
+      "n": "Rendszerüzemeltetés",
+      "k": "req"
+     },
+     {
+      "n": "Mélytanulás",
+      "k": "spec"
+     },
+     {
+      "n": "Nyelvtechnológia",
+      "k": "spec"
+     },
+     {
+      "n": "Számítógépes beszédelemzés",
+      "k": "opt"
+     }
+    ],
+    "5": [
+     {
+      "n": "Szakdolgozat I",
+      "k": "req"
+     },
+     {
+      "n": "Döntési rendszerek",
+      "k": "opt"
+     },
+     {
+      "n": "Megerősítéses tanulás",
+      "k": "opt"
+     }
+    ],
+    "6": [
+     {
+      "n": "Szakmai gyakorlat üzemmérnököknek",
+      "k": "req"
+     },
+     {
+      "n": "Szakdolgozat II",
+      "k": "req"
+     },
+     {
+      "n": "Nagy mennyiségű adatok feldolgozása (Lufthansa)",
+      "k": "opt"
+     }
+    ]
+   },
+   "pools": [
+    {
+     "term": "tavasz",
+     "items": [
+      "Logika és informatikai alkalmazásai",
+      "Új elvű számítások az informatikában"
+     ]
+    },
+    {
+     "term": "bármikor",
+     "items": [
+      "AI rendszerek fejlesztése",
+      "AI tesztelés",
+      "Formális nyelvek és elemzők",
+      "Validalt mesterséges intelligencia ismeretek",
+      "Konvolúciós neurális hálók a képfeldolgozásban"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Automotive-Umi",
+   "label": "Járműipari",
+   "sems": {
+    "1": [
+     {
+      "n": "Matematika informatikusoknak I.",
+      "k": "req"
+     },
+     {
+      "n": "Matematika praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai",
+      "k": "req"
+     },
+     {
+      "n": "Programozás alapjai praktikum",
+      "k": "req"
+     },
+     {
+      "n": "Számítógép hálózatok",
+      "k": "req"
+     },
+     {
+      "n": "Egyetemi informatikai alapok",
+      "k": "req"
+     },
+     {
+      "n": "Személyes és szociális készségek",
+      "k": "req"
+     },
+     {
+      "n": "Webfejlesztés alapjai",
+      "k": "req"
+     }
+    ],
+    "2": [
+     {
+      "n": "Matematika informatikusoknak II.",
+      "k": "req"
+     },
+     {
+      "n": "Operációs rendszerek",
+      "k": "req"
+     },
+     {
+      "n": "Számítógépes adatelemzés",
+      "k": "req"
+     },
+     {
+      "n": "Algoritmusok és adatszerkezetek",
+      "k": "req"
+     },
+     {
+      "n": "Objektumorientált programozás",
+      "k": "req"
+     },
+     {
+      "n": "Szoftverfejlesztési folyamatok",
+      "k": "req"
+     },
+     {
+      "n": "Adatbázisok",
+      "k": "req"
+     }
+    ],
+    "3": [
+     {
+      "n": "Digitális architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Informatikai biztonság",
+      "k": "req"
+     },
+     {
+      "n": "Szoftvertesztelés",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka I",
+      "k": "req"
+     },
+     {
+      "n": "Képfeldolgozó programcsomagok üzemmérnök-informatikusoknak",
+      "k": "req"
+     },
+     {
+      "n": "Mesterséges intelligencia",
+      "k": "req"
+     },
+     {
+      "n": "Gépközeli programozás",
+      "k": "spec"
+     }
+    ],
+    "4": [
+     {
+      "n": "Numerikus számítások",
+      "k": "req"
+     },
+     {
+      "n": "Szoftver architektúrák",
+      "k": "req"
+     },
+     {
+      "n": "Projektmunka II",
+      "k": "req"
+     },
+     {
+      "n": "Természettudományi labor programozóknak",
+      "k": "req"
+     },
+     {
+      "n": "Rendszerüzemeltetés",
+      "k": "req"
+     },
+     {
+      "n": "UX és UI tervezés",
+      "k": "spec"
+     },
+     {
+      "n": "Assembly programozás",
+      "k": "spec"
+     },
+     {
+      "n": "Autoipari Szoftverek Tesztelése",
+      "k": "opt"
+     }
+    ],
+    "5": [
+     {
+      "n": "Szakdolgozat I",
+      "k": "req"
+     },
+     {
+      "n": "Programozási paradigmák",
+      "k": "opt"
+     },
+     {
+      "n": "Projektmunka III",
+      "k": "opt"
+     },
+     {
+      "n": "Nemfunkcionális tesztelés",
+      "k": "opt"
+     }
+    ],
+    "6": [
+     {
+      "n": "Szakmai gyakorlat üzemmérnököknek",
+      "k": "req"
+     },
+     {
+      "n": "Szakdolgozat II",
+      "k": "req"
+     },
+     {
+      "n": "AI rendszerek fejlesztése",
+      "k": "spec"
+     },
+     {
+      "n": "AI tesztelés",
+      "k": "opt"
+     }
+    ]
+   },
+   "pools": [
+    {
+     "term": "ősz",
+     "items": [
+      "Beágyazott rendszerek",
+      "Mobil képalkotás és alkalmazásai"
+     ]
+    }
+   ]
+  }
+ ]
+}

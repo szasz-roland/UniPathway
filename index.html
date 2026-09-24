@@ -13,6 +13,13 @@
   }catch(e){}
 })();
 </script>
+<!-- Module registry: must exist before any module's own <script> loads (modules load before
+     js/script.js — see CLAUDE.md's module convention), so this stays a tiny synchronous inline
+     script here rather than living inside js/script.js itself. -->
+<script>
+  window.MODULES=[];
+  window.registerModule=function(m){window.MODULES.push(m);};
+</script>
 <title>Órarend</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.png" type="image/png">
@@ -25,6 +32,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<!-- Modules: each stays self-contained under modules/<name>/ (never copied/flattened into
+     css/, js/, schedule_data/), styled after tanterv-module's own layout — see CLAUDE.md. -->
+<link rel="stylesheet" href="modules/tanterv-module/css/tanterv.css">
 </head>
 <body>
   <div class="shell">
@@ -69,6 +79,23 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
+<!-- Modules: script + registration, always before js/script.js — see CLAUDE.md's module convention. -->
+<script src="modules/tanterv-module/js/tanterv.js"></script>
+<script>
+  registerModule({
+    id:"tanterv",
+    label:"Tanterv",
+    icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>',
+    mount:function(el){
+      return Tanterv.mount(el,{
+        storage:Tanterv.localStore("orarend-tanterv-v1"),
+        dataUrl:"modules/tanterv-module/curriculum_data/umi_bprof.json"
+      });
+    }
+  });
+</script>
+
 <script src="js/script.js"></script>
 </body>
 </html>
