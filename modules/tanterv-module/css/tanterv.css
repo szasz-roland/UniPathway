@@ -73,8 +73,11 @@
 .tt-key-now { background: var(--tt-now); }
 .tt-key-plan { background: var(--tt-plan); }
 .tt-key-rest { border: 1px dashed var(--tt-faint); }
-.tt-reqsum { display: block; margin-top: 10px; padding: 0; border: 0; background: none; font-size: 13px; color: var(--tt-ink-2); cursor: pointer; text-align: left; }
-.tt-reqsum:hover { color: var(--tt-ink); text-decoration: underline; text-underline-offset: 3px; }
+/* A permanent (not just :hover) dotted underline — hover never fires on a touchscreen, so this
+   is the only cue a phone user gets that this line is tappable, not plain text. */
+.tt-reqsum { display: block; margin-top: 10px; padding: 0; border: 0; background: none; font-size: 13px; color: var(--tt-ink-2); cursor: pointer; text-align: left;
+  text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }
+.tt-reqsum:hover { color: var(--tt-ink); text-decoration-style: solid; }
 
 /* legend */
 .tt-hint { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; margin-top: 26px; font-size: 13.5px; color: var(--tt-ink-2); }
@@ -174,11 +177,40 @@
   .tt-sem { padding: 14px 0 18px; border-right: 0; }
   .tt-sem + .tt-sem { border-top: 1px solid var(--tt-rule); }
   .tt-row { margin: 0; }
-  .tt-track { height: 32px; }
+  .tt-track { height: 36px; }
+  /* At this width a semester's 5-8 individual course segments are only a few px wide each — the
+     1px gaps between them (fine on desktop) read as scattered dashes instead of a bar. Removing
+     just the within-semester gap merges them into one solid-looking bar per semester; the 5px
+     gap *between* semesters stays, since that grouping is real information. */
+  .tt-semseg { gap: 0; }
   .tt-tally { gap: 6px 20px; }
   .tt-tally b { font-size: 22px; }
   .tt-search { max-width: none; }
   .tt-semno { font-size: 48px; }
+
+  /* Specialization picker + pool term filter: 8 (or 5) chips wrapping to several rows ate a screen's
+     worth of scrolling before any real content appeared, for a choice you set once and rarely touch
+     again. One horizontal-scrolling row instead — a standard, expected phone pattern (iOS segmented
+     tabs, category pills) — cuts that to a single row. */
+  .tt-specs, .tt-filter { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .tt-specs::-webkit-scrollbar, .tt-filter::-webkit-scrollbar { display: none; }
+  .tt-specs .tt-chip, .tt-filter .tt-chip { flex: none; }
+
+  /* Toolbar: 3 buttons of very different importance were wrapping onto arbitrary lines depending on
+     label length. Give the primary action (start planning) its own full-width row, pair the two
+     secondary ones evenly below it — a clear hierarchy instead of whatever fit. */
+  .tt-search { flex-basis: 100%; }
+  .tt-btn-main { flex-basis: 100%; }
+  .tt-tools .tt-btn:not(.tt-btn-main) { flex: 1 1 0; text-align: center; }
+
+  /* Status dots/add buttons were 18px — under half the ~44px minimum comfortable touch target, and
+     the thing you tap most on this whole page (once per course, every semester). Room to grow them
+     came from the board already being a single column here, so .tt-row's own first column can widen
+     without competing with anything else for space. */
+  .tt-row { grid-template-columns: 30px 1fr auto; }
+  .tt-dot, .tt-add { width: 26px; height: 26px; }
+  .tt-dot.is-done::after { left: 7px; top: 3px; width: 6px; height: 11px; }
+  .tt-add { font-size: 17px; line-height: 17px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tt-panel, .tt-scrim, .tt-toast { transition: none; }
