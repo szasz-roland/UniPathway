@@ -10,6 +10,8 @@
 - [x] "Teremkereső" room search — a from-scratch, own-design reimplementation of `u-szeged.hu/teremkereso`'s room lookup, with an embedded-map toggle. Originally scoped to just the rooms your own classes use, later expanded to the full university database (~775 rooms) once the user wanted coverage across their whole degree, not just the current semester (see `CLAUDE.md`)
 - [x] Course action sheet: tap a class card → "Terem keresése" jumps straight to that room in Teremkereső, pre-filtered
 - [x] Workspace cleanup: `ROADMAP.md`/`DEPLOYMENT.md`/`TODO.md` moved into `docs/` (root now holds only what GitHub/Claude Code expect there); schedule data extracted out of `js/script.js` into `schedule_data/*.json` (see Phase 2 below)
+- [x] Modular architecture (`modules/<name>/`, `registerModule()`) and a first module: `modules/tanterv-module/`, a curriculum planner (credit tracking, specialization picker, prerequisites, plus a testnevelés/szabadon-választható/kötelezően-választható requirements panel) — see `CLAUDE.md`'s module-convention notes
+- [x] Account sync, Phase 1 (`js/sync.js`, `window.Sync`, Supabase): real sign-in (email+password, one pre-provisioned account, no public sign-up yet) and cross-device sync for theme, checklists, and Tanterv progress — reuses the exact `{load,save,refresh}` contract `Tanterv.hybridStore()` already defined. Works fully offline/unauthenticated exactly as before; sync is additive. See `CLAUDE.md`'s "Account sync" note and `supabase/schema.sql`.
 
 ## Phase 1 — PWA conversion & hosting
 
@@ -23,7 +25,11 @@
 ## Phase 2 — Data management & dynamic updates
 
 - [x] Move the hardcoded `EV`/`ONLINE`/`CODES`/`ZOLI_EV`/`ROOMS` arrays out of the script into JSON files (`schedule_data/*.json`, fetched via `fetchLocal()`) — done directly as static JSON, no backend needed for a single-user app. Updating each semester now means editing those files, not `js/script.js`.
-- [ ] Optional: a small password-protected admin page for editing the schedule JSON directly
+- [x] **Real login gate + schedule/course data moved into Supabase, RLS-protected** (supersedes the old "password-protected admin page" idea below — real per-user auth already existed from Phase 1, see "Shipped" above). `EV`/`ONLINE`/`ZOLI_EV`/`CODES` and every `course_data/<slug>.json` doc now live in the `user_data` table (reusing Phase 1's schema, no new table) instead of static files; `schedule_data/rooms.json` stays static/public (not personal). The app shows nothing — no login-screen flash, no data fetch — until `Sync.ready` resolves; signed out shows only `#loginScreen`. Old files kept in git as reference, excluded from deployment via `.vercelignore`. Editing going forward is Supabase's own Table Editor, not the old files (see `CLAUDE.md`'s schedule-data note) — a from-scratch in-app admin/upload editor was considered and explicitly not built, in favor of the simpler existing-dashboard workflow.
+- [ ] ~~Optional: a small password-protected admin page for editing the schedule JSON directly~~ — superseded by the item above (real accounts + RLS, not a shared password)
+- [ ] The login screen is intentionally unstyled/minimal (functional sample only) — a real design pass is still open
+- [ ] "Zoli órarend" is still a global `NAV_LINKS` entry, not yet conditional on the signed-in account specifically — fine for the current one-account reality, would matter if a second account ever existed
+- [ ] No in-app editor for the now-Supabase-hosted schedule/course data (by choice, see above) — revisit if hand-editing via Supabase's Table Editor turns out to be painful
 
 ## Phase 3 — Advanced PWA features
 

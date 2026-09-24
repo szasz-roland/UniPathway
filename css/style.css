@@ -25,8 +25,8 @@
 
   /* FIX 1: Strict height matching & no bounce scrolling */
   html, body {
-    height: 100dvh; /* Dynamic viewport height (perfect for mobile) */
     height: 100vh;  /* Fallback for older engines */
+    height: 100dvh; /* Dynamic viewport height (perfect for mobile) */
     margin: 0;
     padding: 0;
     overscroll-behavior: none; /* Prevents the "rubber band" bounce effect */
@@ -38,8 +38,25 @@
     transition:background 200ms ease,color 200ms ease;
   }
 
+  /* Login gate — sample/functional only, real design comes later (see index.html's comment).
+     Reuses .cl-name-input/.cl-confirm/.export-err (the same classes the settings-panel sign-in
+     form already uses) rather than new components. */
+  #loginScreen{display:flex;align-items:center;justify-content:center;height:100vh;height:100dvh;background:var(--rail)}
+  /* Same [hidden]-vs-equal-or-higher-specificity-author-rule gotcha as .shell below: an ID selector
+     always outranks [hidden], so the boot() sequence setting the hidden attribute here needs an
+     explicit override too, or both screens render stacked at once. */
+  #loginScreen[hidden]{display:none}
+  .login-box{display:flex;flex-direction:column;gap:10px;width:min(320px,calc(100vw - 32px))}
+  .login-title{font-size:22px;font-weight:800;color:#fff;text-align:center;margin-bottom:8px}
+  #loginScreen .cl-confirm{padding:12px}
+
   /* FIX 2: Constrain shell to exact screen size */
   .shell{display:grid;grid-template-columns:76px 1fr;height:100%;width:100%;overflow:hidden}
+  /* Without this, the [hidden] attribute js/script.js's boot sequence sets on .shell is silently
+     overridden by the display:grid rule above (same specificity, author rule wins over the
+     browser's own default [hidden]{display:none}) — a well-known gotcha, not obvious from the JS
+     side at all. */
+  .shell[hidden]{display:none}
 
   /* ---- left rail ---- */
   .rail{background:var(--rail);display:flex;flex-direction:column;align-items:center;padding:20px 0;gap:4px;

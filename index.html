@@ -7,7 +7,18 @@
 <script>
 (function(){
   try{
-    var saved=localStorage.getItem("orarend-theme");
+    /* js/sync.js (loaded later, after this must-run-synchronously-before-first-paint script)
+       wraps saved values as {value,updatedAt} so cross-device sync can compare ages — see its own
+       comment. A bare "dark"/"light" string isn't valid JSON on its own, so JSON.parse throws for
+       that legacy/no-sync shape and the catch below falls back to using it as-is; either shape
+       resolves to the right mode with no added round-trip, so the flash-of-wrong-theme prevention
+       this script exists for is unaffected. */
+    var raw=localStorage.getItem("orarend-theme");
+    var saved=null;
+    if(raw){
+      try{ var parsed=JSON.parse(raw); saved=(parsed&&typeof parsed==="object"&&"value" in parsed)?parsed.value:raw; }
+      catch(e){ saved=raw; }
+    }
     var mode=saved||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
     document.documentElement.setAttribute("data-theme",mode);
   }catch(e){}
@@ -37,7 +48,22 @@
 <link rel="stylesheet" href="modules/tanterv-module/css/tanterv.css">
 </head>
 <body>
-  <div class="shell">
+  <!-- Login gate: the real barrier is Supabase RLS on the data itself (see CLAUDE.md's "Account
+       sync" note and supabase/schema.sql) — this screen is what makes that visible/usable rather
+       than the app silently loading with empty data. Sample/functional only for now, styling to
+       come later. .shell starts hidden; js/script.js's boot sequence shows exactly one of the two,
+       once Sync.ready resolves the real auth state, with no flash of the wrong one. -->
+  <div id="loginScreen">
+    <div class="login-box">
+      <div class="login-title">Órarend</div>
+      <input type="email" id="loginEmail" class="cl-name-input" placeholder="E-mail cím" autocomplete="username">
+      <input type="password" id="loginPassword" class="cl-name-input" placeholder="Jelszó" autocomplete="current-password">
+      <button type="button" id="loginSubmit" class="cl-confirm">Bejelentkezés</button>
+      <div id="loginError" class="export-err" hidden></div>
+    </div>
+  </div>
+
+  <div class="shell" hidden>
     <aside class="rail">
       <div class="logo" id="burger" title="Menü">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -80,6 +106,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 
+<!-- Account sync: pinned exact version, like html2canvas/jspdf above — see CLAUDE.md. Not deferred,
+     and loaded before js/sync.js, since sync.js calls supabase.createClient() at load time. -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/sync.js"></script>
+
 <!-- Modules: script + registration, always before js/script.js — see CLAUDE.md's module convention. -->
 <script src="modules/tanterv-module/js/tanterv.js"></script>
 <script>
@@ -89,7 +120,7 @@
     icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>',
     mount:function(el){
       return Tanterv.mount(el,{
-        storage:Tanterv.localStore("orarend-tanterv-v1"),
+        storage:Sync.store("orarend-tanterv-v1"),
         dataUrl:"modules/tanterv-module/curriculum_data/umi_bprof.json"
       });
     }
