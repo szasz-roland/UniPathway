@@ -62,11 +62,22 @@
 
   function normalize(s) {
     s = s || {};
+    const e = s.extra || {};
     return {
       version: 1,
       spec: s.spec || 'Tanterv',
       status: Object.assign({}, s.status || s.st),
       added: Object.assign({}, s.added || s.add),
+      /* Requirements the curriculum data can't express: testnevelés/szabadon választható/kötelezően
+         választható aren't part of this program's own course list (PE and "any course, any program"
+         electives come from university-wide catalogs, not this xlsx), so they're logged by hand
+         rather than picked from D.courses. Credit targets for free/elective start unset (null, not a
+         guessed number) until the person using this actually knows their program's real requirement. */
+      extra: {
+        pe: { log: Array.isArray(e.pe && e.pe.log) ? e.pe.log : [] },
+        free: { target: (e.free && e.free.target) || null, log: Array.isArray(e.free && e.free.log) ? e.free.log : [] },
+        elective: { target: (e.elective && e.elective.target) || null },
+      },
       updatedAt: s.updatedAt || 0,
     };
   }
@@ -98,6 +109,10 @@
     const missing = n => (D.courses[n].pre || []).filter(p => S.status[p] !== 'done');
     const dependents = n => Object.values(D.courses).filter(c => (c.pre || []).includes(n)).map(c => c.n);
     const semOf = n => { const r = planned().find(x => x.n === n); return r ? r.s : null; };
+    /* Kötelezően választható progress is computed from courses already tracked as k:'opt' in the
+       plan — no manual logging needed there, unlike free/pe which aren't in this data at all. */
+    const electiveCredits = () => planned().filter(r => r.k === 'opt').reduce((a, r) => a + kr(r.n), 0);
+    const freeCredits = () => S.extra.free.log.reduce((a, it) => a + (Number(it.credits) || 0), 0);
 
     function commit(persist) {
       if (persist !== false) {
@@ -123,12 +138,14 @@
         <div class="tt-tools">
           <input type="search" class="tt-search" placeholder="Keresés: tárgy, kód vagy oktató" aria-label="Keresés">
           <button type="button" class="tt-btn tt-btn-main" data-act="pool">Választható tárgyak</button>
+          <button type="button" class="tt-btn" data-act="extra">Egyéb követelmények</button>
           <button type="button" class="tt-btn" data-act="backup">Mentés</button>
         </div>
         <section class="tt-trackwrap" aria-label="Kredit-sáv">
           <div class="tt-track"></div>
           <div class="tt-scale"><span>0</span><span>60</span><span>120</span><span>${p.credits} kredit</span></div>
           <div class="tt-tally"></div>
+          <button type="button" class="tt-reqsum" data-act="extra"></button>
         </section>
         <p class="tt-hint">Koppints a körre az állapot váltásához: felvéve, majd teljesítve. A tárgy nevére koppintva látod a részleteit.
           <span><i class="tt-flag tt-flag-crit"></i>az adott félévben teljesíteni kritikus</span>
@@ -171,6 +188,10 @@
         `<div><i class="tt-key tt-key-now"></i><b>${now}</b> kredit most felvéve</div>` +
         `<div><i class="tt-key tt-key-plan"></i><b>${total}</b> / ${target} kredit betervezve</div>` +
         (rest ? `<div><i class="tt-key tt-key-rest"></i><b>${rest}</b> kredit hiányzik a tervből</div>` : '');
+      const peN = S.extra.pe.log.length, freeT = S.extra.free.target, elT = S.extra.elective.target;
+      q('.tt-reqsum').innerHTML = `Testnevelés ${peN}/2` +
+        ` · Szabadon választható ${freeCredits()}${freeT ? '/' + freeT : ''} kredit` +
+        ` · Kötelezően választható ${electiveCredits()}${elT ? '/' + elT : ''} kredit`;
     }
 
     function renderBoard() {
@@ -215,6 +236,7 @@
       const box = q('.tt-panel');
       if (panel === 'pool') box.innerHTML = poolHTML();
       else if (panel === 'backup') box.innerHTML = backupHTML();
+      else if (panel === 'extra') box.innerHTML = extraHTML();
       else box.innerHTML = courseHTML(panel);
     }
 
@@ -288,6 +310,37 @@
           <button type="button" class="tt-btn tt-btn-danger" data-act="reset">Minden jelölés törlése</button>
         </div>`;
     }
+    /* Testnevelés/szabadon választható/kötelezően választható: not in the curriculum data at all
+       (PE and "any course, any program" electives aren't part of this program's own course list),
+       so these are logged by hand here rather than picked from D.courses like everything else. */
+    function extraHTML() {
+      const pe = S.extra.pe, free = S.extra.free, el = S.extra.elective;
+      const delRow = (label, extra, act, i) => `<div class="tt-reqrow"><span class="tt-name">${esc(label)}</span>${extra}<button type="button" class="tt-del" data-${act}="${i}" aria-label="Törlés">✕</button></div>`;
+      return `
+        <button type="button" class="tt-btn tt-close" data-act="close">Bezárás</button>
+        <h2 class="tt-ptitle">Egyéb követelmények</h2>
+        <p class="tt-pkind">Ezeket a tantervi háló nem tartalmazza (nem ennek a szaknak a tárgyai), kézzel vezetheted itt.</p>
+
+        <h3 class="tt-subh">Testnevelés — ${pe.log.length}/2 teljesítve</h3>
+        ${pe.log.map((it, i) => delRow(it.name, '', 'pedel', i)).join('')}
+        <div class="tt-reqadd">
+          <input type="text" class="tt-in-text tt-pename" placeholder="pl. Testnevelés ${pe.log.length + 1}">
+          <button type="button" class="tt-btn" data-peadd="1">Hozzáadás</button>
+        </div>
+
+        <h3 class="tt-subh">Szabadon választható — ${freeCredits()}${free.target ? ' / ' + free.target : ''} kredit</h3>
+        <p class="tt-pkind">Cél kredit: <input type="number" class="tt-target-input" data-target="free" value="${free.target || ''}" placeholder="?" min="0"></p>
+        ${free.log.map((it, i) => delRow(it.name, `<span class="tt-kr">${it.credits} kredit</span>`, 'freedel', i)).join('')}
+        <div class="tt-reqadd">
+          <input type="text" class="tt-in-text tt-freename" placeholder="Tárgy neve">
+          <input type="number" class="tt-in-num tt-freekr" placeholder="kredit" min="0">
+          <button type="button" class="tt-btn" data-freeadd="1">Hozzáadás</button>
+        </div>
+
+        <h3 class="tt-subh">Kötelezően választható — ${electiveCredits()}${el.target ? ' / ' + el.target : ''} kredit</h3>
+        <p class="tt-pkind">Cél kredit: <input type="number" class="tt-target-input" data-target="elective" value="${el.target || ''}" placeholder="?" min="0"><br>
+          A „Választható tárgyak” közül eddig felvett/hozzáadott tárgyaid alapján automatikusan számolva, nem kell külön naplózni.</p>`;
+    }
 
     /* ---------- actions ---------- */
     function addTo(n, s) {
@@ -316,7 +369,20 @@
       if (d.addsel) return addTo(d.addsel, t.parentElement.querySelector('select').value);
       if (d.remove) return removeFrom(d.remove);
       if (d.term) { poolTerm = d.term; return renderPanel(); }
+      if (d.peadd) {
+        const inp = q('.tt-pename'), name = (inp.value || '').trim() || `Testnevelés ${S.extra.pe.log.length + 1}`;
+        S.extra.pe.log.push({ name }); return commit();
+      }
+      if (d.pedel !== undefined) { S.extra.pe.log.splice(+d.pedel, 1); return commit(); }
+      if (d.freeadd) {
+        const nameInp = q('.tt-freename'), krInp = q('.tt-freekr');
+        const name = (nameInp.value || '').trim(), credits = Number(krInp.value) || 0;
+        if (!name) return toast('Add meg a tárgy nevét');
+        S.extra.free.log.push({ name, credits }); return commit();
+      }
+      if (d.freedel !== undefined) { S.extra.free.log.splice(+d.freedel, 1); return commit(); }
       if (d.act === 'pool') { selected = null; panel = 'pool'; return render(); }
+      if (d.act === 'extra') { selected = null; panel = 'extra'; return render(); }
       if (d.act === 'backup') { selected = null; panel = 'backup'; return render(); }
       if (d.act === 'export') {
         const a = document.createElement('a');
@@ -334,6 +400,10 @@
       query = e.target.value.trim().toLowerCase(); renderBoard();
     }
     async function onChange(e) {
+      if (e.target.classList.contains('tt-target-input')) {
+        const key = e.target.dataset.target, v = e.target.value === '' ? null : Math.max(0, Number(e.target.value) || 0);
+        S.extra[key].target = v; return commit();
+      }
       if (!e.target.classList.contains('tt-file')) return;
       const f = e.target.files[0]; e.target.value = '';
       if (!f) return;

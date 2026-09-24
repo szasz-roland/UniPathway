@@ -4,6 +4,14 @@ A curriculum planner view: credit track, 6 semester columns, specialization pick
 (felvéve / teljesítve), electives, prerequisites. Plain JS, no dependencies. It follows the site's theme
 variables and `[data-theme="dark"]`, so light/dark mode and the font carry over automatically.
 
+**"Egyéb követelmények" panel** tracks testnevelés (≥2, logged by hand), szabadon választható, and
+kötelezően választható — none of which are in the curriculum data itself (PE and "any course, any
+program" electives aren't part of this program's own course list). Kötelezően választható's credit total
+is computed automatically from courses already added via "Választható tárgyak"; testnevelés and szabadon
+választható are logged by hand since they're not enumerable from this data at all. Credit *targets* for
+szabadon/kötelezően választható start unset (shown as "?") rather than guessed — fill them in once you
+know your program's actual requirement (Neptun's "Tanterv" tab or the mintatanterv document).
+
 ```
 css/tanterv.css                   styles, all scoped under .tt
 js/tanterv.js                     exposes window.Tanterv
