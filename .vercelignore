@@ -4,3 +4,13 @@ android/
 myCourses.xlsx
 zoliCourses.xlsx
 docs/
+
+# Superseded by Supabase (RLS-protected, see supabase/schema.sql + migrate-data.sql) — the app no
+# longer reads these, and excluding them here is what actually stops them being fetchable at their
+# old public URLs, not just "unused." schedule_data/rooms.json is NOT included here — it's still a
+# live static file (public room database, not personal). See CLAUDE.md's "Account sync" note.
+schedule_data/ev.json
+schedule_data/zoli.json
+schedule_data/codes.json
+schedule_data/online.json
+course_data/

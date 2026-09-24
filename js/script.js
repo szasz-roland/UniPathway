@@ -39,12 +39,24 @@ function fetchLocal(url){
     xhr.send();
   });
 }
+/* ev/zoli/online/codes are personal data — RLS-protected in Supabase's user_data table (see
+   supabase/schema.sql, supabase/migrate-data.sql, CLAUDE.md's "Account sync" note). rooms.json
+   stays a plain static file: it's the public university room database, not personal, and
+   Teremkereső works the same regardless of login. Sync.store().load()/.refresh() already return
+   parsed values, unlike fetchLocal()'s raw text, so only rooms still needs JSON.parse(). */
 async function loadScheduleData(){
-  const[ev,zoli,online,codes,rooms]=await Promise.all(
-    ["ev","zoli","online","codes","rooms"].map(n=>fetchLocal(`schedule_data/${n}.json`))
-  );
-  EV=JSON.parse(ev);ZOLI_EV=JSON.parse(zoli);ONLINE=JSON.parse(online);
-  CODES=JSON.parse(codes);ROOMS=JSON.parse(rooms);
+  const loadSynced=async key=>{
+    const store=Sync.store(key);
+    const local=await store.load();
+    const fresh=await store.refresh();
+    return fresh||local;
+  };
+  const[ev,zoli,online,codes,roomsText]=await Promise.all([
+    loadSynced("schedule-ev"),loadSynced("schedule-zoli"),
+    loadSynced("schedule-online"),loadSynced("schedule-codes"),
+    fetchLocal("schedule_data/rooms.json"),
+  ]);
+  EV=ev||[];ZOLI_EV=zoli||[];ONLINE=online||[];CODES=codes||[];ROOMS=JSON.parse(roomsText);
 }
 const svgArw='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
 const svgLoc='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>';
@@ -70,9 +82,13 @@ let sheetCourse=null;
 
 /* ---------- persistence ---------- */
 const CHECKLIST_KEY="orarend-checklists-v1";
-function loadChecklists(){try{return JSON.parse(localStorage.getItem(CHECKLIST_KEY))||[];}catch(e){return[];}}
-function saveChecklists(){try{localStorage.setItem(CHECKLIST_KEY,JSON.stringify(checklists));}catch(e){}}
-let checklists=loadChecklists();
+/* Sync.store() is async (it may check Supabase), unlike the old direct localStorage read — so the
+   very first load happens once, awaited, in init() before the first render, instead of here at
+   parse time. checklists starts empty only for that brief window. save() stays fire-and-forget
+   (not awaited) since local persistence inside it is effectively immediate, same as before. */
+async function loadChecklists(){return (await Sync.store(CHECKLIST_KEY).load())||[];}
+function saveChecklists(){Sync.store(CHECKLIST_KEY).save(checklists);}
+let checklists=[];
 
 function getChecklist(id){return checklists.find(l=>l.id===id);}
 function createChecklist(category,name){
@@ -107,7 +123,11 @@ function applyTheme(mode){
   document.documentElement.setAttribute("data-theme",mode);
   const mc=document.querySelector('meta[name="theme-color"]');
   if(mc)mc.setAttribute("content",mode==="dark"?"#14161d":"#ffffff");
-  try{localStorage.setItem("orarend-theme",mode);}catch(e){}
+  /* Sync.store() writes localStorage itself (wrapped, for cross-device conflict resolution —
+     see js/sync.js and index.html's theme-init script) and, when signed in, mirrors it to
+     Supabase in the background. Not awaited: local persistence already happened by the time
+     this returns, same as the old direct localStorage.setItem() did. */
+  Sync.store("orarend-theme").save(mode);
 }
 
 /* ---------- navigation ---------- */
@@ -237,8 +257,14 @@ async function showCourseInfo(course){
     return;
   }
   try{
-    const text=await fetchLocal(`course_data/${slug}.json`);
-    const doc=JSON.parse(text);
+    /* Same RLS-protected Supabase source as EV/ONLINE/CODES now, not a local fetch — see
+       loadScheduleData(). Falls into the catch below (same "nincs feltöltve" UI as a genuinely
+       missing course) if there's no row, including when signed out. */
+    const store=Sync.store("course-"+slug);
+    const local=await store.load();
+    const fresh=await store.refresh();
+    const doc=fresh||local;
+    if(!doc)throw new Error("no course doc");
     content.innerHTML="";
     if(doc.code||doc.instructor){
       const meta=E("div");meta.className="doc-meta";
@@ -642,6 +668,54 @@ function renderChecklistPanel(){
   });
 }
 
+/* Account section of the settings panel — reuses .cl-name-input/.cl-confirm, the same input/button
+   styling the checklist-creation form already uses in this same dark drawer context, rather than
+   inventing new ones. No signup form (deliberately — see CLAUDE.md's "Account sync" note): one
+   pre-provisioned account, created directly in the Supabase dashboard. */
+function renderAccountSection(){
+  const section=E("div");section.className="set-section";
+  const label=E("div");label.className="set-label";label.textContent="Fiók";
+  section.appendChild(label);
+
+  const user=Sync.currentUser();
+  if(user){
+    const row=E("div");row.className="set-row";
+    row.innerHTML=`<span>Bejelentkezve: ${user.username}</span>`;
+    const out=E("button");out.className="cl-confirm";out.style.flex="0 0 auto";out.style.padding="8px 14px";
+    out.textContent="Kijelentkezés";
+    out.onclick=()=>Sync.signOut();
+    row.appendChild(out);
+    section.appendChild(row);
+    return section;
+  }
+
+  const form=E("div");form.className="cl-form";
+  const emailInput=E("input");emailInput.className="cl-name-input";emailInput.type="email";
+  emailInput.placeholder="E-mail cím";emailInput.autocomplete="username";
+  const pwInput=E("input");pwInput.className="cl-name-input";pwInput.type="password";
+  pwInput.placeholder="Jelszó";pwInput.autocomplete="current-password";
+  const err=E("div");err.className="export-err";err.hidden=true;
+  const submit=E("button");submit.className="cl-confirm";submit.textContent="Bejelentkezés";
+  const doSignIn=async()=>{
+    if(!emailInput.value||!pwInput.value)return;
+    submit.disabled=true;err.hidden=true;
+    try{
+      await Sync.signIn(emailInput.value.trim(),pwInput.value);
+      pwInput.value="";
+    }catch(e){
+      err.textContent=e.message||"Sikertelen bejelentkezés.";err.hidden=false;
+    }finally{
+      submit.disabled=false;
+    }
+  };
+  submit.onclick=doSignIn;
+  emailInput.onkeydown=e=>{if(e.key==="Enter")doSignIn();};
+  pwInput.onkeydown=e=>{if(e.key==="Enter")doSignIn();};
+  form.appendChild(emailInput);form.appendChild(pwInput);form.appendChild(submit);form.appendChild(err);
+  section.appendChild(form);
+  return section;
+}
+
 function renderSettingsPanel(){
   const wrap=document.getElementById("navbody");wrap.innerHTML="";
 
@@ -657,6 +731,8 @@ function renderSettingsPanel(){
   themeRow.appendChild(sw);
   themeSection.appendChild(themeLabel);themeSection.appendChild(themeRow);
   wrap.appendChild(themeSection);
+
+  wrap.appendChild(renderAccountSection());
 
   const exSection=E("div");exSection.className="set-section";
   const exLabel=E("div");exLabel.className="set-label";exLabel.textContent="Órarend exportálása";
@@ -793,15 +869,91 @@ async function runExport(format,btn,errBox){
 async function init(){
   try{
     await loadScheduleData();
+    /* EV/ONLINE/CODES all empty at once, while signed in, shouldn't happen for any actually-
+       configured account — even a light semester has *some* codes/online courses. A signed-in
+       user seeing this almost certainly just hasn't run supabase/migrate-data.sql yet, which
+       otherwise fails perfectly silently (no error, no exception — loadScheduleData() correctly
+       returns empty arrays when the rows simply don't exist), rendering as if the app were broken
+       instead of "you're missing a one-time setup step". See CLAUDE.md's "Account sync" note. */
+    if(Sync.currentUser()&&!EV.length&&!ONLINE.length&&!CODES.length){
+      document.getElementById("list").innerHTML=
+        '<div class="freeday"><div class="big">Nincs betöltve adat ehhez a fiókhoz</div>'+
+        '<div class="s">Futtattad már a <code>supabase/migrate-data.sql</code> szkriptet a Supabase SQL Editorban?</div></div>';
+      return;
+    }
+    checklists=await loadChecklists();
     rail();
     renderNavIcons();
     renderHead();
     renderMain();
+    /* One-time pull, once sign-in state is actually known (Sync.onAuthChange fires again as soon
+       as that resolves, even though this registration itself runs before it does) — mirrors what
+       Tanterv.mount() already does with its own store.refresh() after first render: show the
+       local copy immediately, adopt a newer synced one if one shows up shortly after. */
+    Sync.onAuthChange(async user=>{
+      if(!user)return;
+      const[newerTheme,newerChecklists]=await Promise.all([
+        Sync.store("orarend-theme").refresh(),
+        Sync.store(CHECKLIST_KEY).refresh(),
+      ]);
+      if(newerTheme)applyTheme(newerTheme);
+      if(newerChecklists){checklists=newerChecklists;if(view==="checklist")renderMain();}
+    });
+    /* Keeps the settings panel's sign-in form/"signed in as" state in sync with reality, whether
+       it's already open when auth state resolves or opened later. */
+    Sync.onAuthChange(()=>{if(panelMode==="settings")renderSettingsPanel();});
   }catch(e){
     console.error(e);
     document.getElementById("list").innerHTML=
       '<div class="freeday"><div class="big">Hiba az adatok betöltésekor</div>'+
-      '<div class="s">Ellenőrizd a schedule_data/ mappa JSON fájljait.</div></div>';
+      '<div class="s">Ellenőrizd a Supabase-kapcsolatot és a bejelentkezést.</div></div>';
   }
 }
-init();
+
+/* Login gate — see index.html's #loginScreen comment. Wired once; a later sign-out reloads the
+   page instead of re-showing this, so there's no double-wiring to guard against. */
+function showLoginScreen(){
+  document.getElementById("loginScreen").hidden=false;
+  const emailInput=document.getElementById("loginEmail");
+  const pwInput=document.getElementById("loginPassword");
+  const err=document.getElementById("loginError");
+  const submit=document.getElementById("loginSubmit");
+  const doSignIn=async()=>{
+    if(!emailInput.value||!pwInput.value)return;
+    submit.disabled=true;err.hidden=true;
+    try{
+      await Sync.signIn(emailInput.value.trim(),pwInput.value);
+    }catch(e){
+      err.textContent=e.message||"Sikertelen bejelentkezés.";err.hidden=false;
+    }finally{
+      submit.disabled=false;
+    }
+  };
+  submit.onclick=doSignIn;
+  emailInput.onkeydown=e=>{if(e.key==="Enter")doSignIn();};
+  pwInput.onkeydown=e=>{if(e.key==="Enter")doSignIn();};
+}
+
+(async function boot(){
+  const user=await Sync.ready;
+  if(user){
+    document.getElementById("loginScreen").hidden=true;
+    document.querySelector(".shell").hidden=false;
+    await init();
+  }else{
+    showLoginScreen();
+  }
+  /* Later transitions only — the decision above already handled the initial load. Signing in from
+     the login screen swaps straight to the app; signing out mid-use does a clean reload rather than
+     trying to unwind in-memory state (EV/checklists/etc.) piecemeal. */
+  Sync.onAuthChange(u=>{
+    const loginShown=!document.getElementById("loginScreen").hidden;
+    if(u&&loginShown){
+      document.getElementById("loginScreen").hidden=true;
+      document.querySelector(".shell").hidden=false;
+      init();
+    }else if(!u&&!loginShown){
+      location.reload();
+    }
+  });
+})();
