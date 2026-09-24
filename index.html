@@ -54,12 +54,26 @@
        come later. .shell starts hidden; js/script.js's boot sequence shows exactly one of the two,
        once Sync.ready resolves the real auth state, with no flash of the wrong one. -->
   <div id="loginScreen">
-    <div class="login-box">
-      <div class="login-title">Órarend</div>
-      <input type="email" id="loginEmail" class="cl-name-input" placeholder="E-mail cím" autocomplete="username">
-      <input type="password" id="loginPassword" class="cl-name-input" placeholder="Jelszó" autocomplete="current-password">
-      <button type="button" id="loginSubmit" class="cl-confirm">Bejelentkezés</button>
-      <div id="loginError" class="export-err" hidden></div>
+    <div class="login-card">
+      <div class="login-accent">
+        <span class="login-dot d1" aria-hidden="true"></span>
+        <span class="login-dot d2" aria-hidden="true"></span>
+        <span class="login-dot d3" aria-hidden="true"></span>
+        <span class="login-dot d4" aria-hidden="true"></span>
+        <div class="login-logo"><img src="assets/icon.png" alt="" width="48" height="48"></div>
+        <div class="login-accent-title">Órarend</div>
+        <div class="login-accent-sub">A saját órarended, egy helyen — jelentkezz be a folytatáshoz.</div>
+      </div>
+      <div class="login-form-panel">
+        <div class="login-heading">Bejelentkezés</div>
+        <div class="login-subtext">Add meg a fiókod adatait.</div>
+        <div class="login-fields">
+          <input type="email" id="loginEmail" class="login-input" placeholder="E-mail cím" autocomplete="username">
+          <input type="password" id="loginPassword" class="login-input" placeholder="Jelszó" autocomplete="current-password">
+        </div>
+        <button type="button" id="loginSubmit" class="login-submit">Bejelentkezés</button>
+        <div id="loginError" class="export-err" hidden></div>
+      </div>
     </div>
   </div>
 

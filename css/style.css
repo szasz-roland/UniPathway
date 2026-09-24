@@ -38,17 +38,48 @@
     transition:background 200ms ease,color 200ms ease;
   }
 
-  /* Login gate — sample/functional only, real design comes later (see index.html's comment).
-     Reuses .cl-name-input/.cl-confirm/.export-err (the same classes the settings-panel sign-in
-     form already uses) rather than new components. */
-  #loginScreen{display:flex;align-items:center;justify-content:center;height:100vh;height:100dvh;background:var(--rail)}
+  /* Login gate — a split card (dark brand panel + light form panel), stacked on phones and
+     side-by-side from the same tablet breakpoint the rest of the app already switches on
+     (641px). Own `.login-*` classes rather than reusing .cl-name-input/.cl-confirm — this is a
+     full-screen entry point, not a panel row, and needs its own sizing. */
+  #loginScreen{display:flex;align-items:center;justify-content:center;height:100vh;height:100dvh;padding:20px;background:var(--surface-2)}
   /* Same [hidden]-vs-equal-or-higher-specificity-author-rule gotcha as .shell below: an ID selector
      always outranks [hidden], so the boot() sequence setting the hidden attribute here needs an
      explicit override too, or both screens render stacked at once. */
   #loginScreen[hidden]{display:none}
-  .login-box{display:flex;flex-direction:column;gap:10px;width:min(320px,calc(100vw - 32px))}
-  .login-title{font-size:22px;font-weight:800;color:#fff;text-align:center;margin-bottom:8px}
-  #loginScreen .cl-confirm{padding:12px}
+  .login-card{width:100%;max-width:420px;background:var(--bg);border-radius:26px;overflow:hidden;
+    box-shadow:0 24px 60px -20px rgba(0,0,0,.35);animation:enterUp 260ms var(--ease-out) both}
+  .login-accent{position:relative;overflow:hidden;background:var(--rail);padding:26px 24px 22px;
+    display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+  .login-dot{position:absolute;border-radius:50%;filter:blur(1px);opacity:.55}
+  .login-dot.d1{width:64px;height:64px;background:var(--ea-ac);top:-22px;left:-18px}
+  .login-dot.d2{width:40px;height:40px;background:var(--gy-ac);bottom:-14px;right:18px}
+  .login-dot.d3{width:26px;height:26px;background:var(--pr-ac);top:14px;right:-8px;opacity:.4}
+  .login-dot.d4{width:18px;height:18px;background:var(--mt-ac);bottom:22px;left:28px;opacity:.4}
+  .login-logo{position:relative;width:48px;height:48px;border-radius:50%;overflow:hidden}
+  .login-logo img{width:100%;height:100%;object-fit:cover;display:block}
+  .login-accent-title{position:relative;font-size:19px;font-weight:800;color:#fff}
+  .login-accent-sub{position:relative;font-size:12.5px;color:var(--rail-tx-2);max-width:260px}
+  .login-form-panel{padding:26px 24px 28px;display:flex;flex-direction:column;gap:14px}
+  .login-heading{font-size:21px;font-weight:800;color:var(--ink)}
+  .login-subtext{font-size:13px;color:var(--ink-2);margin-top:-8px}
+  .login-fields{display:flex;flex-direction:column;gap:10px}
+  .login-input{padding:14px 18px;border-radius:999px;border:1.5px solid var(--hair);background:var(--surface-2);
+    color:var(--ink);font-family:var(--sans);font-size:16px;transition:border-color 140ms var(--ease-out)}
+  .login-input::placeholder{color:var(--faint)}
+  .login-input:focus{outline:none;border-color:var(--sel)}
+  .login-submit{background:var(--sel);color:var(--rail);border:none;border-radius:999px;padding:15px;
+    font-weight:800;font-size:14px;cursor:pointer;transition:transform 140ms var(--ease-out)}
+  .login-submit:active{transform:scale(.97)}
+  .login-submit:disabled{opacity:.6;cursor:default}
+  #loginScreen .export-err{color:#e5484d;text-align:center;margin-top:0}
+  @media(min-width:641px){
+    .login-card{max-width:680px;display:flex;flex-direction:row;align-items:stretch}
+    .login-accent{flex:0 0 42%;padding:32px 26px;justify-content:center}
+    .login-accent-title{font-size:22px}
+    .login-form-panel{flex:1;padding:36px 34px;justify-content:center;gap:16px}
+    .login-heading{font-size:24px}
+  }
 
   /* FIX 2: Constrain shell to exact screen size */
   .shell{display:grid;grid-template-columns:76px 1fr;height:100%;width:100%;overflow:hidden}
@@ -497,6 +528,6 @@
   }
   @media(prefers-reduced-motion:reduce){
     *{transition:none!important}
-    .item,.freeday,.wcol,.card.now,.wcard.now,.codepage,.cl-form,.shoprow,.taskrow{animation:none!important}
+    .item,.freeday,.wcol,.card.now,.wcard.now,.codepage,.cl-form,.shoprow,.taskrow,.login-card{animation:none!important}
     .taskrow input:checked ~ .taskbox::after{animation:none!important}
   }
